@@ -65,16 +65,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\ControllerBase.cs" />
-    <Compile Include="Assets\Scripts\Controllers\ControllerSpawnTower.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ControllerTowers.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IAwake.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
     <Compile Include="Assets\Scripts\Main\ActionsGame.cs" />
     <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
+    <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
     <Compile Include="Assets\Scripts\Main\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\Main\Singleton.cs" />
     <Compile Include="Assets\Scripts\Main\StarterGame.cs" />
     <Compile Include="Assets\Scripts\Objects\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
+    <Compile Include="Assets\Scripts\Objects\Tower.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonMy.cs" />
     <Reference Include="UnityEngine">
