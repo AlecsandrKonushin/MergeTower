@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ControllerEffects", menuName = "Controllers/ControllerTowers")]
+[CreateAssetMenu(fileName = "ControllerTowers", menuName = "Controllers/ControllerTowers")]
 public class ControllerTowers : ControllerBase, IAwake, IListenerBuyTower
 {
     [SerializeField] private Tower[] towerPrefabs;

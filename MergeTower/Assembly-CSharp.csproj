@@ -65,15 +65,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\ControllerBase.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ControllerEnemies.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerTowers.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IAwake.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IListenerEndMove.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IMove.cs" />
     <Compile Include="Assets\Scripts\Main\ActionsGame.cs" />
     <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
     <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
     <Compile Include="Assets\Scripts\Main\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\Main\Singleton.cs" />
     <Compile Include="Assets\Scripts\Main\StarterGame.cs" />
+    <Compile Include="Assets\Scripts\Main\UpdateController.cs" />
+    <Compile Include="Assets\Scripts\Objects\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Objects\Systems\MoveSystem.cs" />
     <Compile Include="Assets\Scripts\Objects\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
     <Compile Include="Assets\Scripts\Objects\Tower.cs" />
