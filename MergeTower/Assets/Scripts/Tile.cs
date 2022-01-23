@@ -1,18 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool isBusy;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool IsBusy { get => isBusy; set => isBusy = value; }
 }
