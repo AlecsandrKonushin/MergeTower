@@ -3,8 +3,6 @@
 public class CreatorObjects : Singleton<CreatorObjects>
 {
     [SerializeField] private GameObject parentTowers;
-    [SerializeField] private GameObject spawnEnemyPosition; // TODO: должна передаваться в метод, не ссылкой
-    [SerializeField] private GameObject targetEnemyPosition; // TODO: должна передаваться в метод, не ссылкой
 
     public Tower CreateTower(Tower towerPrefab, Tile tileForSpawn)
     {
@@ -19,7 +17,8 @@ public class CreatorObjects : Singleton<CreatorObjects>
 
     public Enemy CreateEnemy(Enemy enemyPrefab)
     {
-        Enemy enemy = Instantiate(enemyPrefab, spawnEnemyPosition.transform);
+        Transform spawnTransfowm = PositionsOnField.Instance.GetSpawnEnemyTransform;
+        Enemy enemy = Instantiate(enemyPrefab, spawnTransfowm);
 
         return enemy;
     }

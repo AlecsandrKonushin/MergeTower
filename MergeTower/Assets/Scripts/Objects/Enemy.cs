@@ -4,10 +4,13 @@ public class Enemy : MonoBehaviour
 {
     private MoveSystem moveSystem;
 
-    public Enemy()
+    public void InitEnemy(TypeMove typeMove, Vector3 targetMove)
     {
-        moveSystem = new MoveSystem();
+        if (typeMove == TypeMove.Simple)
+        {
+            moveSystem = new MoveSystem(gameObject);
+        }
 
-        UpdateController.Instance.AddMoveObject(moveSystem);
+        moveSystem.SetPositionForMove(targetMove);
     }
 }
