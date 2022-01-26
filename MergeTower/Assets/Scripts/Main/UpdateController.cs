@@ -6,12 +6,9 @@ public class UpdateController : Singleton<UpdateController>
 
     private void Update()
     {
-        if (moveObjects.Count > 0)
+        foreach (var moveObject in moveObjects)
         {
-            foreach (var moveObject in moveObjects)
-            {
-                moveObject.Move();
-            }
+            moveObject.Move();
         }
     }
 

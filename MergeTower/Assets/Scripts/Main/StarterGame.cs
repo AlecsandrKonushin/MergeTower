@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -17,19 +16,5 @@ public class StarterGame : MonoBehaviour
         }
 
         BoxControllers.InitControllers();
-
-        BoxControllers.GetController<ControllerGame>().StartGame();
-
-        StartCoroutine(CoSpawnEnemies());
-    }
-
-
-    private IEnumerator CoSpawnEnemies()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(2f);
-            BoxControllers.GetController<ControllerEnemies>().CreateEnemy();
-        }
     }
 }
