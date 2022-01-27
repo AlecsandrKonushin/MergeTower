@@ -6,6 +6,6 @@ public class Tower : MonoBehaviour
 
     public void InitTower()
     {
-        shootSystem = new ShootSystem();
+        //shootSystem = new ShootSystem();
     }
 }

@@ -9,9 +9,10 @@ public class CreatorObjects : Singleton<CreatorObjects>
     public Tower CreateTower(Tower towerPrefab, Tile tileForSpawn)
     {
         Vector3 positionSpawn = tileForSpawn.transform.position;
+        Quaternion rotationSpawn =  Quaternion.Euler(0, 0, 0);
         positionSpawn.y += 1f;
 
-        Tower tower = Instantiate(towerPrefab, positionSpawn, tileForSpawn.transform.rotation);
+        Tower tower = Instantiate(towerPrefab, positionSpawn, rotationSpawn);
         tower.transform.SetParent(parentTowers.transform);
 
         return tower;
