@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : ObjectScene
 {
     private MoveSystem moveSystem;
 
-    public Enemy()
+    public override void InitObject()
     {
         moveSystem = new MoveSystem();
 

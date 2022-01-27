@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 
-public class Tower : MonoBehaviour
+public class Tower : ObjectScene
 {
     private ShootSystem shootSystem;
 
-    public void InitTower()
+    public override void InitObject()
     {
         //shootSystem = new ShootSystem();
+
     }
 }

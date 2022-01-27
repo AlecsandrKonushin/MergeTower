@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerEndMove.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMove.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IWaiting.cs" />
     <Compile Include="Assets\Scripts\Main\ActionsGame.cs" />
     <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
     <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
@@ -79,9 +80,12 @@
     <Compile Include="Assets\Scripts\Main\Singleton.cs" />
     <Compile Include="Assets\Scripts\Main\StarterGame.cs" />
     <Compile Include="Assets\Scripts\Main\StatesGame.cs" />
+    <Compile Include="Assets\Scripts\Main\Time\TimeController.cs" />
+    <Compile Include="Assets\Scripts\Main\Time\TimerWaiting.cs" />
     <Compile Include="Assets\Scripts\Main\UpdateController.cs" />
     <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
     <Compile Include="Assets\Scripts\Objects\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Objects\ObjectScene.cs" />
     <Compile Include="Assets\Scripts\Objects\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
     <Compile Include="Assets\Scripts\Objects\Tower.cs" />

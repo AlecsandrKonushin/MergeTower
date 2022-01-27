@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ControllerEnemies", menuName = "Controllers/ControllerEnemies")]
-public class ControllerEnemies : ControllerBase
+public class ControllerEnemies : ControllerBase, IWaiting
 {
     [SerializeField] private Enemy[] enemiesPrefab;
 
@@ -10,13 +10,17 @@ public class ControllerEnemies : ControllerBase
 
     public void StartSpawn()
     {
+        TimeCome();
+    }
 
+    public void TimeCome()
+    {
+        CreateEnemy();
+        TimeController.Instance.AddWaiting(this, 2f);
     }
 
     private void CreateEnemy()
     {
-
+        CreatorObjects.Instance.CreateEnemy(enemiesPrefab[0]);
     }
-
-
 }

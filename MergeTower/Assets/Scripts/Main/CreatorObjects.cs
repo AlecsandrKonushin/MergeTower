@@ -14,6 +14,7 @@ public class CreatorObjects : Singleton<CreatorObjects>
 
         Tower tower = Instantiate(towerPrefab, positionSpawn, rotationSpawn);
         tower.transform.SetParent(parentTowers.transform);
+        tower.InitObject();
 
         return tower;
     }
@@ -21,6 +22,7 @@ public class CreatorObjects : Singleton<CreatorObjects>
     public Enemy CreateEnemy(Enemy enemyPrefab)
     {
         Enemy enemy = Instantiate(enemyPrefab, spawnEnemyPosition.transform);
+        enemy.InitObject();
 
         return enemy;
     }
