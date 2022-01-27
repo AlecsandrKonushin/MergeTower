@@ -4,11 +4,17 @@ public class UpdateController : Singleton<UpdateController>
 {
     private List<IMove> moveObjects = new List<IMove>();
 
+    private bool canMove;
+    public bool SetCanMove { set => canMove = value; }
+
     private void Update()
     {
-        foreach (var moveObject in moveObjects)
+        if (canMove)
         {
-            moveObject.Move();
+            foreach (var moveObject in moveObjects)
+            {
+                moveObject.Move();
+            }
         }
     }
 

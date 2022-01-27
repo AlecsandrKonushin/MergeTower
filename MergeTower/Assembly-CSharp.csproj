@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\ControllerBase.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerEnemies.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ControllerGame.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerTowers.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IAwake.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\Main\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\Main\Singleton.cs" />
     <Compile Include="Assets\Scripts\Main\StarterGame.cs" />
+    <Compile Include="Assets\Scripts\Main\StatesGame.cs" />
     <Compile Include="Assets\Scripts\Main\UpdateController.cs" />
     <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
     <Compile Include="Assets\Scripts\Objects\Enemy.cs" />

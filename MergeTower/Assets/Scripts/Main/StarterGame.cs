@@ -16,5 +16,7 @@ public class StarterGame : MonoBehaviour
         }
 
         BoxControllers.InitControllers();
+
+        BoxControllers.GetController<ControllerGame>().StartGame();
     }
 }
