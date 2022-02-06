@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerEndMove.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMove.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IShoot.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWaiting.cs" />
     <Compile Include="Assets\Scripts\Main\ActionsGame.cs" />
     <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\Objects\Tower.cs" />
     <Compile Include="Assets\Scripts\Systems\MoveSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\ShootSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\TargetSystem.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonMy.cs" />
     <Compile Include="Assets\Scripts\UI\DataActionsUI.cs" />

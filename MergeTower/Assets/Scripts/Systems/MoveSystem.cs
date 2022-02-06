@@ -13,13 +13,12 @@ public class MoveSystem : MonoBehaviour, IMove
     {
         if (canMove)
         {
-            Debug.Log($"target pos = {targetPosition}");
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speedMove * Time.deltaTime);
 
             if (transform.position == targetPosition)
             {
                 canMove = false;
-                listenerEndMove.EndMove();
+                listenerEndMove?.EndMove();
             }
         }
     }
