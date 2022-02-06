@@ -5,7 +5,7 @@ public class ControllerGame : ControllerBase
 {
     public void StartGame()
     {
-
         StatesGame.Instance.SetCanMove = true;
+        BoxControllers.GetController<ControllerEnemies>().StartSpawn();
     }
 }

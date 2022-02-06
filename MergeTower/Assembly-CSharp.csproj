@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
     <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
     <Compile Include="Assets\Scripts\Main\DontDestroy.cs" />
+    <Compile Include="Assets\Scripts\Main\PositionsScene.cs" />
     <Compile Include="Assets\Scripts\Main\Singleton.cs" />
     <Compile Include="Assets\Scripts\Main\StarterGame.cs" />
     <Compile Include="Assets\Scripts\Main\StatesGame.cs" />
@@ -93,6 +94,11 @@
     <Compile Include="Assets\Scripts\Systems\ShootSystem.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonMy.cs" />
+    <Compile Include="Assets\Scripts\UI\DataActionsUI.cs" />
+    <Compile Include="Assets\Scripts\UI\Panel.cs" />
+    <Compile Include="Assets\Scripts\UI\TypeAnimationPanel.cs" />
+    <Compile Include="Assets\Scripts\UI\TypePanel.cs" />
+    <Compile Include="Assets\Scripts\UI\UIMain.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
