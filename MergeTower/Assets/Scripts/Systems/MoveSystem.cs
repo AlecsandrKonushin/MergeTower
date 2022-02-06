@@ -13,6 +13,7 @@ public class MoveSystem : MonoBehaviour, IMove
     {
         if (canMove)
         {
+            Debug.Log($"target pos = {targetPosition}");
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speedMove * Time.deltaTime);
 
             if (transform.position == targetPosition)
@@ -26,6 +27,8 @@ public class MoveSystem : MonoBehaviour, IMove
     public void SetPositionForMove(Vector3 targetPosition)
     {
         this.targetPosition = targetPosition;
+
+        canMove = true;
     }
 
     public void SetListenerEndMove(IListenerEndMove listener)
