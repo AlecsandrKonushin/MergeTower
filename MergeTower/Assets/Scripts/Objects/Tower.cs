@@ -14,6 +14,8 @@ public class Tower : ObjectScene
         targetSystem = gameObject.AddComponent<TargetSystem>();
         rotationSystem = gameObject.AddComponent<RotationSystem>();
         shootSystem = gameObject.AddComponent<ShootSystem>();
+
+        UpdateController.Instance.AddMoveObject(rotationSystem);
         shootSystem.Init(bulletPrefab, speedShoot);
 
         targetSystem.SubscribeOnGetTargetEnemy(StartAttack);
@@ -21,6 +23,7 @@ public class Tower : ObjectScene
 
     private void StartAttack(Enemy enemy)
     {
+        rotationSystem.SetPositionForChange(enemy.transform);
         shootSystem.SetTarget(enemy);
     }
 }

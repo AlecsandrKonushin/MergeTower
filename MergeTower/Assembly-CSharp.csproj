@@ -70,7 +70,7 @@
     <Compile Include="Assets\Scripts\Controllers\ControllerTowers.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IAwake.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IListenerEndMove.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IListenerEndChange.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMove.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IShoot.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWaiting.cs" />
@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Objects\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
     <Compile Include="Assets\Scripts\Objects\Tower.cs" />
+    <Compile Include="Assets\Scripts\Systems\ChangeTransformSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\MoveSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\RotationSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\ShootSystem.cs" />

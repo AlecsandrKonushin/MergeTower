@@ -1,37 +1,21 @@
 ﻿using UnityEngine;
 
-public class MoveSystem : MonoBehaviour, IMove
+public class MoveSystem : ChangeTransformSystem
 {
-    private IListenerEndMove listenerEndMove;
-
-    private float speedMove = 5f;
     private Vector3 targetPosition;
 
-    private bool canMove;
-
-    public void Move()
+    protected override void SetData()
     {
-        if (canMove)
+        targetPosition = targetTransform.position;
+    }
+
+    protected override void ChangeTransform()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speedChange * Time.deltaTime);
+
+        if (transform.position == targetPosition)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speedMove * Time.deltaTime);
-
-            if (transform.position == targetPosition)
-            {
-                canMove = false;
-                listenerEndMove?.EndMove();
-            }
+            EndChangeTransform();
         }
-    }
-
-    public void SetPositionForMove(Vector3 targetPosition)
-    {
-        this.targetPosition = targetPosition;
-
-        canMove = true;
-    }
-
-    public void SetListenerEndMove(IListenerEndMove listener)
-    {
-        listenerEndMove = listener;
     }
 }

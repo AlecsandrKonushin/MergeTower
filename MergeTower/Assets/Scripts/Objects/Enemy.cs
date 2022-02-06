@@ -6,7 +6,7 @@
     {
         moveSystem = gameObject.AddComponent<MoveSystem>();
 
-        moveSystem.SetPositionForMove(PositionsScene.Instance.GetTargetEnemyPos.transform.position);
+        moveSystem.SetPositionForChange(PositionsScene.Instance.GetTargetEnemyPos.transform);
 
         UpdateController.Instance.AddMoveObject(moveSystem);
     }
