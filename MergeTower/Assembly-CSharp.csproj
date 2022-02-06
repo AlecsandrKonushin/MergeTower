@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
     <Compile Include="Assets\Scripts\Objects\Tower.cs" />
     <Compile Include="Assets\Scripts\Systems\MoveSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\RotationSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\ShootSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\TargetSystem.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />

@@ -16,16 +16,15 @@ public class ShootSystem : MonoBehaviour, IShoot
     public void SetTarget(Enemy enemyTarget)
     {
         target = enemyTarget;
+
+        Shoot();
     }
 
     public void Shoot()
     {
-        if (StatesGame.Instance.CanShoot)
+        if (target != null)
         {
-            if (target != null)
-            {
-
-            }
+            Debug.Log($"shoot on {target.gameObject.name}");
         }
     }
 }

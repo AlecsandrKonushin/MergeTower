@@ -25,15 +25,11 @@ public class ControllerEnemies : ControllerBase, IWaiting
             float zPos = PositionsScene.Instance.GetTargetEnemyPos.transform.position.z;
             float distance = zPos - enemy.transform.position.z;
 
-            Debug.Log($"zPos = {zPos}");
-            Debug.Log($"distance enemy[0] = {distance}");
-
             if (enemies.Count > 1)
             {
                 for (int i = 1; i < enemies.Count; i++)
                 {
                     float newDistance = zPos - enemies[i].transform.position.z;
-                    Debug.Log($"distance enemy[{i}] = {newDistance}");
 
                     if (newDistance < distance)
                     {
@@ -46,6 +42,8 @@ public class ControllerEnemies : ControllerBase, IWaiting
         return enemy;
     }
 
+    private int count = 0;
+
     public void StartSpawn()
     {
         TimeCome();
@@ -53,7 +51,10 @@ public class ControllerEnemies : ControllerBase, IWaiting
 
     public void TimeCome()
     {
-        CreateEnemy();
+        count++;
+        if (count > 1)
+            CreateEnemy();
+        
         TimeController.Instance.AddWaiting(this, 2f);
     }
 

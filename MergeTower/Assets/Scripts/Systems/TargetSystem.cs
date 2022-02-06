@@ -1,30 +1,47 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class TargetSystem : MonoBehaviour
 {
-    public delegate void NewTarget(Enemy enemy);
-    public event NewTarget EventNewTarget;
+    private Action<Enemy> waitTargetEnemy;
 
     private Enemy targetEnemy;
-    public Enemy GetTargetEnemy { get => targetEnemy; }
+
+    public void SubscribeOnGetTargetEnemy(Action<Enemy> function)
+    {
+        ChooseEnemyTarget();
+
+        if(targetEnemy != null)
+        {
+            function.Invoke(targetEnemy);
+        }
+        else
+        {
+            waitTargetEnemy = function;
+        }
+    }
 
     public void ChooseEnemyTarget()
     {
         targetEnemy = BoxControllers.GetController<ControllerEnemies>().GetFirstEnemy();
 
-        if(targetEnemy == null)
+        if (targetEnemy == null)
         {
             Debug.Log($"Нет цели для Tower. Enemy = null");
 
-            BoxControllers.GetController<ControllerEnemies>().EventNewEnemy += SpawnTarget;
+            BoxControllers.GetController<ControllerEnemies>().EventNewEnemy += TargetAppeared;
         }
     }
 
-    private void SpawnTarget(Enemy enemy)
+    private void TargetAppeared(Enemy enemy)
     {
-        BoxControllers.GetController<ControllerEnemies>().EventNewEnemy -= SpawnTarget;
+        BoxControllers.GetController<ControllerEnemies>().EventNewEnemy -= TargetAppeared;
         targetEnemy = enemy;
 
-        EventNewTarget?.Invoke(targetEnemy);
+        if (waitTargetEnemy != null)
+        {
+            waitTargetEnemy.Invoke(targetEnemy);
+            waitTargetEnemy = null;
+        }
     }
 }

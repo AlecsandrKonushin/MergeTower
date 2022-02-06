@@ -16,7 +16,7 @@ public class TimerWaiting : MonoBehaviour // TODO: прочитать про IDi
         this.time = time;
 
         timeGo = true;
-        isBusy = false;
+        isBusy = true;
     }
 
     private void Update()
@@ -31,7 +31,7 @@ public class TimerWaiting : MonoBehaviour // TODO: прочитать про IDi
 
                 waiting.TimeCome();
 
-                isBusy = true;
+                isBusy = false;
             }
         }
     }

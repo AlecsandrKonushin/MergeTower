@@ -12,7 +12,7 @@ public class TimeController : Singleton<TimeController>
         {
             foreach (var timer in timersWaiting)
             {
-                if (timer.GetIsBusy)
+                if (!timer.GetIsBusy)
                 {
                     currentTimer = timer;
                 }
@@ -21,7 +21,7 @@ public class TimeController : Singleton<TimeController>
 
         if (currentTimer == null)
         {
-            currentTimer = new TimerWaiting();
+            currentTimer = gameObject.AddComponent<TimerWaiting>();
             timersWaiting.Add(currentTimer);
         }
 
