@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ControllerTower
   m_EditorClassIdentifier: 
   towerPrefabs:
-  - {fileID: 6633380394739444449, guid: 6d78e495ee966e84397aeafbb3d129ca, type: 3}
+  - {fileID: 6633380394739444449, guid: 4c4d07b0fc4cd1b49bc77e14febc4dcf, type: 3}
