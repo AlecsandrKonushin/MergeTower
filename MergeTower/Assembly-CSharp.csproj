@@ -639,6 +639,9 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -657,6 +660,9 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
@@ -668,6 +674,18 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
