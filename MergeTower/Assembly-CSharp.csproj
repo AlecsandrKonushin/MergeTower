@@ -627,8 +627,14 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>E:/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
@@ -644,6 +650,12 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -674,18 +686,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>E:/Sourcetree/Alecsandr/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
