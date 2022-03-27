@@ -1483,7 +1483,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218743396}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: a2224ef56fca5ad4d99133d27af48090, type: 3}
+  m_Asset: {fileID: 0}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -6486,7 +6486,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a22ee81cebfd6e441aee58b17d9475db, type: 2}
+  - {fileID: 2100000, guid: f6cecfd4f0e5a344988e1d4901ea2277, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6930,7 +6930,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1bbfde92c969a74284317bf9c7da6b4, type: 2}
+  - {fileID: 2100000, guid: a22ee81cebfd6e441aee58b17d9475db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
