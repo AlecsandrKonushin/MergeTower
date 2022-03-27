@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Controllers\ControllerEnemies.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerGame.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerTowers.cs" />
+    <Compile Include="Assets\Scripts\Core\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IAwake.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerEndChange.cs" />
@@ -666,11 +667,17 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Editor">
       <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
@@ -686,12 +693,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
