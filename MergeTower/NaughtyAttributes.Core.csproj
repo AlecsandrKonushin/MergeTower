@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3CDE0DF9-E2FC-A44B-509B-6D423ABF92F6}</ProjectGuid>
+    <ProjectGuid>{3E3B7528-C447-B340-3376-BEDA7A61006F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>NaughtyAttributes.Core</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -64,48 +64,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Controllers\ControllerBase.cs" />
-    <Compile Include="Assets\Scripts\Controllers\ControllerEnemies.cs" />
-    <Compile Include="Assets\Scripts\Controllers\ControllerGame.cs" />
-    <Compile Include="Assets\Scripts\Controllers\ControllerTowers.cs" />
-    <Compile Include="Assets\Scripts\Core\Coroutines.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IAwake.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IListenerEndChange.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IMove.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IShoot.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IWaiting.cs" />
-    <Compile Include="Assets\Scripts\Main\ActionsGame.cs" />
-    <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
-    <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
-    <Compile Include="Assets\Scripts\Main\DontDestroy.cs" />
-    <Compile Include="Assets\Scripts\Main\PositionsScene.cs" />
-    <Compile Include="Assets\Scripts\Main\Singleton.cs" />
-    <Compile Include="Assets\Scripts\Main\StarterGame.cs" />
-    <Compile Include="Assets\Scripts\Main\StatesGame.cs" />
-    <Compile Include="Assets\Scripts\Main\Time\TimeController.cs" />
-    <Compile Include="Assets\Scripts\Main\Time\TimerWaiting.cs" />
-    <Compile Include="Assets\Scripts\Main\UpdateController.cs" />
-    <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Objects\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Objects\ObjectScene.cs" />
-    <Compile Include="Assets\Scripts\Objects\Tile.cs" />
-    <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
-    <Compile Include="Assets\Scripts\Objects\Tower.cs" />
-    <Compile Include="Assets\Scripts\Systems\ChangeTransformSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\MoveSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\RotationSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\ShootSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\TargetSystem.cs" />
-    <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
-    <Compile Include="Assets\Scripts\UI\ButtonMy.cs" />
-    <Compile Include="Assets\Scripts\UI\BuyTower.cs" />
-    <Compile Include="Assets\Scripts\UI\DataActionsUI.cs" />
-    <Compile Include="Assets\Scripts\UI\Panel.cs" />
-    <Compile Include="Assets\Scripts\UI\RestartPanel.cs" />
-    <Compile Include="Assets\Scripts\UI\TypeAnimationPanel.cs" />
-    <Compile Include="Assets\Scripts\UI\TypePanel.cs" />
-    <Compile Include="Assets\Scripts\UI\UIMain.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\AllowNestingAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\AnimatorParamAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\CurveRangeAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\DrawerAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\DropdownAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\EnumFlagsAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\Expandable.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\HorizontalLineAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\InfoBoxAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\InputAxisAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\LayerAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\MinMaxSliderAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\ProgressBarAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\ResizableTextAreaAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\SceneAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\ShowAssetPreviewAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\SortingLayerAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes\TagAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ButtonAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ReorderableListAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ShowNativePropertyAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\ShowNonSerializedFieldAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\DrawerAttributes_SpecialCase\SpecialCaseDrawerAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\INaughtyAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\BoxGroupAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\DisableIfAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\EnableIfAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\EnableIfAttributeBase.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\FoldoutAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\HideIfAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\IGroupAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\LabelAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\MetaAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\OnValueChangedAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\ShowIfAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\MetaAttributes\ShowIfAttributeBase.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\Utility\EColor.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\Utility\EConditionOperator.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\ValidatorAttributes\MaxValueAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\ValidatorAttributes\MinValueAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\ValidatorAttributes\RequiredAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\ValidatorAttributes\ValidateInputAttribute.cs" />
+    <Compile Include="Assets\Download\NaughtyAttributes\Scripts\Core\ValidatorAttributes\ValidatorAttribute.cs" />
+    <None Include="Assets\Download\NaughtyAttributes\Scripts\Core\NaughtyAttributes.Core.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -282,6 +285,24 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>P:/Projects/MergeTower/MergeTower/Library/PackageCache/com.unity.render-pipelines.core@7.4.3/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -628,87 +649,14 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>P:/Programs/Unity/2019.4.3f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Runtime">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.VisualEffectGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>P:/Projects/MergeTower/MergeTower/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="NaughtyAttributes.Editor.csproj">
-      <Project>{3B92CC6E-F239-0FA9-DEB1-41FEA522A970}</Project>
-      <Name>NaughtyAttributes.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{3E3B7528-C447-B340-3376-BEDA7A61006F}</Project>
-      <Name>NaughtyAttributes.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{EE6DF47A-DD82-7140-C904-F0143DF39AC4}</Project>
-      <Name>NaughtyAttributes.Test</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
