@@ -7,29 +7,29 @@ namespace Core
     {
         private const string NAME_OBJECT = "[COROUTINES_OBJECT]";
 
-        private static Coroutines instance => GetInstance();
-        private static Coroutines m_instance;
+        private static Coroutines Instance => GetInstance();
+        private static Coroutines instance;
 
         private static Coroutines GetInstance()
         {
-            if (m_instance == null)
+            if (instance == null)
             {
                 CreateCoroutines();
             }
 
-            return m_instance;
+            return instance;
         }
 
         private static Coroutines CreateCoroutines()
         {
-            m_instance = new GameObject(NAME_OBJECT).AddComponent<Coroutines>();
-            m_instance.hideFlags = HideFlags.HideAndDontSave;
-            return m_instance;
+            instance = new GameObject(NAME_OBJECT).AddComponent<Coroutines>();
+            instance.hideFlags = HideFlags.HideAndDontSave;
+            return instance;
         }
 
-        private static Coroutine StartRoutine(IEnumerator enumerator)
+        public static Coroutine StartRoutine(IEnumerator enumerator)
         {
-            return instance.StartCoroutine(enumerator);
+            return Instance.StartCoroutine(enumerator);
         }
     }
 }
