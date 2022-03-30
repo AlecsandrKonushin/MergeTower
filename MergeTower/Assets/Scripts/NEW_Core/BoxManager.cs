@@ -9,6 +9,7 @@ namespace Core
         public static GameSettings gameSettings { get; private set; }
 
         public static bool IsLogging = false;
+        public static SceneManager sceneManager { get; private set; }
 
         public static void Init(bool isLogging)
         {
@@ -19,15 +20,10 @@ namespace Core
 
         private static IEnumerator InitGameRoutine()
         {
-            InitGameSettings();
+            gameSettings = new GameSettings();
             yield return null;
 
 
-        }
-
-        private static void InitGameSettings()
-        {
-            gameSettings = new GameSettings();
         }
     }
 }

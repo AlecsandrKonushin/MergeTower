@@ -14,6 +14,8 @@ namespace Core
 
         private void Start()
         {
+            DontDestroyOnLoad(gameObject);
+
             BoxManager.Init(isLogging);
         }
 

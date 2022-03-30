@@ -1,43 +1,71 @@
 using Core.StorageSystem;
 using System;
 using System.Collections;
-using System.Collections.Generic;
+using System.IO;
+using System.Threading;
 using UnityEngine;
 
 public class FileStorage : Storage
 {
+    private const string PATH_FOLDER_SAVE = "Saves";
+
+    private string filePath { get; }
+
     public FileStorage(string fileName)
     {
+        var folderPath = $"{Application.persistentDataPath}/{PATH_FOLDER_SAVE}";
 
-    }
+        if (!Directory.Exists(folderPath))
+        {
+            Directory.CreateDirectory(folderPath);
+        }
 
-    protected override void LoadInternal()
-    {
-        throw new NotImplementedException();
-    }
-
-    protected override void LoadWithCallbackInternal(Action<GameData> callback = null)
-    {
-        throw new NotImplementedException();
-    }
-
-    protected override Coroutine LoadWithRoutineInternal(Action<GameData> callback = null)
-    {
-        throw new NotImplementedException();
+        filePath = $"{folderPath}/{fileName}";
     }
 
     protected override void SaveInternal()
     {
-        throw new NotImplementedException();
+        var file = File.Create(filePath);
+        m_formatter.Serialize(file, data);
+        file.Close();
     }
 
     protected override void SaveWithCallbackInternal(Action callback = null)
     {
-        throw new NotImplementedException();
+        var thread = new Thread(() => SaveDataInThread(callback));
+        thread.Start();
     }
 
-    protected override Coroutine SaveWithRoutineInternal(Action callback = null)
+    private void SaveDataInThread(Action callback)
     {
-        throw new NotImplementedException();
+        Save();
+        callback?.Invoke();
+    }
+
+    protected override void LoadInternal()
+    {
+        if (!File.Exists(filePath))
+        {
+            data = new GameData();
+            Save();
+        }
+        else
+        {
+            var file = File.Open(filePath, FileMode.Open);
+            data = (GameData)m_formatter.Deserialize(file);
+            file.Close();
+        }
+    }
+
+    protected override void LoadWithCallbackInternal(Action<GameData> callback = null)
+    {
+        var thread = new Thread(() => LoadDataInThread(callback));
+        thread.Start();
+    }
+
+    private void LoadDataInThread(Action<GameData> callback)
+    {
+        Load();
+        callback?.Invoke(data);
     }
 }

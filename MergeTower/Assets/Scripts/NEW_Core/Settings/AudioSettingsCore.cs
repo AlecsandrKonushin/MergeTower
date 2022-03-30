@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Core
 {
-    public class AudioSettings : ISettings
+    public class AudioSettingsCore : ISettings
     {
         protected const string KEY_AUDIO_SETTINGS = "AUDIO_SETTINGS";
 
@@ -34,7 +34,7 @@ namespace Core
             }
         }
 
-        public AudioSettings(Storage gameSettingsStorage)
+        public AudioSettingsCore(Storage gameSettingsStorage)
         {
             this.gameSettingsStorage = gameSettingsStorage;
 
