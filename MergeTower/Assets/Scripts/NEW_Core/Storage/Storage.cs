@@ -2,9 +2,9 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-namespace Core
+namespace Core.StorageSystem
 {
-    public abstract class Storage : MonoBehaviour
+    public abstract class Storage
     {
         private static BinaryFormatter formatter;
 
@@ -14,7 +14,7 @@ namespace Core
         {
             get
             {
-                if(formatter == null)
+                if (formatter == null)
                 {
                     formatter = new BinaryFormatter();
                 }
@@ -30,9 +30,9 @@ namespace Core
             SaveInternal();
         }
 
-        public void SaveAsync(Action callback = null)
+        public void SaveWithCallback(Action callback = null)
         {
-            SaveAsyncInternal(callback);
+            SaveWithCallbackInternal(callback);
         }
 
         public Coroutine SaveWithRoutine(Action callback = null)
@@ -41,7 +41,7 @@ namespace Core
         }
 
         protected abstract void SaveInternal();
-        protected abstract void SaveAsyncInternal(Action callback = null);
+        protected abstract void SaveWithCallbackInternal(Action callback = null);
         protected abstract Coroutine SaveWithRoutineInternal(Action callback = null);
 
         #endregion
@@ -53,18 +53,18 @@ namespace Core
             LoadInternal();
         }
 
-        public void LoadAsync(Action<GameData> callback = null)
+        public void LoadWithCallback(Action<GameData> callback = null)
         {
-            LoadAsyncInternal(callback);
+            LoadWithCallbackInternal(callback);
         }
 
         public Coroutine LoadWithRoutine(Action<GameData> callback = null)
         {
             return LoadWithRoutineInternal(callback);
-        } 
+        }
 
         protected abstract void LoadInternal();
-        protected abstract void LoadAsyncInternal(Action<GameData> callback = null);
+        protected abstract void LoadWithCallbackInternal(Action<GameData> callback = null);
         protected abstract Coroutine LoadWithRoutineInternal(Action<GameData> callback = null);
 
         #endregion
@@ -72,6 +72,16 @@ namespace Core
         public T Get<T>(string key)
         {
             return Data.Get<T>(key);
+        }
+
+        public T Get<T>(string key, T valueByDefault)
+        {
+            return Data.Get<T>(key, valueByDefault);
+        }
+
+        public void Set<T>(string key, T value)
+        {
+            Data.Set(key, value);
         }
     }
 }

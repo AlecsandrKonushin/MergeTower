@@ -6,9 +6,15 @@ namespace Core
 {
     public class BoxManager
     {
-        public static void Init()
-        {
+        public static GameSettings gameSettings { get; private set; }
 
+        public static bool IsLogging = false;
+
+        public static void Init(bool isLogging)
+        {
+            IsLogging = isLogging;
+
+            Coroutines.StartRoutine(InitGameRoutine());
         }
 
         private static IEnumerator InitGameRoutine()
@@ -21,7 +27,7 @@ namespace Core
 
         private static void InitGameSettings()
         {
-
+            gameSettings = new GameSettings();
         }
     }
 }

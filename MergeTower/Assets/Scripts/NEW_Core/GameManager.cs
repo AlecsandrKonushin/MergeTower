@@ -14,7 +14,7 @@ namespace Core
 
         private void Start()
         {
-            BoxManager.Init();
+            BoxManager.Init(isLogging);
         }
 
         private void OnApplicationPause(bool pause)

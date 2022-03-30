@@ -1,16 +1,17 @@
+using Core.StorageSystem;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
 {
-    public class AudioSettings : MonoBehaviour
+    public class AudioSettings : ISettings
     {
+        protected const string KEY_AUDIO_SETTINGS = "AUDIO_SETTINGS";
+
         public event Action VolumeMusicChange;
         public event Action VolumeSoundsChange;
 
-        private Storage storage;
+        private Storage gameSettingsStorage;
         private AudioSettingsData audioData;
 
         public float VolumeMusic
@@ -31,6 +32,21 @@ namespace Core
                 audioData.VolumeSounds = Mathf.Clamp(value, 0f, 1f);
                 VolumeSoundsChange?.Invoke();
             }
+        }
+
+        public AudioSettings(Storage gameSettingsStorage)
+        {
+            this.gameSettingsStorage = gameSettingsStorage;
+
+            var audioDataByDefault = new AudioSettingsData();
+            var loadedData = gameSettingsStorage.Get(KEY_AUDIO_SETTINGS, audioDataByDefault);
+            audioData = loadedData;
+        }
+
+        public void Save()
+        {
+            gameSettingsStorage.Set(KEY_AUDIO_SETTINGS, audioData);
+            gameSettingsStorage.Save();
         }
     }
 }

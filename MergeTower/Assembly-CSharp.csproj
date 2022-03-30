@@ -86,8 +86,8 @@
     <Compile Include="Assets\Scripts\UI\BuyTower.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Interface\ISettings.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerEnemies.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\GameData.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\Storage.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Storage\GameData.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Storage\Storage.cs" />
     <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerEndChange.cs" />
     <Compile Include="Assets\Scripts\Main\Time\TimerWaiting.cs" />
@@ -106,6 +106,7 @@
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Main\Time\TimeController.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Storage\FileStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
