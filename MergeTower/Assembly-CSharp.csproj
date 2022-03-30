@@ -72,7 +72,7 @@
     <Compile Include="Assets\Scripts\Main\ActionsGame.cs" />
     <Compile Include="Assets\Scripts\Objects\Tile.cs" />
     <Compile Include="Assets\Scripts\UI\TypeAnimationPanel.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\SCRO_SceneManagers.cs" />
     <Compile Include="Assets\Scripts\Systems\ChangeTransformSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\RotationSystem.cs" />
     <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
@@ -108,7 +108,6 @@
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Main\Time\TimeController.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\SceneConfig.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\ClassReferenceAttribute.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Interface\IManager.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\BaseManager.cs" />

@@ -1,4 +1,6 @@
-public class BaseManager : IManager
+using UnityEngine;
+
+public class BaseManager : ScriptableObject, IManager
 {
     public virtual void OnInitialize() { }
 
