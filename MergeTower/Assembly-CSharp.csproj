@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Main\StarterGame.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IWaiting.cs" />
     <Compile Include="Assets\Scripts\UI\TypePanel.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Settings\AudioSettingsData.cs" />
     <Compile Include="Assets\Scripts\Main\ActionsGame.cs" />
     <Compile Include="Assets\Scripts\Objects\Tile.cs" />
     <Compile Include="Assets\Scripts\UI\TypeAnimationPanel.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\Systems\RotationSystem.cs" />
     <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
     <Compile Include="Assets\Scripts\UI\RestartPanel.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Settings\AudioSettings.cs" />
     <Compile Include="Assets\Scripts\UI\UIMain.cs" />
     <Compile Include="Assets\Scripts\Systems\ShootSystem.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IMove.cs" />
@@ -82,10 +84,14 @@
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
     <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
     <Compile Include="Assets\Scripts\UI\BuyTower.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Interface\ISettings.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerEnemies.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\GameData.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Storage.cs" />
     <Compile Include="Assets\Scripts\Objects\Bullet.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerEndChange.cs" />
     <Compile Include="Assets\Scripts\Main\Time\TimerWaiting.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\BoxManager.cs" />
     <Compile Include="Assets\Scripts\UI\Panel.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerTowers.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IListenerBuyTower.cs" />
@@ -93,19 +99,13 @@
     <Compile Include="Assets\Scripts\Controllers\ControllerGame.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonMy.cs" />
     <Compile Include="Assets\Scripts\Objects\Tower.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\GameManager.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Settings\GameSettings.cs" />
     <Compile Include="Assets\Scripts\Main\UpdateController.cs" />
     <Compile Include="Assets\Scripts\Main\StatesGame.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Main\Time\TimeController.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\GameManager.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\BoxManager.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\Settings\GameSettings.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\Interface\ISettings.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\Settings\AudioSettings.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\Settings\AudioSettingsData.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\Storage.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\GameData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
