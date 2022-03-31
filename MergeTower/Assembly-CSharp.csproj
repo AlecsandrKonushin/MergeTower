@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\UI\TypeAnimationPanel.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\SCRO_SceneManagers.cs" />
     <Compile Include="Assets\Scripts\Systems\ChangeTransformSystem.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\Interface\IManager.cs" />
     <Compile Include="Assets\Scripts\Systems\RotationSystem.cs" />
     <Compile Include="Assets\Scripts\Main\CreatorObjects.cs" />
     <Compile Include="Assets\Scripts\UI\RestartPanel.cs" />
@@ -87,6 +88,8 @@
     <Compile Include="Assets\Scripts\Main\BoxControllers.cs" />
     <Compile Include="Assets\Scripts\UI\BuyTower.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Interface\ISettings.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\ClassReferenceAttribute.cs" />
+    <Compile Include="Assets\Scripts\NEW_Core\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Controllers\ControllerEnemies.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Storage\GameData.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Storage\Storage.cs" />
@@ -108,9 +111,6 @@
     <Compile Include="Assets\Scripts\UI\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\NEW_Core\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Main\Time\TimeController.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\ClassReferenceAttribute.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\Interface\IManager.cs" />
-    <Compile Include="Assets\Scripts\NEW_Core\BaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
