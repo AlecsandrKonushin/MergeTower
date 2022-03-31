@@ -10,11 +10,15 @@ namespace Core
         public static event Action FocusedApplication;
         public static event Action UnfocusedApplication;
 
+        [SerializeField] private GameObject obj;
+        [SerializeField] private SCRO_SceneManagers sceneManagers;
         [SerializeField] private bool isLogging;
 
         private void Start()
         {
-            BoxManager.Init();
+            DontDestroyOnLoad(gameObject);
+
+            BoxManager.Init(sceneManagers, isLogging);
         }
 
         private void OnApplicationPause(bool pause)
