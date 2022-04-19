@@ -1,5 +1,3 @@
-public interface IManager
+public interface IManager : IInitialize
 {
-    void OnInitialize();
-    void OnStart();
 }
