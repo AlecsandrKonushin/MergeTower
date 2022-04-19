@@ -1,209 +1,163 @@
+Unity Editor version:    2020.3.30f1 (1fb1bf06830e)
+Branch:                  2020.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.2.1 (Build 21D62)
+Darwin version:          21.3.0
+Architecture:            x86_64
+Running under Rosetta:   YES
+Available memory:        16384 MB
 Using pre-set license
-Built from '2020.3/staging' branch; Version is '2020.3.30f1 (1fb1bf06830e) revision 2077119'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'ru' Physical Memory: 16249 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+Pro License: NO
 
 COMMAND LINE ARGUMENTS:
-E:\programm\Unity Hub\Unity Vers\2020.3.30f1\Editor\Unity.exe
+/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-E:/Sourcetree/Alecsandr/MergeTower
+/Users/artur/Documents/Orher/MergeTower/MergeTower
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50221
-Successfully changed project path to: E:/Sourcetree/Alecsandr/MergeTower
-E:/Sourcetree/Alecsandr/MergeTower
+52277
+Successfully changed project path to: /Users/artur/Documents/Orher/MergeTower/MergeTower
+/Users/artur/Documents/Orher/MergeTower/MergeTower
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 47.84 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 58.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
-[Subsystems] Discovering subsystems at path E:/programm/Unity Hub/Unity Vers/2020.3.30f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/Sourcetree/Alecsandr/MergeTower/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/artur/Documents/Orher/MergeTower/MergeTower/Assets
 GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2182)
-    Vendor:   
-    VRAM:     5991 MB
-    Driver:   30.0.15.1179
+2022-04-19 17:49:24.450 Unity[30461:301086] (null) preferred device: Apple M1 (high power)
+2022-04-19 17:49:24.450 Unity[30461:301086] Metal devices available: 1
+2022-04-19 17:49:24.450 Unity[30461:301086] 0: Apple M1 (high power)
+2022-04-19 17:49:24.450 Unity[30461:301086] Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
 Initialize mono
-Mono path[0] = 'E:/programm/Unity Hub/Unity Vers/2020.3.30f1/Editor/Data/Managed'
-Mono path[1] = 'E:/programm/Unity Hub/Unity Vers/2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'E:/programm/Unity Hub/Unity Vers/2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56744
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56461
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/programm/Unity Hub/Unity Vers/2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000765 seconds.
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 50.69 ms, found 2 plugins.
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.001840 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 58.57 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.477 seconds
+- Completed reload, in  1.119 seconds
 Domain Reload Profiling:
-	ReloadAssembly (477ms)
-		BeginReloadAssembly (42ms)
+	ReloadAssembly (1119ms)
+		BeginReloadAssembly (101ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (382ms)
-			LoadAssemblies (41ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (907ms)
+			LoadAssemblies (99ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (115ms)
+			SetupTypeCache (177ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (148ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (450ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (51ms)
-				BeforeProcessingInitializeOnLoad (12ms)
-				ProcessInitializeOnLoadAttributes (61ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
+				RefreshPlugins (59ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (232ms)
+				ProcessInitializeOnLoadMethodAttributes (80ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001790 seconds.
+Registered in 0.003009 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 50.59 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 59.35 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.906 seconds
+- Completed reload, in  2.049 seconds
 Domain Reload Profiling:
-	ReloadAssembly (906ms)
-		BeginReloadAssembly (108ms)
+	ReloadAssembly (2051ms)
+		BeginReloadAssembly (226ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (28ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (756ms)
-			LoadAssemblies (68ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (1741ms)
+			LoadAssemblies (167ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (265ms)
+			SetupTypeCache (389ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (276ms)
+			RebuildScriptCaches (82ms)
+			SetupLoadedEditorAssemblies (839ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (51ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (145ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (59ms)
+				BeforeProcessingInitializeOnLoad (169ms)
+				ProcessInitializeOnLoadAttributes (570ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
 Platform modules already initialized, skipping
+Validating Project structure ... 0.002941 seconds.
+Shader import version has changed; will reimport all shaders...
+Upgrading shader files ...0.002915 seconds.
+Application.AssetDatabase Initial Script Refresh Start
+RefreshInfo: InitialScriptRefreshV2(NoUpdateAssetOptions) scanfilter:  ... 1 filters
+RefreshProfiler: Total: 0.000ms
+Application.AssetDatabase Initial Script Refresh End
+Application.AssetDatabase.Refresh Start
+Application.AssetDatabase.Refresh End
+RefreshInfo: StopAssetImportingV2(ForceSynchronousImport) scanfilter: 
+RefreshProfiler: Total: 0.000ms
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Initializing Unity extensions:
+2022-04-19 17:49:29.438 Unity[30461:301086] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600002a773a0 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+2022-04-19 17:49:29.442 Unity[30461:301086] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x600002a5d810 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3622 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 242.9 MB.
-System memory in use after: 243.1 MB.
+Unloading 3642 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 286.6 MB.
+System memory in use after: 285.2 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4079.
-Total: 2.619400 ms (FindLiveObjects: 0.221200 ms CreateObjectMapping: 0.153600 ms MarkObjects: 2.172800 ms  DeleteObjects: 0.071200 ms)
+Unloading 219 unused Assets to reduce memory usage. Loaded Objects now: 4104.
+Total: 3.115333 ms (FindLiveObjects: 0.215750 ms CreateObjectMapping: 0.110041 ms MarkObjects: 2.347834 ms  DeleteObjects: 0.440833 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/flash_effect/ConeMuzzle_02.fbx
-  artifactKey: Guid(799c63747fdd5c34592a48711f14c8bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/flash_effect/ConeMuzzle_02.fbx using Guid(799c63747fdd5c34592a48711f14c8bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c30270e50dd2c9ed7086950b1333216') in 0.264309 seconds 
+  path: Assets/Scripts/Controllers
+  artifactKey: Guid(0f627e745b81bf145b664ab6a0790035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers using Guid(0f627e745b81bf145b664ab6a0790035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e131e0633ccc9950569010ff85be3c35') in 0.008837 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/flash_effect/MuzzlePlanes_02.fbx
-  artifactKey: Guid(7f63e95b077034645be9ddead5797746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/flash_effect/MuzzlePlanes_02.fbx using Guid(7f63e95b077034645be9ddead5797746) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5959dfce7a334f363feb955dcbacd8dd') in 0.013302 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 133.076056 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b95a0bc81582409d98926255564cd2b') in 0.008133 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.695488 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '928eb6f8afa45ec52656c726070c4150') in 0.002467 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.759881 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cd48165a763457313f17aab66653156') in 0.003002 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 173.475421 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '150208b157d9cef0688206f293bf8f7c') in 0.002647 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.220968 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e76902d886bc4bab69a5590d4391f8f') in 0.002712 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.954521 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc72ab152da74f031e29cfe678f803b7') in 0.002910 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 15.233440 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '996f16f6758c44854c11374299d85a7b') in 0.002759 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 36.395938 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f0d4c14ba4c55267857633e87d0dc9d') in 0.002802 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 152.238650 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14631ed4caf4ab929ebb9c8dcb08729a') in 0.002477 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.266348 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aa8d1cc983a2e034d66c06b4f8b4f56') in 0.002851 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.573495 seconds.
-  path: Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx
-  artifactKey: Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Visual/Effects_Shaders/VFX_dop/Shoot.vfx using Guid(1ef763581c9b53948ba0202d97bd5b0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f253d156f9ea03003a90ce714a782b5f') in 0.002657 seconds 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+  Time since last request: 0.000210 seconds.
+  path: Assets/Scripts/Controllers/ControllerBase.cs
+  artifactKey: Guid(843c79d302a4c6343a61163dadcd1541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Controllers/ControllerBase.cs using Guid(843c79d302a4c6343a61163dadcd1541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b74e080a03a13a2c87897061569924d') in 0.963998 seconds 
