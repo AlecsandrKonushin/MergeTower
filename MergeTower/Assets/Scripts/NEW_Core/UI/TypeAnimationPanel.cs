@@ -1,4 +1,4 @@
-﻿public enum TypeAnimationPanel
+﻿public enum TypeAnimationUI
 { 
     Show,
     Hide,

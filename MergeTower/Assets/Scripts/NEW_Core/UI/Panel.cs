@@ -33,11 +33,11 @@ public class Panel : MonoBehaviour
 
         foreach (var anim in animations)
         {
-            if (anim.name == TypeAnimationPanel.Show.ToString())
+            if (anim.name == TypeAnimationUI.Show.ToString())
                 timeShow = anim.length;
-            if (anim.name == TypeAnimationPanel.Hide.ToString())
+            if (anim.name == TypeAnimationUI.Hide.ToString())
                 timeHide = anim.length;
-            if (anim.name == TypeAnimationPanel.Change.ToString())
+            if (anim.name == TypeAnimationUI.Change.ToString())
                 timeChange = anim.length;
         }
     }
@@ -60,7 +60,7 @@ public class Panel : MonoBehaviour
 
     public void HidePanel()
     {
-        background.GetComponent<Animator>().SetTrigger(TypeAnimationPanel.Hide.ToString());
+        background.GetComponent<Animator>().SetTrigger(TypeAnimationUI.Hide.ToString());
         StartCoroutine(CoEndHidePanel());
     }
 
@@ -82,7 +82,7 @@ public class Panel : MonoBehaviour
 
     public void ChangePanel()
     {
-        background.GetComponent<Animator>().SetTrigger(TypeAnimationPanel.Change.ToString());
+        background.GetComponent<Animator>().SetTrigger(TypeAnimationUI.Change.ToString());
         StartCoroutine(CoEndChangePanel());
 
         ChangeDataPanel();
