@@ -8,9 +8,14 @@ namespace UI
     {
         public event Action<IUIElement> ClickCloseButton;
 
-        [SerializeField] private Button buttonClose;
+        private ButtonClose buttonClose;
 
-        protected void OnClickButtonClick()
+        public override void OnStart()
+        {
+            buttonClose = GetComponentInChildren<ButtonClose>();
+        }
+
+        protected void OnClickButtonClose()
         {
             BeforeClickButtonClose();
             Hide();

@@ -56,7 +56,9 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/UIWindow.cs" />
     <Compile Include="Assets/Scripts/Old/Interfaces/IAwake.cs" />
+    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/Buttons/MyButton.cs" />
     <Compile Include="Assets/Scripts/Objects/ObjectScene.cs" />
     <Compile Include="Assets/Scripts/Main/PositionsScene.cs" />
     <Compile Include="Assets/Scripts/Objects/Enemy.cs" />
@@ -78,14 +80,17 @@
     <Compile Include="Assets/Scripts/Old/Systems/RotationSystem.cs" />
     <Compile Include="Assets/Scripts/Main/CreatorObjects.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/UI/RestartPanel.cs" />
+    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/UIController.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/Settings/AudioSettingsCore.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/UI/UIMain.cs" />
     <Compile Include="Assets/Scripts/Old/Systems/ShootSystem.cs" />
     <Compile Include="Assets/Scripts/Old/Interfaces/IMove.cs" />
+    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/UIElement.cs" />
     <Compile Include="Assets/Scripts/Main/Singleton.cs" />
     <Compile Include="Assets/Scripts/Old/Controllers/ControllerBase.cs" />
     <Compile Include="Assets/Scripts/Objects/TilesParent.cs" />
     <Compile Include="Assets/Scripts/Main/BoxControllers.cs" />
+    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/Buttons/ButtonClose.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/UI/BuyTower.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/Interface/ISettings.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/ClassReferenceAttribute.cs" />
@@ -104,18 +109,16 @@
     <Compile Include="Assets/Scripts/Old/Controllers/ControllerGame.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/UI/ButtonMy.cs" />
     <Compile Include="Assets/Scripts/Objects/Tower.cs" />
+    <Compile Include="Assets/Scripts/NEW_Core/Interface/IUIElement.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/GameManager.cs" />
+    <Compile Include="Assets/Scripts/NEW_Core/Interface/IInitialize.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/Settings/GameSettings.cs" />
     <Compile Include="Assets/Scripts/Main/UpdateController.cs" />
     <Compile Include="Assets/Scripts/Main/StatesGame.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/UI/ButtonBuyTower.cs" />
     <Compile Include="Assets/Scripts/NEW_Core/Coroutines.cs" />
     <Compile Include="Assets/Scripts/Main/Time/TimeController.cs" />
-    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/UIController.cs" />
-    <Compile Include="Assets/Scripts/NEW_Core/Interface/IUIElement.cs" />
-    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/UIWindow.cs" />
-    <Compile Include="Assets/Scripts/NEW_Core/Interface/IInitialize.cs" />
-    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/UIElement.cs" />
+    <Compile Include="Assets/Scripts/NEW_Core/UI/NEW/Windows/SettingsWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -330,6 +333,12 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/Hub/Editor/2020.3.30f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/Hub/Editor/2020.3.30f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.30f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
