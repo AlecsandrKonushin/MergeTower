@@ -29,7 +29,7 @@ namespace Core
             gameSettings = new GameSettings();
             yield return null;
 
-            CreateControllers();
+            CreateManagers();
             yield return null;
 
             InitManagers();
@@ -39,7 +39,7 @@ namespace Core
             yield return null;
         }
 
-        private static void CreateControllers()
+        private static void CreateManagers()
         {
             foreach (var manager in sceneManagers.GetManagers)
             {

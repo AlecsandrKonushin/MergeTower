@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 
-public class RotationSystem : ChangeTransformSystem
+namespace MoveSystem
 {
-    protected override void ChangeTransform()
+    public class RotationObjectSystem : ChangeTransformSystem
     {
-        if (targetTransform != null)
+        protected override void ChangeTransform()
         {
-            Vector3 LookPosition = new Vector3(targetTransform.transform.position.x, this.transform.position.y, targetTransform.transform.position.z);
+            if (targetTransform != null)
+            {
+                Vector3 LookPosition = new Vector3(targetTransform.transform.position.x, this.transform.position.y, targetTransform.transform.position.z);
 
-            transform.LookAt(LookPosition);
-        }
-        else
-        {
-            EndChangeTransform();
+                transform.LookAt(LookPosition);
+            }
+            else
+            {
+                EndChangeTransform();
+            }
         }
     }
 }

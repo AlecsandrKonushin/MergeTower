@@ -1,47 +1,46 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
-public class ChangeTransformSystem : MonoBehaviour, IMove
+namespace MoveSystem
 {
-    protected IListenerEndChange listenerEndChange;
-
-    protected float speedChange = 5f;
-    protected Transform targetTransform;
-
-    protected bool canChange;
-
-    public void Move()
+    public class ChangeTransformSystem : MonoBehaviour, IMove
     {
-        if (canChange)
+        public UnityEvent listenerEndChange;
+
+        protected float speedChange = 5f;
+        protected Transform targetTransform;
+
+        protected bool canChange;
+
+        public void Move()
         {
-            if (targetTransform != null)
+            if (canChange)
             {
-                ChangeTransform();
-            }
-            else
-            {
-                EndChangeTransform();
+                if (targetTransform != null)
+                {
+                    ChangeTransform();
+                }
+                else
+                {
+                    //EndChangeTransform();
+                }
             }
         }
-    }
 
-    public void SetPositionForChange(Transform targetTransform)
-    {
-        this.targetTransform = targetTransform;
-        SetData();
-        canChange = true;
-    }
+        public void SetPositionForChange(Transform targetTransform)
+        {
+            this.targetTransform = targetTransform;
+            SetData();
+            canChange = true;
+        }
 
-    public void SetListenerEndChange(IListenerEndChange listener)
-    {
-        listenerEndChange = listener;
-    }
+        protected virtual void ChangeTransform() { }
+        protected virtual void SetData() { }
 
-    protected virtual void ChangeTransform() { }
-    protected virtual void SetData() { }
-
-    protected void EndChangeTransform()
-    {
-        canChange = false;
-        listenerEndChange?.EndMove();
+        protected void EndChangeTransform()
+        {
+            canChange = false;
+            listenerEndChange?.Invoke();
+        }
     }
 }

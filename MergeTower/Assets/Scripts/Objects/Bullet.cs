@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
+using MoveSystem;
 
-public class Bullet : MonoBehaviour
+namespace ShootSystem
 {
-    private MoveSystem moveSystem;
+    public class Bullet : MonoBehaviour
+    {
+        private MoveObjectSystem moveObjectSystem;
+    }
 }

@@ -23,19 +23,19 @@ public class TargetSystem : MonoBehaviour
 
     public void ChooseEnemyTarget()
     {
-        targetEnemy = BoxControllers.GetController<ControllerEnemies>().GetFirstEnemy();
+        targetEnemy = BoxControllers.GetController<EnemiesManager>().GetFirstEnemy();
 
         if (targetEnemy == null)
         {
             Debug.Log($"Нет цели для Tower. Enemy = null");
 
-            BoxControllers.GetController<ControllerEnemies>().EventNewEnemy += TargetAppeared;
+            BoxControllers.GetController<EnemiesManager>().EventNewEnemy += TargetAppeared;
         }
     }
 
     private void TargetAppeared(Enemy enemy)
     {
-        BoxControllers.GetController<ControllerEnemies>().EventNewEnemy -= TargetAppeared;
+        BoxControllers.GetController<EnemiesManager>().EventNewEnemy -= TargetAppeared;
         targetEnemy = enemy;
 
         if (waitTargetEnemy != null)

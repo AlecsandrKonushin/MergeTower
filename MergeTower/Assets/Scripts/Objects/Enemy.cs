@@ -1,13 +1,16 @@
-﻿public class Enemy : ObjectScene
+﻿using MoveSystem;
+using Core;
+
+public class Enemy : ObjectScene
 {
-    private MoveSystem moveSystem;
+    private MoveObjectSystem moveSystem;
 
     public override void InitObject()
     {
-        moveSystem = gameObject.AddComponent<MoveSystem>();
+        moveSystem = gameObject.AddComponent<MoveObjectSystem>();
 
         moveSystem.SetPositionForChange(PositionsScene.Instance.GetTargetEnemyPos.transform);
 
-        UpdateController.Instance.AddMoveObject(moveSystem);
+       // UpdateGame.Instance.AddMoveObject(moveSystem);
     }
 }

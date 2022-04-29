@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class TilesParent : Singleton<TilesParent>
+public class TilesParent : MonoBehaviour
 {
     private Tile[] tiles;
 
     private List<Tile> freeTiles = new List<Tile>();
 
-    protected override void AfterAwaik()
+    protected void Awake()
     {
         tiles = GetComponentsInChildren<Tile>();
         freeTiles.AddRange(tiles);
