@@ -30,7 +30,7 @@ namespace Core.StorageSystem
 
             if(Keys.Count != Values.Count)
             {
-                Debug.Log($"Кол-во ключей не равно кол-ву значений!");
+                Debug.Log($"???-?? ?????? != ???-?? ????????!");
             }
 
             for (int i = 0; i < Keys.Count; i++)
