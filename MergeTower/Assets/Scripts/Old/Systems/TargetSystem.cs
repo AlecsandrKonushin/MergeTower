@@ -1,4 +1,5 @@
 ﻿using System;
+using Core;
 using UnityEngine;
 
 public class TargetSystem : MonoBehaviour
@@ -23,19 +24,19 @@ public class TargetSystem : MonoBehaviour
 
     public void ChooseEnemyTarget()
     {
-        targetEnemy = BoxControllers.GetController<EnemiesManager>().GetFirstEnemy();
+        targetEnemy = BoxManager.GetManager<EnemiesManager>().GetFirstEnemy();
 
         if (targetEnemy == null)
         {
             Debug.Log($"Нет цели для Tower. Enemy = null");
 
-            BoxControllers.GetController<EnemiesManager>().EventNewEnemy += TargetAppeared;
+            BoxManager.GetManager<EnemiesManager>().EventNewEnemy += TargetAppeared;
         }
     }
 
     private void TargetAppeared(Enemy enemy)
     {
-        BoxControllers.GetController<EnemiesManager>().EventNewEnemy -= TargetAppeared;
+        BoxManager.GetManager<EnemiesManager>().EventNewEnemy -= TargetAppeared;
         targetEnemy = enemy;
 
         if (waitTargetEnemy != null)

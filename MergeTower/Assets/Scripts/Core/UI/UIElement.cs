@@ -56,7 +56,7 @@ namespace UI
 
                 if (haveAnimation)
                 {
-                    StartCoroutine(CoShowAnimation(TypeAnimationUI.Show, () => { AfterAnimationShow(); }));
+                    StartCoroutine(CoShowAnimation(TypeAnimation.Show, () => { AfterAnimationShow(); }));
                 }
                 else
                 {
@@ -81,7 +81,7 @@ namespace UI
 
                 if (haveAnimation)
                 {
-                    StartCoroutine(CoShowAnimation(TypeAnimationUI.Show, () => { AfterAnimationHide(); }));
+                    StartCoroutine(CoShowAnimation(TypeAnimation.Hide, () => { AfterAnimationHide(); }));
                 }
                 else
                 {
@@ -146,35 +146,35 @@ namespace UI
 
             foreach (var anim in animations)
             {
-                if (anim.name == TypeAnimationUI.Show.ToString())
+                if (anim.name == TypeAnimation.Show.ToString())
                 {
                     timeShow = anim.length;
                 }
-                if (anim.name == TypeAnimationUI.Hide.ToString())
+                if (anim.name == TypeAnimation.Hide.ToString())
                 {
                     timeHide = anim.length;
                 }
-                if (anim.name == TypeAnimationUI.Change.ToString())
+                if (anim.name == TypeAnimation.Change.ToString())
                 {
                     timeChange = anim.length;
                 }
             }
         }
 
-        private IEnumerator CoShowAnimation(TypeAnimationUI typeAnimation, Action callBack = null)
+        private IEnumerator CoShowAnimation(TypeAnimation typeAnimation, Action callBack = null)
         {
             animator.SetTrigger(typeAnimation.ToString());
             float timeWait = 0;
 
-            if (typeAnimation == TypeAnimationUI.Show)
+            if (typeAnimation == TypeAnimation.Show)
             {
                 timeWait = timeShow;
             }
-            else if (typeAnimation == TypeAnimationUI.Hide)
+            else if (typeAnimation == TypeAnimation.Hide)
             {
                 timeWait = timeHide;
             }
-            else if (typeAnimation == TypeAnimationUI.Change)
+            else if (typeAnimation == TypeAnimation.Change)
             {
                 timeWait = timeChange;
             }
