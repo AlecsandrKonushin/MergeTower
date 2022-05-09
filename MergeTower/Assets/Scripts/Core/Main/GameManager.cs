@@ -5,12 +5,15 @@ namespace Core
 {
     public class GameManager : MonoBehaviour
     {
+        #region ACTIONS
+
         public static event Action PausedApplication;
         public static event Action UnpausedApplication;
         public static event Action FocusedApplication;
         public static event Action UnfocusedApplication;
 
-        [SerializeField] private GameObject obj;
+        #endregion ACTIONS
+
         [SerializeField] private SCRO_SceneManagers sceneManagers;
         [SerializeField] private bool isLogging;
 
@@ -18,7 +21,16 @@ namespace Core
         {
             DontDestroyOnLoad(gameObject);
 
-            BoxManager.Init(sceneManagers, isLogging);
+            CreateCreator();
+            //BoxManager.Init(sceneManagers, isLogging);
+        }
+
+        private void CreateCreator()
+        {
+            GameObject newObject = new GameObject();
+            newObject.name = "CREATOR";
+            Creator creator = newObject.AddComponent<Creator>();
+            creator.OnInitialize();
         }
 
         private void OnApplicationPause(bool pause)

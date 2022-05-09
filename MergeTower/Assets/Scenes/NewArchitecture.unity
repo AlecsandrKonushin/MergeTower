@@ -166,8 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf784e002a95f9642867ee588676ada4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  sceneManagers: {fileID: 0}
+  sceneManagers: {fileID: 11400000, guid: 6bdb5a0bdf7795e4c9cf08a2c3cfc9f6, type: 2}
   isLogging: 0
 --- !u!1 &1819578077
 GameObject:
