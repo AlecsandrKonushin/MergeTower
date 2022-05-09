@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189b0a23cf959444ab663d05c824e305, type: 3}
   m_Name: SCRO_SceneManager_Game
   m_EditorClassIdentifier: 
-  managers: []
+  managers:
+  - {fileID: 11400000, guid: 5ba4180c436f8c84482e230727cf0f94, type: 2}
   GetManagers: []

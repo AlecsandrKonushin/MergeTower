@@ -26,9 +26,6 @@ namespace Core
 
         private static IEnumerator InitGameRoutine()
         {
-            gameSettings = new GameSettings();
-            yield return null;
-
             CreateManagers();
             yield return null;
 

@@ -5,8 +5,6 @@ namespace Core
 {
     public class Coroutines : MonoBehaviour
     {
-        private const string NAME_OBJECT = "[COROUTINES_OBJECT]";
-
         private static Coroutines Instance => GetInstance();
         private static Coroutines instance;
 
@@ -22,7 +20,7 @@ namespace Core
 
         private static Coroutines CreateCoroutines()
         {
-            instance = new GameObject(NAME_OBJECT).AddComponent<Coroutines>();
+            instance = new GameObject(DataNames.CoroutinesName).AddComponent<Coroutines>();
             instance.hideFlags = HideFlags.HideAndDontSave;
             return instance;
         }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "ControllerTowers", menuName = "Controllers/ControllerTowers")]
+    [CreateAssetMenu(fileName = "TowersManager", menuName = "Managers/TowersManager")]
     public class TowersManager : BaseManager
     {
         [SerializeField] private Tower[] towerPrefabs;

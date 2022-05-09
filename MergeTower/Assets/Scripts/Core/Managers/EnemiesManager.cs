@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Core
 {
-    [CreateAssetMenu(fileName = "ControllerEnemies", menuName = "Controllers/ControllerEnemies")]
+    [CreateAssetMenu(fileName = "EnemiesManager", menuName = "Managers/EnemiesManager")]
     public class EnemiesManager : BaseManager, IWaiting
     {
         public delegate void NewEnemy(Enemy enemy);

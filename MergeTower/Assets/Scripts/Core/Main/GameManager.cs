@@ -19,18 +19,7 @@ namespace Core
 
         private void Start()
         {
-            DontDestroyOnLoad(gameObject);
-
-            CreateCreator();
-            //BoxManager.Init(sceneManagers, isLogging);
-        }
-
-        private void CreateCreator()
-        {
-            GameObject newObject = new GameObject();
-            newObject.name = "CREATOR";
-            Creator creator = newObject.AddComponent<Creator>();
-            creator.OnInitialize();
+            BoxManager.Init(sceneManagers, isLogging);
         }
 
         private void OnApplicationPause(bool pause)
