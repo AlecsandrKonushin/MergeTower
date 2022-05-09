@@ -13,6 +13,7 @@ namespace Core
         private static SCRO_SceneManagers sceneManagers;
 
         private static bool isLogging = false;
+        public static bool GetIsLogging { get => isLogging; }
 
         #region INIT
 

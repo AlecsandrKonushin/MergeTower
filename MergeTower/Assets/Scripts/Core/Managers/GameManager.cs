@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace Core
 {
-    public class GameManager : MonoBehaviour
+    [CreateAssetMenu(fileName = "GameManager", menuName = "Managers/GameManager")]
+    public class GameManager : BaseManager
     {
         #region ACTIONS
 
@@ -14,17 +15,9 @@ namespace Core
 
         #endregion ACTIONS
 
-        [SerializeField] private SCRO_SceneManagers sceneManagers;
-        [SerializeField] private bool isLogging;
-
-        private void Start()
-        {
-            BoxManager.Init(sceneManagers, isLogging);
-        }
-
         private void OnApplicationPause(bool pause)
         {
-            if (isLogging)
+            if (BoxManager.GetIsLogging)
             {
                 Debug.Log($"Application on pause = {pause}");
             }
@@ -41,7 +34,7 @@ namespace Core
 
         private void OnApplicationFocus(bool focus)
         {
-            if (isLogging)
+            if (BoxManager.GetIsLogging)
             {
                 Debug.Log($"Application on focus = {focus}");
             }
