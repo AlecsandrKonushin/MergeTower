@@ -15,6 +15,11 @@ namespace Core
 
         #endregion ACTIONS
 
+        public override void OnStart()
+        {
+            base.OnStart();
+        }
+
         private void OnApplicationPause(bool pause)
         {
             if (BoxManager.GetIsLogging)

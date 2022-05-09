@@ -9,6 +9,6 @@ namespace Core
         private BaseManager[] managers;
 
         [HideInInspector]
-        public BaseManager[] GetManagers;
+        public BaseManager[] GetManagers { get => managers; }
     }
 }

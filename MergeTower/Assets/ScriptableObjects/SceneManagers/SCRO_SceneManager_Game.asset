@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: SCRO_SceneManager_Game
   m_EditorClassIdentifier: 
   managers:
+  - {fileID: 11400000, guid: b305f0746c9750e428f2c3d36935082d, type: 2}
+  - {fileID: 11400000, guid: e0d97859d0b9db84d95f5f193605f17f, type: 2}
   - {fileID: 11400000, guid: 5ba4180c436f8c84482e230727cf0f94, type: 2}
+  - {fileID: 11400000, guid: 45c882f4c6f541e4b80320869a9faf1b, type: 2}
   GetManagers: []

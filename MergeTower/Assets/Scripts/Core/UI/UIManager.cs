@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class UIController : Singleton<UIController>, IInitialize
+    public class UIManager : Singleton<UIManager>, IInitialize
     {
         private Dictionary<Type, UIWindow> windows;
 

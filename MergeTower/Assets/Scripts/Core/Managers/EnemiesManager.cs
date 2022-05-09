@@ -54,8 +54,11 @@ namespace Core
         public void TimeCome()
         {
             count++;
+
             if (count > 1)
+            {
                 CreateEnemy();
+            }
 
             Timer.Instance.AddWaiting(this, 2f);
         }

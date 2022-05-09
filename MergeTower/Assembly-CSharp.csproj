@@ -74,7 +74,7 @@
     <Compile Include="Assets\Scripts\Core\Interface\IManager.cs" />
     <Compile Include="Assets\Scripts\Old\Systems\RotationSystem.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\CreatorManager.cs" />
-    <Compile Include="Assets\Scripts\Core\UI\UIController.cs" />
+    <Compile Include="Assets\Scripts\Core\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Core\Settings\AudioSettingsCore.cs" />
     <Compile Include="Assets\Scripts\Old\Systems\ShootBulletSystem.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\IMove.cs" />
