@@ -1,9 +1,29 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
-    public class MyButton : MonoBehaviour
+    [RequireComponent(typeof(Button))]
+    public class MyButton : UIElement
     {
+        public override void OnStart()
+        {
+            GetComponent<Button>().onClick.AddListener(OnClickButton);
+        }
 
+        private void OnClickButton()
+        {
+            OtherActionClick();
+        }
+
+        protected virtual void OtherActionClick()
+        {
+
+        }
+
+        private void OnDestroy()
+        {
+            GetComponent<Button>().onClick.RemoveListener(OnClickButton);
+        }
     }
 }

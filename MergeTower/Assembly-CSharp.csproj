@@ -56,34 +56,36 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Core\UI\UIWindow.cs" />
+    <Compile Include="Assets\Scripts\Core\UI\Windows\UIWindow.cs" />
     <Compile Include="Assets\Scripts\Core\UI\Buttons\MyButton.cs" />
     <Compile Include="Assets\Scripts\Core\UI\TypeAnimation.cs" />
     <Compile Include="Assets\Scripts\Objects\ObjectScene.cs" />
     <Compile Include="Assets\Scripts\Core\PositionsScene.cs" />
     <Compile Include="Assets\Scripts\Objects\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Old\Systems\TargetSystem.cs" />
-    <Compile Include="Assets\Scripts\Old\Systems\MoveObjectSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\TargetSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\MoveObjectSystem.cs" />
     <Compile Include="Assets\Scripts\Core\Main\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\IShoot.cs" />
+    <Compile Include="Assets\Scripts\Core\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Core\Storage\FileStorage.cs" />
     <Compile Include="Assets\Scripts\Core\Settings\AudioSettingsData.cs" />
     <Compile Include="Assets\Scripts\Objects\Tile.cs" />
     <Compile Include="Assets\Scripts\Core\SCRO\SCRO_SceneManagers.cs" />
-    <Compile Include="Assets\Scripts\Old\Systems\ChangeTransformSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\ChangeTransformSystem.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\IManager.cs" />
-    <Compile Include="Assets\Scripts\Old\Systems\RotationSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\RotationSystem.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\CreatorManager.cs" />
     <Compile Include="Assets\Scripts\Core\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Core\Settings\AudioSettingsCore.cs" />
-    <Compile Include="Assets\Scripts\Old\Systems\ShootBulletSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\ShootBulletSystem.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\IMove.cs" />
     <Compile Include="Assets\Scripts\Core\UI\UIElement.cs" />
     <Compile Include="Assets\Scripts\Core\Main\Singleton.cs" />
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
-    <Compile Include="Assets\Scripts\Old\Interfaces\IWaiting.cs" />
+    <Compile Include="Assets\Scripts\Systems\Interfaces\IWaiting.cs" />
     <Compile Include="Assets\Scripts\Core\UI\Buttons\ButtonClose.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\ISettings.cs" />
+    <Compile Include="Assets\Scripts\Core\Main\DataNames.cs" />
     <Compile Include="Assets\Scripts\Core\Main\ClassReferenceAttribute.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\EnemiesManager.cs" />
@@ -102,8 +104,7 @@
     <Compile Include="Assets\Scripts\Core\Main\UpdateGame.cs" />
     <Compile Include="Assets\Scripts\Core\Main\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Core\Time\TimeController.cs" />
-    <Compile Include="Assets\Scripts\Core\Main\DataNames.cs" />
-    <Compile Include="Assets\Scripts\Core\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Core\UI\Buttons\ButtonByTower.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
