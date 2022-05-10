@@ -18,6 +18,7 @@ namespace Core
             }
             else
             {
+                Debug.Log("Монеты кончились!");
                 return false;
             }
         }
