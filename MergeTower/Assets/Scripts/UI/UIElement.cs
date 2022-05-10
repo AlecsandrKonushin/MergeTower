@@ -11,9 +11,8 @@ namespace UI
 
         #region EVENTS
 
-        public UnityEvent<IUIElement> EndShow;
-        public UnityEvent<IUIElement> EndChange;
-        public UnityEvent<IUIElement> EndHide;
+        [HideInInspector]
+        public UnityEvent<IUIElement> EndShow, EndChange, EndHide;
 
         #endregion
 

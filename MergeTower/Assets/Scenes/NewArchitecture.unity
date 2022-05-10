@@ -346,8 +346,9 @@ GameObject:
   - component: {fileID: 1290948949}
   - component: {fileID: 1290948948}
   - component: {fileID: 1290948947}
+  - component: {fileID: 1290948950}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Buy tower button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,10 +368,10 @@ RectTransform:
   m_Father: {fileID: 443521995}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 130}
+  m_SizeDelta: {x: 400, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290948947
 MonoBehaviour:
@@ -454,6 +455,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290948945}
   m_CullTransparentMesh: 1
+--- !u!114 &1290948950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290948945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a0973e9b5540a44a97a36b23d32d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndShow:
+    m_PersistentCalls:
+      m_Calls: []
+  EndChange:
+    m_PersistentCalls:
+      m_Calls: []
+  EndHide:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1544379106
 GameObject:
   m_ObjectHideFlags: 0

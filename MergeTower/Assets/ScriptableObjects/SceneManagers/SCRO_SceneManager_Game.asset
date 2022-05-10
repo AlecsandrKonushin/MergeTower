@@ -17,4 +17,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e0d97859d0b9db84d95f5f193605f17f, type: 2}
   - {fileID: 11400000, guid: 5ba4180c436f8c84482e230727cf0f94, type: 2}
   - {fileID: 11400000, guid: 45c882f4c6f541e4b80320869a9faf1b, type: 2}
-  GetManagers: []
+  - {fileID: 11400000, guid: a6b0f78919ac9dd4b93a51ce9453601f, type: 2}
+  - {fileID: 11400000, guid: e10adfd143b76f14a8f1abe1b333d687, type: 2}

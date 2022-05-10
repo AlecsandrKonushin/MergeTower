@@ -1,4 +1,5 @@
 using System;
+using Towers;
 using UnityEngine;
 
 namespace Core
@@ -19,6 +20,13 @@ namespace Core
         {
             base.OnStart();
         }
+
+        public void ClickBuyTowerButton(TypeTower typeTower)
+        {
+
+        }
+
+        #region STATES_GAME
 
         private void OnApplicationPause(bool pause)
         {
@@ -53,5 +61,7 @@ namespace Core
                 UnfocusedApplication?.Invoke();
             }
         }
+
+        #endregion STATES_GAME
     }
 }
