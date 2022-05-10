@@ -8,11 +8,11 @@ namespace UI
     {
         public event Action<IUIElement> ClickCloseButton;
 
-        private ButtonClose buttonClose;
+        private CloseButton buttonClose;
 
         public override void OnStart()
         {
-            buttonClose = GetComponentInChildren<ButtonClose>();
+            buttonClose = GetComponentInChildren<CloseButton>();
         }
 
         protected void OnClickButtonClose()

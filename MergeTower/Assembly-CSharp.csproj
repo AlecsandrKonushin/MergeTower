@@ -65,7 +65,6 @@
     <Compile Include="Assets\Scripts\Systems\TargetSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\MoveObjectSystem.cs" />
     <Compile Include="Assets\Scripts\Core\Main\DontDestroy.cs" />
-    <Compile Include="Assets\Scripts\UI\Buttons\ButtonBuyTower.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\IShoot.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Core\Storage\FileStorage.cs" />
@@ -84,7 +83,7 @@
     <Compile Include="Assets\Scripts\Core\Main\Singleton.cs" />
     <Compile Include="Assets\Scripts\Objects\TilesParent.cs" />
     <Compile Include="Assets\Scripts\Systems\Interfaces\IWaiting.cs" />
-    <Compile Include="Assets\Scripts\UI\Buttons\ButtonClose.cs" />
+    <Compile Include="Assets\Scripts\UI\Buttons\CloseButton.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\ISettings.cs" />
     <Compile Include="Assets\Scripts\Core\Main\DataNames.cs" />
     <Compile Include="Assets\Scripts\Core\Main\ClassReferenceAttribute.cs" />
@@ -110,6 +109,8 @@
     <Compile Include="Assets\Scripts\Core\Managers\PriceManager.cs" />
     <Compile Include="Assets\Scripts\Core\Data\DataPriceTower.cs" />
     <Compile Include="Assets\Scripts\Objects\SceneObjects.cs" />
+    <Compile Include="Assets\Scripts\UI\Windows\MainUIWindow.cs" />
+    <Compile Include="Assets\Scripts\UI\Buttons\BuyTowerButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

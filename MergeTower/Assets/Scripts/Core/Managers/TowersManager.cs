@@ -16,17 +16,9 @@ namespace Core
         {
             Tile tile = SceneObjects.Instance.GetTilesParent.GetTileForSpawnTower();
 
-            //if (tile == null)
-            //{
-            //    return;
-            //}
-            //else
-            //{
-            //    Tower newTower = CreatorObjects.Instance.CreateTower(towerPrefabs[0], tile);
+            Tower newTower = BoxManager.GetManager<CreatorManager>().CreateTower(towerPrefabs[0], tile);
 
-            //    towers.Add(newTower);
-            //}
+            towers.Add(newTower);
         }
-
     }
 }

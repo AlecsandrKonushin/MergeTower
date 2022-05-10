@@ -2,7 +2,7 @@ using Core;
 using UI;
 using Towers;
 
-public class ButtonBuyTower : MyButton
+public class BuyTowerButton : MyButton
 {
     private TypeTower typeTower = TypeTower.Pirat;
 

@@ -33,7 +33,11 @@ namespace UI
             {
                 SetAnimationTime();
             }
+
+            AfterInitialization();
         }
+
+        protected virtual void AfterInitialization() { }
 
         public virtual void OnStart() { }
 

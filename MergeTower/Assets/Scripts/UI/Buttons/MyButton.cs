@@ -6,7 +6,7 @@ namespace UI
     [RequireComponent(typeof(Button))]
     public class MyButton : UIElement
     {
-        public override void OnStart()
+        protected override void AfterInitialization()
         {
             GetComponent<Button>().onClick.AddListener(OnClickButton);
         }
