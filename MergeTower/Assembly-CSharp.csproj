@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\Core\Data\TypeTower.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\PriceManager.cs" />
     <Compile Include="Assets\Scripts\Core\Data\DataPriceTower.cs" />
+    <Compile Include="Assets\Scripts\Objects\SceneObjects.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

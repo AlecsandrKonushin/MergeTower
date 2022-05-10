@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UI;
 
 namespace Core
 {
@@ -20,8 +19,6 @@ namespace Core
 
         public static void Init(SCRO_SceneManagers sceneManagers,bool isLogging)
         {
-            UIManager.Instance.OnInitialize();
-
             BoxManager.sceneManagers = sceneManagers;
             BoxManager.isLogging = isLogging;
 

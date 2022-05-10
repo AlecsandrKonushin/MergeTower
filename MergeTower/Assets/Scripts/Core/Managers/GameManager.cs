@@ -1,3 +1,4 @@
+using ObjectsOnScene;
 using System;
 using Towers;
 using UnityEngine;
@@ -23,7 +24,14 @@ namespace Core
 
         public void ClickBuyTowerButton(TypeTower typeTower)
         {
-
+            if (BoxManager.GetManager<CoinsManager>().CanBuyTower(typeTower))
+            {
+                if (SceneObjects.Instance.GetTilesParent.HaveTileForSpawn())
+                {
+                    BoxManager.GetManager<CoinsManager>().BuyTower(typeTower);
+                    BoxManager.GetManager<TowersManager>().BuyTower(typeTower);
+                }
+            }
         }
 
         #region STATES_GAME

@@ -1,38 +1,55 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class TilesParent : MonoBehaviour
+namespace ObjectsOnScene
 {
-    private Tile[] tiles;
-
-    private List<Tile> freeTiles = new List<Tile>();
-
-    protected void Awake()
+    public class TilesParent : MonoBehaviour, IInitialize
     {
-        tiles = GetComponentsInChildren<Tile>();
-        freeTiles.AddRange(tiles);
-    }
+        private Tile[] tiles;
 
-    public Tile GetTileForSpawnTower()
-    {
-        Tile tile = null;
+        private List<Tile> freeTiles = new List<Tile>();
 
-        if (freeTiles.Count == 0)
+        public void OnInitialize()
         {
-            Debug.Log("Нет свободных tiles для спауна tower");
-
-            return null;
+            tiles = GetComponentsInChildren<Tile>();
+            freeTiles.AddRange(tiles);
         }
 
-        if (freeTiles.Count == 1)
+        public void OnStart() { }
+
+        public bool HaveTileForSpawn()
         {
-            tile = freeTiles[0];
+            if (freeTiles.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        tile = freeTiles[Random.Range(0, freeTiles.Count)];
+        public Tile GetTileForSpawnTower()
+        {
+            Tile tile = null;
 
-        freeTiles.Remove(tile);
+            if (freeTiles.Count == 0)
+            {
+                Debug.Log("Нет свободных tiles для спауна tower");
 
-        return tile;
+                return null;
+            }
+
+            if (freeTiles.Count == 1)
+            {
+                tile = freeTiles[0];
+            }
+
+            tile = freeTiles[Random.Range(0, freeTiles.Count)];
+
+            freeTiles.Remove(tile);
+
+            return tile;
+        }
     }
 }

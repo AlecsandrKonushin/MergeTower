@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using ObjectsOnScene;
+using System.Collections.Generic;
+using Towers;
 using UnityEngine;
 
 namespace Core
@@ -10,9 +12,9 @@ namespace Core
 
         private List<Tower> towers = new List<Tower>();
 
-        public void BuyTower()
+        public void BuyTower(TypeTower typeTower)
         {
-            //Tile tile = TilesParent.Instance.GetTileForSpawnTower();
+            Tile tile = SceneObjects.Instance.GetTilesParent.GetTileForSpawnTower();
 
             //if (tile == null)
             //{

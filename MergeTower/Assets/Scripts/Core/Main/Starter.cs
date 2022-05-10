@@ -1,4 +1,6 @@
+using UI;
 using UnityEngine;
+using ObjectsOnScene;
 
 namespace Core
 {
@@ -9,6 +11,8 @@ namespace Core
 
         private void Start()
         {
+            UIManager.Instance.OnInitialize();
+            SceneObjects.Instance.OnInitialize();
             BoxManager.Init(sceneManagers, isLogging);
         }
     }

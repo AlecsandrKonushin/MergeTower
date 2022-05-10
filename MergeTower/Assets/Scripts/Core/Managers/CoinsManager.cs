@@ -10,7 +10,23 @@ namespace Core
 
         public bool CanBuyTower(TypeTower typeTower)
         {
-            return true;
+            int price = BoxManager.GetManager<PriceManager>().GetPriceTower(typeTower);
+
+            if (price <= countCoins)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void BuyTower(TypeTower typeTower)
+        {
+            int price = BoxManager.GetManager<PriceManager>().GetPriceTower(typeTower);
+
+            countCoins -= price;
         }
     }
 }
