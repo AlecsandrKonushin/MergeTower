@@ -5,7 +5,7 @@ public class Enemy : ObjectScene
 {
     private MoveObjectSystem moveSystem;
 
-    public override void InitObject()
+    public override void OnInitialize()
     {
         moveSystem = gameObject.AddComponent<MoveObjectSystem>();
 

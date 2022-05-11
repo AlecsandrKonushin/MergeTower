@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
-public abstract class ObjectScene : MonoBehaviour
+public abstract class ObjectScene : MonoBehaviour, IInitialize
 {
-    public abstract void InitObject();
+    public virtual void OnInitialize() { }
+
+    public virtual void OnStart() { }
 }

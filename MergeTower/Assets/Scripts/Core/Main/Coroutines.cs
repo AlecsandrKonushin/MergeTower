@@ -20,7 +20,7 @@ namespace Core
 
         private static Coroutines CreateCoroutines()
         {
-            instance = new GameObject(DataNames.CoroutinesName).AddComponent<Coroutines>();
+            instance = new GameObject(NamesData.CoroutinesName).AddComponent<Coroutines>();
             instance.hideFlags = HideFlags.HideAndDontSave;
             return instance;
         }

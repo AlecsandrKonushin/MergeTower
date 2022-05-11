@@ -3,19 +3,17 @@ using UnityEngine;
 
 namespace ObjectsOnScene
 {
-    public class TilesParent : MonoBehaviour, IInitialize
+    public class TilesParent : ObjectScene
     {
         private Tile[] tiles;
 
         private List<Tile> freeTiles = new List<Tile>();
 
-        public void OnInitialize()
+        public override void OnInitialize()
         {
             tiles = GetComponentsInChildren<Tile>();
             freeTiles.AddRange(tiles);
         }
-
-        public void OnStart() { }
 
         public bool HaveTileForSpawn()
         {

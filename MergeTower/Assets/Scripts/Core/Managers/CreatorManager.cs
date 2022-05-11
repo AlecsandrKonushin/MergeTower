@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ObjectsOnScene;
+using UnityEngine;
 
 namespace Core
 {
@@ -10,8 +11,8 @@ namespace Core
 
         public override void OnInitialize()
         {
-            towersParent = new GameObject(DataNames.TowersParentName);
-            enemiesParent = new GameObject(DataNames.EnemiesParentName);
+            towersParent = new GameObject(NamesData.TowersParentName);
+            enemiesParent = new GameObject(NamesData.EnemiesParentName);
         }
 
         public Tower CreateTower(Tower towerPrefab, Tile tileForSpawn)
@@ -23,7 +24,7 @@ namespace Core
             Tower tower = Instantiate(towerPrefab, positionSpawn, rotationSpawn);
 
             tower.transform.SetParent(towersParent.transform);
-            tower.InitObject();
+            tower.OnInitialize();
 
             return tower;
         }
@@ -34,7 +35,7 @@ namespace Core
             Enemy enemy = Instantiate(enemyPrefab, objectSpawn.transform.position, objectSpawn.transform.rotation);
            
             enemy.transform.SetParent(enemiesParent.transform);
-            enemy.InitObject();
+            enemy.OnInitialize();
 
             return enemy;
         }

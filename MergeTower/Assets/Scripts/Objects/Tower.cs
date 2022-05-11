@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using ShootSystem;
 using MoveSystem;
+using Core;
 
 namespace ObjectsOnScene
 {
@@ -13,15 +14,16 @@ namespace ObjectsOnScene
         private ShootBulletSystem shootSystem;
         private RotationObjectSystem rotationSystem;
 
-        public override void InitObject()
+        public override void OnInitialize()
         {
             targetSystem = gameObject.AddComponent<TargetSystem>();
             rotationSystem = gameObject.AddComponent<RotationObjectSystem>();
             shootSystem = gameObject.AddComponent<ShootBulletSystem>();
 
-            //UpdateGame.Instance.AddMoveObject(rotationSystem);
-            shootSystem.Init(bulletPrefab, speedShoot);
+            UpdateGame.Instance.AddMoveObject(rotationSystem);
+            Timer.Instance. подписать shootSystem на Timer и ожидать окончания таймера для выстрела
 
+            shootSystem.Init(bulletPrefab, speedShoot);
             targetSystem.SubscribeOnGetTargetEnemy(StartAttack);
         }
 
