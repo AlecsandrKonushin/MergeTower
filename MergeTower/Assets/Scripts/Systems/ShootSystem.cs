@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
-namespace ShootSystem
+namespace SystemShoot
 {
-    public class ShootBulletSystem : MonoBehaviour, IShoot
+    public class ShootSystem : IShoot, IWaiting
     {
         private Bullet bulletPrefab;
         private float speedShoot;
 
         private Enemy target;
+
+        private bool readyToShoot;
 
         public void Init(Bullet bulletPrefab, float speedShoot)
         {
@@ -28,6 +30,10 @@ namespace ShootSystem
             {
                 Debug.Log($"shoot on {target.gameObject.name}");
             }
+        }
+
+        public void TickTimer()
+        {
         }
     }
 }

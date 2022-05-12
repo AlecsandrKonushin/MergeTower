@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace MoveSystem
+namespace SystemMove
 {
     public class ChangeTransformSystem : MonoBehaviour, IMove
     {
-        public UnityEvent listenerEndChange;
+        public UnityEvent ListenerEndChange;
 
+        // TODO: устанавливать скорость в конструкторе
         protected float speedChange = 5f;
         protected Transform targetTransform;
 
@@ -22,12 +23,12 @@ namespace MoveSystem
                 }
                 else
                 {
-                    //EndChangeTransform();
+                    EndChangeTransform();
                 }
             }
         }
 
-        public void SetPositionForChange(Transform targetTransform)
+        public void SetTransformForChange(Transform targetTransform)
         {
             this.targetTransform = targetTransform;
             SetData();
@@ -40,7 +41,7 @@ namespace MoveSystem
         protected void EndChangeTransform()
         {
             canChange = false;
-            listenerEndChange?.Invoke();
+            ListenerEndChange?.Invoke();
         }
     }
 }

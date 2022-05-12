@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using MoveSystem;
+using SystemMove;
 
-namespace ShootSystem
+namespace SystemShoot
 {
     public class Bullet : MonoBehaviour
     {

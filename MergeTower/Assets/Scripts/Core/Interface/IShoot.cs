@@ -1,4 +1,4 @@
-﻿namespace ShootSystem
+﻿namespace SystemShoot
 {
     public interface IShoot
     {

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace MoveSystem
+namespace SystemMove
 {
-    public class RotationObjectSystem : ChangeTransformSystem
+    public class RotationSystem : ChangeTransformSystem
     {
         protected override void ChangeTransform()
         {

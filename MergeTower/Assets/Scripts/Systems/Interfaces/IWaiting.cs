@@ -1,4 +1,4 @@
 ﻿public interface IWaiting
 {
-    void TimeCome();
+    void TickTimer();
 }

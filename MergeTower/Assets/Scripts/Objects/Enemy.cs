@@ -1,4 +1,4 @@
-﻿using MoveSystem;
+﻿using SystemMove;
 using Core;
 
 public class Enemy : ObjectScene
@@ -9,7 +9,7 @@ public class Enemy : ObjectScene
     {
         moveSystem = gameObject.AddComponent<MoveObjectSystem>();
 
-        moveSystem.SetPositionForChange(PositionsScene.Instance.GetTargetEnemyPos.transform);
+        moveSystem.SetTransformForChange(PositionsScene.Instance.GetTargetEnemyPos.transform);
 
        // UpdateGame.Instance.AddMoveObject(moveSystem);
     }

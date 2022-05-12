@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-using ShootSystem;
-using MoveSystem;
+using SystemShoot;
+using SystemMove;
 using Core;
+using SystemTarget;
 
 namespace ObjectsOnScene
 {
@@ -10,27 +11,28 @@ namespace ObjectsOnScene
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private float speedShoot;
 
-        private TargetSystem targetSystem;
-        private ShootBulletSystem shootSystem;
-        private RotationObjectSystem rotationSystem;
+        private TargetTowerSystem targetSystem;
+        private ShootSystem shootSystem;
+        private RotationSystem rotationSystem;
 
         public override void OnInitialize()
         {
-            targetSystem = gameObject.AddComponent<TargetSystem>();
-            rotationSystem = gameObject.AddComponent<RotationObjectSystem>();
-            shootSystem = gameObject.AddComponent<ShootBulletSystem>();
+            rotationSystem = gameObject.AddComponent<RotationSystem>();
+            targetSystem = new TargetTowerSystem();
+            shootSystem = new ShootSystem();
 
             UpdateGame.Instance.AddMoveObject(rotationSystem);
-            Timer.Instance. подписать shootSystem на Timer и ожидать окончания таймера для выстрела
+            UpdateGame.Instance.AddShootObject(shootSystem);
+            Timer.Instance.AddWaitingObject(shootSystem);
 
             shootSystem.Init(bulletPrefab, speedShoot);
-            targetSystem.SubscribeOnGetTargetEnemy(StartAttack);
+            targetSystem.SubscribeOnGetTarget(StartAttack);
         }
 
-        private void StartAttack(Enemy enemy)
+        private void StartAttack(ObjectScene enemy)
         {
-            rotationSystem.SetPositionForChange(enemy.transform);
-            shootSystem.SetTarget(enemy);
+            rotationSystem.SetTransformForChange(enemy.transform);
+            shootSystem.SetTarget(enemy as Enemy);
         }
     }
 }

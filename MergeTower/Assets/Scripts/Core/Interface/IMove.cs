@@ -1,4 +1,4 @@
-﻿namespace MoveSystem
+﻿namespace SystemMove
 {
     public interface IMove
     {

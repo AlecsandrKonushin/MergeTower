@@ -48,10 +48,10 @@ namespace Core
 
         public void StartSpawn()
         {
-            TimeCome();
+            TickTimer();
         }
 
-        public void TimeCome()
+        public void TickTimer()
         {
             count++;
 
@@ -60,7 +60,7 @@ namespace Core
                 CreateEnemy();
             }
 
-            Timer.Instance.AddWaiting(this, 2f);
+            //Timer.Instance.AddWaitingObject(this, 2f);
         }
 
         private void CreateEnemy()

@@ -2,32 +2,32 @@
 
 namespace Core
 {
-    public class Timer : Singleton<Timer>
+    public class Timer : Singleton<Timer>, IWaiting
     {
-        private List<TimerWaiting> timersWaiting = new List<TimerWaiting>();
+        private List<IWaiting> waitingObjects = new List<IWaiting>();
 
-        public void AddWaiting(IWaiting waiting, float time)
+        public void AddWaitingObject(IWaiting waitingObject)
         {
-            TimerWaiting currentTimer = null;
+            waitingObjects.Add(waitingObject);
+        }
 
-            if (timersWaiting.Count > 0)
+        public void RemoveWaitingObject(IWaiting waitingObject)
+        {
+            if (waitingObjects.Contains(waitingObject))
             {
-                foreach (var timer in timersWaiting)
+                waitingObjects.Remove(waitingObject);
+            }
+        }
+
+        public void TickTimer()
+        {
+            if (waitingObjects.Count > 0)
+            {
+                foreach (var waitingObject in waitingObjects)
                 {
-                    if (!timer.GetIsBusy)
-                    {
-                        currentTimer = timer;
-                    }
+                    waitingObject.TickTimer();
                 }
             }
-
-            if (currentTimer == null)
-            {
-                currentTimer = gameObject.AddComponent<TimerWaiting>();
-                timersWaiting.Add(currentTimer);
-            }
-
-            currentTimer.SetDataTimer(waiting, time);
         }
     }
 }

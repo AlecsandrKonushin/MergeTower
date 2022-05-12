@@ -1,25 +1,50 @@
 ﻿using System.Collections.Generic;
-using MoveSystem;
-using ShootSystem;
+using SystemMove;
+using SystemShoot;
 
 namespace Core
 {
-    public class UpdateGame : Singleton<UpdateGame>
+    public class UpdateGame : Singleton<UpdateGame>, IInitialize
     {
         private List<IMove> moveObjects = new List<IMove>();
         private List<IShoot> shootObjects = new List<IShoot>();
+        private Timer timer;
 
-        private bool canMove;
-        public bool SetCanMove { set => canMove = value; }
+        private bool isCanMove;
+        private bool isCanShoot;
+        private bool isTimeGo;
+
+        public bool SetCanMove { set => isCanMove = value; }
+        public bool SetCanShoot { set => isCanShoot = value; }
+
+        public void OnInitialize()
+        {
+            timer = Timer.instance;
+        }
+
+        public void OnStart() { }
 
         private void Update()
         {
-            if (canMove)
+            if (isCanMove)
             {
                 foreach (var moveObject in moveObjects)
                 {
                     moveObject.Move();
                 }
+            }
+
+            if (isCanShoot)
+            {
+                foreach (var shootObject in shootObjects)
+                {
+                    shootObject.Shoot();
+                }
+            }
+
+            if (isTimeGo)
+            {
+                timer.TickTimer();
             }
         }
 

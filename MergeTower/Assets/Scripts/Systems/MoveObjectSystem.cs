@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MoveSystem
+namespace SystemMove
 {
     public class MoveObjectSystem : ChangeTransformSystem
     {
