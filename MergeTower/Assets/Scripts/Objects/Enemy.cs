@@ -1,16 +1,17 @@
 ﻿using SystemMove;
 using Core;
+using SystemTarget;
 
 public class Enemy : ObjectScene
 {
     private MoveObjectSystem moveSystem;
+    private TargetSystem targetSystem;
 
     public override void OnInitialize()
     {
         moveSystem = gameObject.AddComponent<MoveObjectSystem>();
 
-        moveSystem.SetTransformForChange(PositionsScene.Instance.GetTargetEnemyPos.transform);
 
-       // UpdateGame.Instance.AddMoveObject(moveSystem);
+        UpdateGame.Instance.AddMoveObject(moveSystem);
     }
 }

@@ -6,12 +6,12 @@ namespace ObjectsOnScene
     {
         // TODO: Оставить только позиции для спауна на сцене. Tiles удалить и сделать их спаун в старте
         [SerializeField] TilesParent tilesParent;
-        [SerializeField] private GameObject spawnEnemyPosition;
-        [SerializeField] private GameObject targetEnemyPosition;
+        [SerializeField] private ObjectScene spawnEnemyPosition;
+        [SerializeField] private ObjectScene targetEnemyPosition;
 
         public TilesParent GetTilesParent { get => tilesParent; }
-        public GameObject GetSpawnEnemyPosition { get => spawnEnemyPosition; }
-        public GameObject GetTargetEnemyPosition { get => targetEnemyPosition; }
+        public ObjectScene GetSpawnEnemyPosition { get => spawnEnemyPosition; }
+        public ObjectScene GetTargetEnemyPosition { get => targetEnemyPosition; }
 
         public void OnInitialize()
         {

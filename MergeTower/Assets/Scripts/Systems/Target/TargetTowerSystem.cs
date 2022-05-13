@@ -1,11 +1,28 @@
 ﻿using Core;
+using System;
 using UnityEngine;
 
 namespace SystemTarget
 {
     public class TargetTowerSystem : TargetSystem
     {
-        public override void ChooseTarget()
+        protected Action<ObjectScene> waitTarget;
+
+        public void SubscribeOnGetTarget(Action<ObjectScene> function)
+        {
+            ChooseTarget();
+
+            if (target != null)
+            {
+                function.Invoke(target);
+            }
+            else
+            {
+                waitTarget = function;
+            }
+        }
+
+        private void ChooseTarget()
         {
             target = BoxManager.GetManager<EnemiesManager>().GetFirstEnemy();
 
@@ -17,7 +34,7 @@ namespace SystemTarget
             }
         }
 
-        protected override void WaitTarget(ObjectScene objectScene)
+        private void WaitTarget(ObjectScene objectScene)
         {
             BoxManager.GetManager<EnemiesManager>().EventNewEnemy -= WaitTarget;
             target = objectScene ;

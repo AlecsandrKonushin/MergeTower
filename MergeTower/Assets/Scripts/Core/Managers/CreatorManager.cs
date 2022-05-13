@@ -31,7 +31,7 @@ namespace Core
 
         public Enemy CreateEnemy(Enemy enemyPrefab)
         {
-            GameObject objectSpawn = PositionsScene.Instance.GetSpawnEnemyPos;
+            GameObject objectSpawn = SceneObjects.Instance.GetSpawnEnemyPosition.gameObject;
             Enemy enemy = Instantiate(enemyPrefab, objectSpawn.transform.position, objectSpawn.transform.rotation);
            
             enemy.transform.SetParent(enemiesParent.transform);

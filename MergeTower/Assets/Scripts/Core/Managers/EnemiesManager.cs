@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using ObjectsOnScene;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Core
@@ -24,7 +25,7 @@ namespace Core
             if (enemies.Count > 0)
             {
                 enemy = enemies[0];
-                float zPos = PositionsScene.Instance.GetTargetEnemyPos.transform.position.z;
+                float zPos = SceneObjects.Instance.GetTargetEnemyPosition.transform.position.z;
                 float distance = zPos - enemy.transform.position.z;
 
                 if (enemies.Count > 1)
