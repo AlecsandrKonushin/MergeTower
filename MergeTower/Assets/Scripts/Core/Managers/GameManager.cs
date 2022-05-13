@@ -17,11 +17,6 @@ namespace Core
 
         #endregion ACTIONS
 
-        public override void OnStart()
-        {
-            base.OnStart();
-        }
-
         public void ClickBuyTowerButton(TypeTower typeTower)
         {
             if (BoxManager.GetManager<CoinsManager>().CanBuyTower(typeTower))

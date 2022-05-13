@@ -30,13 +30,13 @@ namespace SystemTarget
             {
                 Debug.Log($"Нет цели для Tower. Enemy = null");
 
-                BoxManager.GetManager<EnemiesManager>().EventNewEnemy += WaitTarget;
+                BoxManager.GetManager<EnemiesManager>().NewEnemy += WaitTarget;
             }
         }
 
         private void WaitTarget(ObjectScene objectScene)
         {
-            BoxManager.GetManager<EnemiesManager>().EventNewEnemy -= WaitTarget;
+            BoxManager.GetManager<EnemiesManager>().NewEnemy -= WaitTarget;
             target = objectScene ;
 
             if (waitTarget != null)

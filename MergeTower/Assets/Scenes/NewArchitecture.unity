@@ -150,8 +150,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2117256990}
   - {fileID: 1698850179}
+  - {fileID: 2117256990}
   m_Father: {fileID: 1016781925}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilesParent: {fileID: 2025199383}
   spawnEnemyPosition: {fileID: 1698850178}
-  goldHeap: {fileID: 0}
+  goldHeap: {fileID: 2117256991}
 --- !u!1 &1068770208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7463901}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712664784
 GameObject:
@@ -3103,7 +3103,7 @@ Transform:
   m_Children:
   - {fileID: 1534900402}
   m_Father: {fileID: 7463901}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2117256991
 MonoBehaviour:

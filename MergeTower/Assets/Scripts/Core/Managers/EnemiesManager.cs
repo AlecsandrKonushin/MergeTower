@@ -1,4 +1,5 @@
 ﻿using ObjectsOnScene;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,12 +8,14 @@ namespace Core
     [CreateAssetMenu(fileName = "EnemiesManager", menuName = "Managers/EnemiesManager")]
     public class EnemiesManager : BaseManager, IWaiting
     {
-        public delegate void NewEnemy(Enemy enemy);
-        public event NewEnemy EventNewEnemy;
+        public Action<Enemy> NewEnemy;
 
         [SerializeField] private Enemy[] enemiesPrefab;
 
         private List<Enemy> enemies = new List<Enemy>();
+
+        private float timeSpawn = 1.5f;
+        private float timeWaitSpawn = 0;
 
         /// <summary>
         /// Получить ближайшего к базе Enemy
@@ -45,18 +48,22 @@ namespace Core
             return enemy;
         }
 
-        private int count = 0;
-
-        public void StartSpawn()
+        public override void OnInitialize()
         {
-            TickTimer();
+            Timer.Instance.AddWaitingObject(this);
+           // UpdateGame.Instance.
+        }
+
+        public override void OnStart()
+        {
+            CreateEnemy();
         }
 
         public void TickTimer()
         {
-            count++;
+            timeWaitSpawn -= Time.deltaTime;
 
-            if (count > 1)
+            if (timeWaitSpawn <= 0)
             {
                 CreateEnemy();
             }
@@ -67,7 +74,7 @@ namespace Core
             Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
             enemies.Add(enemy);
 
-            EventNewEnemy?.Invoke(enemy);
+            NewEnemy?.Invoke(enemy);
         }
     }
 }

@@ -2,16 +2,19 @@
 using Core;
 using SystemTarget;
 
-public class Enemy : ObjectScene
+namespace ObjectsOnScene
 {
-    private MoveObjectSystem moveSystem;
-    private TargetSystem targetSystem;
-
-    public override void OnInitialize()
+    public class Enemy : ObjectScene
     {
-        moveSystem = gameObject.AddComponent<MoveObjectSystem>();
+        private MoveObjectSystem moveSystem;
+        private TargetSystem targetSystem;
 
+        public override void OnInitialize()
+        {
+            moveSystem = gameObject.AddComponent<MoveObjectSystem>();
+            targetSystem = new TargetEnemySystem();
 
-        UpdateGame.Instance.AddMoveObject(moveSystem);
+            UpdateGame.Instance.AddMoveObject(moveSystem);
+        }
     }
 }

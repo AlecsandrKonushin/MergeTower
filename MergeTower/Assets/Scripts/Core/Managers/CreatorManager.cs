@@ -9,6 +9,8 @@ namespace Core
         private GameObject towersParent;
         private GameObject enemiesParent;
 
+        private const float offsetYTower = 1f;
+
         public override void OnInitialize()
         {
             towersParent = new GameObject(NamesData.TowersParentName);
@@ -19,7 +21,7 @@ namespace Core
         {
             Vector3 positionSpawn = tileForSpawn.transform.position;
             Quaternion rotationSpawn = Quaternion.Euler(0, 0, 0);
-            positionSpawn.y += 1f;
+            positionSpawn.y += offsetYTower;
 
             Tower tower = Instantiate(towerPrefab, positionSpawn, rotationSpawn);
 

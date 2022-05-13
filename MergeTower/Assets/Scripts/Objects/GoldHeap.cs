@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class GoldHeap : ObjectScene
+namespace ObjectsOnScene
 {
-    private int health = 3;
-
-    public void DamageHeap(int damage)
+    public class GoldHeap : ObjectScene
     {
-        health -= damage;
+        private int health = 3;
 
-        if(health <= 0)
+        public void DamageHeap(int damage)
         {
-            Debug.Log("Конец игры!");
+            health -= damage;
+
+            if (health <= 0)
+            {
+                Debug.Log("Конец игры!");
+            }
         }
     }
 }
