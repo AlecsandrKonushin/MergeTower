@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Core;
+using UnityEngine;
 
 namespace SystemShoot
 {
@@ -10,11 +11,19 @@ namespace SystemShoot
         private Enemy target;
 
         private bool readyToShoot;
+        private float timeReloading;
+        private float timeWaitReloading;
 
-        public void Init(Bullet bulletPrefab, float speedShoot)
+        public ShootSystem(Bullet bulletPrefab, float speedShoot, float timeReloading)
         {
             this.bulletPrefab = bulletPrefab;
             this.speedShoot = speedShoot;
+            this.timeReloading = timeReloading;
+
+            timeWaitReloading = timeReloading;
+
+            UpdateGame.Instance.AddShootObject(this);
+            Timer.Instance.AddWaitingObject(this);
         }
 
         public void SetTarget(Enemy enemyTarget)
@@ -26,14 +35,28 @@ namespace SystemShoot
 
         public void Shoot()
         {
-            if (target != null)
+            if (readyToShoot)
             {
-                Debug.Log($"shoot on {target.gameObject.name}");
+                if (target != null)
+                {
+                    Debug.Log($"Выстрел в {target}");
+
+                    readyToShoot = false;
+                    Timer.Instance.AddWaitingObject(this);
+                }
             }
         }
 
         public void TickTimer()
         {
+            timeWaitReloading -= Time.deltaTime;
+
+            if(timeWaitReloading <= 0)
+            {
+                readyToShoot = true;
+                timeWaitReloading = timeReloading;
+                Timer.Instance.RemoveWaitingObject(this);
+            }
         }
     }
 }

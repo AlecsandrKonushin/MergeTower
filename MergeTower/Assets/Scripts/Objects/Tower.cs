@@ -19,13 +19,10 @@ namespace ObjectsOnScene
         {
             rotationSystem = gameObject.AddComponent<RotationSystem>();
             targetSystem = new TargetTowerSystem();
-            shootSystem = new ShootSystem();
+            shootSystem = new ShootSystem(bulletPrefab, speedShoot, 1f);
 
             UpdateGame.Instance.AddMoveObject(rotationSystem);
-            UpdateGame.Instance.AddShootObject(shootSystem);
-            Timer.Instance.AddWaitingObject(shootSystem);
 
-            shootSystem.Init(bulletPrefab, speedShoot);
             targetSystem.SubscribeOnGetTarget(StartAttack);
         }
 
