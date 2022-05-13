@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scripts\Core\Main\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Core\Time\Timer.cs" />
     <Compile Include="Assets\Scripts\Systems\Target\TargetEnemySystem.cs" />
+    <Compile Include="Assets\Scripts\Objects\GoldHeap.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

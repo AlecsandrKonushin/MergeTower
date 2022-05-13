@@ -25,7 +25,7 @@ namespace Core
             if (enemies.Count > 0)
             {
                 enemy = enemies[0];
-                float zPos = SceneObjects.Instance.GetTargetEnemyPosition.transform.position.z;
+                float zPos = SceneObjects.Instance.GetGoldHeap.transform.position.z;
                 float distance = zPos - enemy.transform.position.z;
 
                 if (enemies.Count > 1)
@@ -60,8 +60,6 @@ namespace Core
             {
                 CreateEnemy();
             }
-
-            //Timer.Instance.AddWaitingObject(this, 2f);
         }
 
         private void CreateEnemy()

@@ -150,10 +150,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2117256990}
   - {fileID: 1698850179}
-  - {fileID: 827737661}
   m_Father: {fileID: 1016781925}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &78649103
 GameObject:
@@ -1232,36 +1232,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789359536}
   m_Mesh: {fileID: -8292042552149905708, guid: ee8d9eee65da11a4d908e2ccd099ff28, type: 3}
---- !u!1 &827737660
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 827737661}
-  m_Layer: 0
-  m_Name: Target enemy position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &827737661
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827737660}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: 1.5, z: 30}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7463901}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842305323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1417,6 @@ Transform:
   - {fileID: 1097512007}
   - {fileID: 239752265}
   - {fileID: 2025199382}
-  - {fileID: 2117256990}
   - {fileID: 7463901}
   m_Father: {fileID: 1153944873}
   m_RootOrder: 2
@@ -1466,7 +1435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilesParent: {fileID: 2025199383}
   spawnEnemyPosition: {fileID: 1698850178}
-  targetEnemyPosition: {fileID: 827737660}
+  goldHeap: {fileID: 0}
 --- !u!1 &1068770208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7463901}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712664784
 GameObject:
@@ -3113,8 +3082,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117256990}
+  - component: {fileID: 2117256991}
   m_Layer: 0
-  m_Name: Target enemy
+  m_Name: Gold heap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3127,11 +3097,23 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117256989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.51, y: 1.53, z: 17.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.51, y: 1.53, z: 27.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1534900402}
-  m_Father: {fileID: 1016781925}
-  m_RootOrder: 3
+  m_Father: {fileID: 7463901}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2117256991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117256989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd428f0d62ac2954c8f94d134b713df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
