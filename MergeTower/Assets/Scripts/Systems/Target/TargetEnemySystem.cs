@@ -1,10 +1,12 @@
 using ObjectsOnScene;
-using SystemTarget;
 
-public class TargetEnemySystem : TargetSystem
+namespace SystemTarget
 {
-    public void ChooseTarget()
+    public class TargetEnemySystem : TargetSystem
     {
-        target = SceneObjects.Instance.GetGoldHeap;
+        public void ChooseTarget()
+        {
+            target = SceneObjects.Instance.GetGoldHeap;
+        }
     }
 }
