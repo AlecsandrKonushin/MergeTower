@@ -51,7 +51,6 @@ namespace Core
         public override void OnInitialize()
         {
             Timer.Instance.AddWaitingObject(this);
-           // UpdateGame.Instance.
         }
 
         public override void OnStart()
@@ -65,6 +64,24 @@ namespace Core
 
             if (timeWaitSpawn <= 0)
             {
+                Timer.Instance.RemoveWaitingObject(this);
+
+                if (BoxManager.GetManager<GameManager>().CanSpawn)
+                {
+                    CreateEnemy();
+                }
+                else
+                {
+                    GameManager.ChangeCanSpawn += WaitCanSpawn;
+                }
+            }
+        }
+
+        private void WaitCanSpawn(bool canSpawn)
+        {
+            if (canSpawn)
+            {
+                GameManager.ChangeCanSpawn -= WaitCanSpawn;
                 CreateEnemy();
             }
         }
@@ -73,8 +90,11 @@ namespace Core
         {
             Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
             enemies.Add(enemy);
-
             NewEnemy?.Invoke(enemy);
+
+            timeWaitSpawn = timeSpawn;
+            Timer.Instance.AddWaitingObject(this);
+            Debug.Log("new time in enemies controller");
         }
     }
 }

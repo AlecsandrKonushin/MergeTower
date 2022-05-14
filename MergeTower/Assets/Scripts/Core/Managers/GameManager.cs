@@ -17,6 +17,44 @@ namespace Core
 
         #endregion ACTIONS
 
+        #region STATES_GAME
+
+        public static event Action<bool> ChangeCanMove;
+        public static event Action<bool> ChangeCanShoot;
+        public static event Action<bool> ChangeCanSpawn;
+        public static event Action<bool> ChangeTimeGo;
+
+        public bool CanMove 
+        {
+            get => canMove;
+            private set => ChangeCanMove?.Invoke(value); 
+        }
+
+        public bool CanShoot
+        {
+            get => canShoot;
+            private set => ChangeCanShoot?.Invoke(value);
+        }
+
+        public bool CanSpawn
+        {
+            get => canSpawn;
+            private set => ChangeCanSpawn?.Invoke(value);
+        }
+
+        public bool TimeGo
+        {
+            get => timeGo;
+            private set => ChangeTimeGo?.Invoke(value);
+        }
+
+        private bool canMove;
+        private bool canShoot;
+        private bool canSpawn;
+        private bool timeGo;
+
+        #endregion STATES_GAME
+
         public void ClickBuyTowerButton(TypeTower typeTower)
         {
             if (BoxManager.GetManager<CoinsManager>().CanBuyTower(typeTower))
@@ -29,7 +67,7 @@ namespace Core
             }
         }
 
-        #region STATES_GAME
+        #region DO_ACTIONS
 
         private void OnApplicationPause(bool pause)
         {
@@ -65,6 +103,6 @@ namespace Core
             }
         }
 
-        #endregion STATES_GAME
+        #endregion DO_ACTIONS
     }
 }

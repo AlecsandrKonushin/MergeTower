@@ -12,12 +12,10 @@ namespace Core
 
         private bool isCanMove;
         private bool isCanShoot;
-        private bool isCanSpawn;
         private bool isTimeGo;
 
         public bool SetCanMove { set => isCanMove = value; }
         public bool SetCanShoot { set => isCanShoot = value; }
-        public bool SetCanSpawn { set => isCanSpawn = value; }
         public bool SetTimeGo { set => isTimeGo = value; }
 
         public void OnInitialize()
