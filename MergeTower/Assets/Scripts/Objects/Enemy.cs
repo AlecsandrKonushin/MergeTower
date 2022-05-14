@@ -15,7 +15,7 @@ namespace ObjectsOnScene
             targetSystem = new TargetEnemySystem();
             targetSystem.ChooseTarget();
 
-            UpdateGame.Instance.AddMoveObject(moveSystem);
+            BoxManager.GetManager<UpdateManager>().AddMoveObject(moveSystem);
         }
     }
 }

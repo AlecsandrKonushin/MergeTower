@@ -23,8 +23,8 @@ namespace SystemShoot
 
             timeWaitReloading = timeReloading;
 
-            UpdateGame.Instance.AddShootObject(this);
-            Timer.Instance.AddWaitingObject(this);
+            BoxManager.GetManager<UpdateManager>().AddShootObject(this);
+            BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
         }
 
         public void SetTarget(Enemy enemyTarget)
@@ -43,7 +43,7 @@ namespace SystemShoot
                     Debug.Log($"Выстрел в {target}");
 
                     readyToShoot = false;
-                    Timer.Instance.AddWaitingObject(this);
+                    BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
                 }
             }
         }
@@ -56,7 +56,7 @@ namespace SystemShoot
             {
                 readyToShoot = true;
                 timeWaitReloading = timeReloading;
-                Timer.Instance.RemoveWaitingObject(this);
+                BoxManager.GetManager<TimeManager>().RemoveWaitingObject(this);
             }
         }
     }

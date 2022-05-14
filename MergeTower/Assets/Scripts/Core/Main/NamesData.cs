@@ -5,5 +5,6 @@ namespace Core
         public static string CoroutinesName { get => "[COROUTINES_OBJECT]"; }
         public static string TowersParentName { get => "[TOWERS]"; }
         public static string EnemiesParentName { get => "[ENEMIES]"; }
+        public static string UpdateGameName { get => "[UPDATE_GAME]"; }
     }
 }

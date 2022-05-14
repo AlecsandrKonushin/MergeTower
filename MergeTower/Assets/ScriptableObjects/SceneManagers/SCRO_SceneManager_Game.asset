@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: SCRO_SceneManager_Game
   m_EditorClassIdentifier: 
   managers:
-  - {fileID: 11400000, guid: b305f0746c9750e428f2c3d36935082d, type: 2}
-  - {fileID: 11400000, guid: e0d97859d0b9db84d95f5f193605f17f, type: 2}
-  - {fileID: 11400000, guid: 5ba4180c436f8c84482e230727cf0f94, type: 2}
-  - {fileID: 11400000, guid: 45c882f4c6f541e4b80320869a9faf1b, type: 2}
   - {fileID: 11400000, guid: a6b0f78919ac9dd4b93a51ce9453601f, type: 2}
+  - {fileID: 11400000, guid: e0d97859d0b9db84d95f5f193605f17f, type: 2}
+  - {fileID: 11400000, guid: 45c882f4c6f541e4b80320869a9faf1b, type: 2}
+  - {fileID: 11400000, guid: 5bbc7b4e797f34243899274b1cb48f96, type: 2}
   - {fileID: 11400000, guid: e10adfd143b76f14a8f1abe1b333d687, type: 2}
+  - {fileID: 11400000, guid: 1d101a600151e4e44a1953bc982c8acd, type: 2}
+  - {fileID: 11400000, guid: 5ba4180c436f8c84482e230727cf0f94, type: 2}
+  - {fileID: 11400000, guid: 287678a15d9e01a4b8709a68b0caaa58, type: 2}

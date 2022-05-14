@@ -1,78 +1,25 @@
-﻿using System.Collections.Generic;
-using SystemMove;
-using SystemShoot;
+﻿using System;
+using UnityEngine;
 
-namespace Core
+namespace GameUpdate
 {
-    public class UpdateGame : Singleton<UpdateGame>, IInitialize
+    public class UpdateGame : MonoBehaviour
     {
-        private List<IMove> moveObjects = new List<IMove>();
-        private List<IShoot> shootObjects = new List<IShoot>();
-        private Timer timer;
-
-        private bool isCanMove;
-        private bool isCanShoot;
-        private bool isTimeGo;
-
-        public bool SetCanMove { set => isCanMove = value; }
-        public bool SetCanShoot { set => isCanShoot = value; }
-        public bool SetTimeGo { set => isTimeGo = value; }
-
-        public void OnInitialize()
-        {
-            timer = Timer.instance;
-        }
-
-        public void OnStart() { }
+        public event Action NewFrame;
 
         private void Update()
         {
-            if (isCanMove)
-            {
-                foreach (var moveObject in moveObjects)
-                {
-                    moveObject.Move();
-                }
-            }
-
-            if (isCanShoot)
-            {
-                foreach (var shootObject in shootObjects)
-                {
-                    shootObject.Shoot();
-                }
-            }
-
-            if (isTimeGo)
-            {
-                timer.TickTimer();
-            }
+            NewFrame?.Invoke();
         }
 
-        public void AddMoveObject(IMove moveObject)
+        public void SubscribeOnUpdate(Action newFrame)
         {
-            moveObjects.Add(moveObject);
+            NewFrame += newFrame;
         }
 
-        public void RemoveMoveObject(IMove moveObject)
+        public void UnSubscribeOnUpdate(Action newFrame)
         {
-            if (moveObjects.Contains(moveObject))
-            {
-                moveObjects.Remove(moveObject);
-            }
-        }
-
-        public void AddShootObject(IShoot shootObject)
-        {
-            shootObjects.Add(shootObject);
-        }
-
-        public void RemoveShootObject(IShoot shootObject)
-        {
-            if (shootObjects.Contains(shootObject))
-            {
-                shootObjects.Remove(shootObject);
-            }
+            NewFrame -= newFrame;
         }
     }
 }

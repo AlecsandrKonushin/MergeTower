@@ -21,7 +21,7 @@ namespace ObjectsOnScene
             targetSystem = new TargetTowerSystem();
             shootSystem = new ShootSystem(bulletPrefab, speedShoot, 1f);
 
-            UpdateGame.Instance.AddMoveObject(rotationSystem);
+            BoxManager.GetManager<UpdateManager>().AddMoveObject(rotationSystem);
 
             targetSystem.SubscribeOnGetTarget(StartAttack);
         }

@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Core
 {
-    public class Timer : Singleton<Timer>, IWaiting
+    [CreateAssetMenu(fileName = "TimeManager", menuName = "Managers/TimeManager")]
+    public class TimeManager : BaseManager, IWaiting
     {
         private List<IWaiting> waitingObjects = new List<IWaiting>();
 
