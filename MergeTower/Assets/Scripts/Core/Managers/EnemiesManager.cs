@@ -48,11 +48,6 @@ namespace Core
             return enemy;
         }
 
-        public override void OnInitialize()
-        {
-            BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
-        }
-
         public override void OnStart()
         {
             CreateEnemy();
@@ -94,7 +89,6 @@ namespace Core
 
             timeWaitSpawn = timeSpawn;
             BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
-            Debug.Log("new time in enemies controller");
         }
     }
 }

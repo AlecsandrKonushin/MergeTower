@@ -25,9 +25,9 @@ namespace Core
         {
             if (waitingObjects.Count > 0)
             {
-                foreach (var waitingObject in waitingObjects)
+                for (int i = 0; i < waitingObjects.Count; i++)
                 {
-                    waitingObject.TickTimer();
+                    waitingObjects[i].TickTimer();
                 }
             }
         }
