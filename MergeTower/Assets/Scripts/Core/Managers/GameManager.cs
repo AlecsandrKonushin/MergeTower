@@ -24,6 +24,11 @@ namespace Core
         public static event Action<bool> ChangeCanSpawn;
         public static event Action<bool> ChangeTimeGo;
 
+        private bool canMove;
+        private bool canShoot;
+        private bool canSpawn;
+        private bool timeGo;
+
         public bool CanMove 
         {
             get => canMove;
@@ -46,14 +51,14 @@ namespace Core
         {
             get => timeGo;
             private set => ChangeTimeGo?.Invoke(value);
-        }
-
-        private bool canMove;
-        private bool canShoot;
-        private bool canSpawn;
-        private bool timeGo;
+        }        
 
         #endregion STATES_GAME
+
+        public override void OnStart()
+        {
+            canSpawn = true;
+        }
 
         public void ClickBuyTowerButton(TypeTower typeTower)
         {

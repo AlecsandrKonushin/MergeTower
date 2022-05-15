@@ -11,9 +11,11 @@ namespace ObjectsOnScene
 
         public override void OnInitialize()
         {
-            moveSystem = gameObject.AddComponent<MoveObjectSystem>();
             targetSystem = new TargetEnemySystem();
             targetSystem.ChooseTarget();
+
+            moveSystem = gameObject.AddComponent<MoveObjectSystem>();
+            moveSystem.SetTransformForChange(targetSystem.GetTarget.transform);
 
             BoxManager.GetManager<UpdateManager>().AddMoveObject(moveSystem);
         }

@@ -5,10 +5,11 @@ namespace SystemMove
 {
     public class ChangeTransformSystem : MonoBehaviour, IMove
     {
+        [HideInInspector]
         public UnityEvent ListenerEndChange;
 
         // TODO: устанавливать скорость в конструкторе
-        protected float speedChange = 5f;
+        protected float speedChange = 3f;
         protected Transform targetTransform;
 
         protected bool canChange;

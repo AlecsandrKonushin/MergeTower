@@ -31,7 +31,10 @@ namespace Core
             updateGame = newObject.gameObject.AddComponent<UpdateGame>();
 
             timer = BoxManager.GetManager<TimeManager>();
+
             isTimeGo = true;
+            isCanMove = true;
+            isCanShoot = true;
         }
 
         public override void OnStart()

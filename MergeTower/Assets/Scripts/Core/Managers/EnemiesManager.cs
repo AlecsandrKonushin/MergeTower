@@ -14,7 +14,7 @@ namespace Core
 
         private List<Enemy> enemies = new List<Enemy>();
 
-        private float timeSpawn = 1.5f;
+        private float timeSpawn = 2f;
         private float timeWaitSpawn = 0;
 
         /// <summary>
@@ -85,6 +85,7 @@ namespace Core
         {
             Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
             enemies.Add(enemy);
+            enemy.OnInitialize();
             NewEnemy?.Invoke(enemy);
 
             timeWaitSpawn = timeSpawn;
