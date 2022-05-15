@@ -14,8 +14,23 @@ namespace Core
 
         private List<Enemy> enemies = new List<Enemy>();
 
+        private bool canSpawn;
         private float timeSpawn = 2f;
         private float timeWaitSpawn = 0;
+
+        #region INITIALIZE 
+
+        public override void OnInitialize()
+        {
+            GameManager.ChangeCanSpawn += (bool canSpawn) => { this.canSpawn = canSpawn; };
+        }
+
+        public override void OnStart()
+        {
+            CreateEnemy();
+        }
+
+        #endregion INITIALIZE
 
         /// <summary>
         /// Получить ближайшего к базе Enemy
@@ -48,10 +63,6 @@ namespace Core
             return enemy;
         }
 
-        public override void OnStart()
-        {
-            CreateEnemy();
-        }
 
         public void TickTimer()
         {
@@ -61,7 +72,7 @@ namespace Core
             {
                 BoxManager.GetManager<TimeManager>().RemoveWaitingObject(this);
 
-                if (BoxManager.GetManager<GameManager>().CanSpawn)
+                if (canSpawn)
                 {
                     CreateEnemy();
                 }

@@ -15,13 +15,11 @@ namespace Core
         private List<IShoot> shootObjects = new List<IShoot>();
         private TimeManager timer;
 
-        private bool isCanMove;
-        private bool isCanShoot;
-        private bool isTimeGo;
+        private bool canMove;
+        private bool canShoot;
+        private bool timeGo;
 
-        public bool SetCanMove { set => isCanMove = value; }
-        public bool SetCanShoot { set => isCanShoot = value; }
-        public bool SetTimeGo { set => isTimeGo = value; }
+        #region INITIALIZE
 
         public override void OnInitialize()
         {
@@ -32,9 +30,9 @@ namespace Core
 
             timer = BoxManager.GetManager<TimeManager>();
 
-            isTimeGo = true;
-            isCanMove = true;
-            isCanShoot = true;
+            GameManager.ChangeCanMove += (bool canMove) => { this.canMove = canMove; };
+            GameManager.ChangeCanShoot += (bool canShoot) => { this.canShoot = canShoot; };
+            GameManager.ChangeTimeGo += (bool timeGo) => { this.timeGo = timeGo; };
         }
 
         public override void OnStart()
@@ -42,9 +40,11 @@ namespace Core
             updateGame.SubscribeOnUpdate(NewFrame);
         }
 
+        #endregion INITIALIZE
+
         private void NewFrame()
         {
-            if (isCanMove)
+            if (canMove)
             {
                 foreach (var moveObject in moveObjects)
                 {
@@ -52,7 +52,7 @@ namespace Core
                 }
             }
 
-            if (isCanShoot)
+            if (canShoot)
             {
                 foreach (var shootObject in shootObjects)
                 {
@@ -60,7 +60,7 @@ namespace Core
                 }
             }
 
-            if (isTimeGo)
+            if (timeGo)
             {
                 if (timer != null)
                 {
@@ -68,6 +68,8 @@ namespace Core
                 }
             }
         }
+
+        #region ADD/REMOVE_SUBSCRIBERS
 
         public void AddMoveObject(IMove moveObject)
         {
@@ -94,5 +96,7 @@ namespace Core
                 shootObjects.Remove(shootObject);
             }
         }
+
+        #endregion ADD/REMOVE_SUBSCRIBERS
     }
 }
