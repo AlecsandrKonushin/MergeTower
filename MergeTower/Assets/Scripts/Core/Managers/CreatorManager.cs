@@ -8,6 +8,7 @@ namespace Core
     {
         private GameObject towersParent;
         private GameObject enemiesParent;
+        private GameObject bulletsParent;
 
         private const float offsetYTower = 1f;
 
@@ -15,6 +16,7 @@ namespace Core
         {
             towersParent = new GameObject(NamesData.TowersParentName);
             enemiesParent = new GameObject(NamesData.EnemiesParentName);
+            bulletsParent = new GameObject(NamesData.BulletParentName);
         }
 
         public Tower CreateTower(Tower towerPrefab, Tile tileForSpawn)
@@ -40,6 +42,15 @@ namespace Core
             enemy.OnInitialize();
 
             return enemy;
+        }
+
+        public Bullet CreateBullet(Bullet bulletPrefab, Vector3 positionForSpawn)
+        {
+            Bullet bullet = Instantiate(bulletPrefab, positionForSpawn, Quaternion.identity);
+            bullet.transform.SetParent(bulletsParent.transform);
+            bullet.OnInitialize();
+
+            return bullet;
         }
     }
 }

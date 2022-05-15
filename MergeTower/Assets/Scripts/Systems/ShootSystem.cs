@@ -1,4 +1,5 @@
 ﻿using Core;
+using Data;
 using ObjectsOnScene;
 using UnityEngine;
 
@@ -6,8 +7,8 @@ namespace SystemShoot
 {
     public class ShootSystem : IShoot, IWaiting
     {
-        private Bullet bulletPrefab;
-        private float speedShoot;
+        private BulletData bulletData;
+        private Vector3 positionShoot;
 
         private Enemy target;
 
@@ -15,10 +16,10 @@ namespace SystemShoot
         private float timeReloading;
         private float timeWaitReloading;
 
-        public ShootSystem(Bullet bulletPrefab, float speedShoot, float timeReloading)
+        public ShootSystem(Vector3 positionShoot, BulletData bulletData, float timeReloading)
         {
-            this.bulletPrefab = bulletPrefab;
-            this.speedShoot = speedShoot;
+            this.positionShoot = positionShoot;
+            this.bulletData = bulletData;
             this.timeReloading = timeReloading;
 
             timeWaitReloading = timeReloading;
@@ -40,7 +41,7 @@ namespace SystemShoot
             {
                 if (target != null)
                 {
-                    Debug.Log($"Выстрел в {target}");
+                    BoxManager.GetManager<BulletManager>().CreateBullet(bulletData, positionShoot);
 
                     readyToShoot = false;
                     BoxManager.GetManager<TimeManager>().AddWaitingObject(this);

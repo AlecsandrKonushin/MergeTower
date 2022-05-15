@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using SystemMove;
+using Data;
 
-namespace SystemShoot
+namespace ObjectsOnScene
 {
-    public class Bullet : MonoBehaviour
+    public class Bullet : ObjectScene
     {
+        private BulletData bulletData;
         private MoveObjectSystem moveObjectSystem;
+
+        private void SetDataBullet(BulletData bulletData)
+        {
+            this.bulletData = bulletData;
+        }
     }
 }

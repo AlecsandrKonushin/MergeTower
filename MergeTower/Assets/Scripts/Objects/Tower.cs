@@ -1,15 +1,15 @@
-﻿using UnityEngine;
-using SystemShoot;
+﻿using SystemShoot;
 using SystemMove;
 using Core;
 using SystemTarget;
+using Data;
+using UnityEngine;
 
 namespace ObjectsOnScene
 {
     public class Tower : ObjectScene
     {
-        [SerializeField] private Bullet bulletPrefab;
-        [SerializeField] private float speedShoot;
+        [SerializeField] private GameObject positionShoot;
 
         private TargetTowerSystem targetSystem;
         private ShootSystem shootSystem;
@@ -19,7 +19,10 @@ namespace ObjectsOnScene
         {
             rotationSystem = gameObject.AddComponent<RotationSystem>();
             targetSystem = new TargetTowerSystem();
-            shootSystem = new ShootSystem(bulletPrefab, speedShoot, 1f);
+
+            // TODO: брать дату пули из какого-то хранилища
+            BulletData bulletData = new BulletData(TypeBullet.Simple, 2f);
+            shootSystem = new ShootSystem(positionShoot.transform.position, bulletData, 1f);
 
             BoxManager.GetManager<UpdateManager>().AddMoveObject(rotationSystem);
 
