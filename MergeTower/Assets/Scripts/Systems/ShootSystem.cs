@@ -41,7 +41,7 @@ namespace SystemShoot
             {
                 if (target != null)
                 {
-                    BoxManager.GetManager<BulletManager>().CreateBullet(bulletData, positionShoot);
+                    BoxManager.GetManager<BulletManager>().CreateBullet(bulletData, positionShoot, target);
 
                     readyToShoot = false;
                     BoxManager.GetManager<TimeManager>().AddWaitingObject(this);

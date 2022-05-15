@@ -12,9 +12,10 @@ namespace Core
 
         private List<Bullet> bullets = new List<Bullet>();
 
-        public void CreateBullet(BulletData bulletData, Vector3 startPosition)
+        public void CreateBullet(BulletData bulletData, Vector3 startPosition, ObjectScene target)
         {
             Bullet newBullet = BoxManager.GetManager<CreatorManager>().CreateBullet(bulletPrefab, startPosition);
+            newBullet.SetDataBullet(bulletData);
         }
     }
 }

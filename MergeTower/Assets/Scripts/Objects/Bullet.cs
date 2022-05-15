@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using SystemMove;
+﻿using SystemMove;
 using Data;
 
 namespace ObjectsOnScene
@@ -8,10 +7,16 @@ namespace ObjectsOnScene
     {
         private BulletData bulletData;
         private MoveObjectSystem moveObjectSystem;
+        private ObjectScene target;
 
-        private void SetDataBullet(BulletData bulletData)
+        public void SetDataBullet(BulletData bulletData)
         {
             this.bulletData = bulletData;
+        }
+
+        public void SetTarget(ObjectScene target)
+        {
+            this.target = target;
         }
     }
 }
