@@ -7,17 +7,17 @@ namespace SystemShoot
 {
     public class ShootSystem : IShoot, IWaiting
     {
+        private Tower tower;
         private BulletData bulletData;
         private Vector3 positionShoot;
-
-        private Enemy target;
 
         private bool readyToShoot;
         private float timeReloading;
         private float timeWaitReloading;
 
-        public ShootSystem(Vector3 positionShoot, BulletData bulletData, float timeReloading)
+        public ShootSystem(Tower tower, Vector3 positionShoot, BulletData bulletData, float timeReloading)
         {
+            this.tower = tower;
             this.positionShoot = positionShoot;
             this.bulletData = bulletData;
             this.timeReloading = timeReloading;
@@ -28,20 +28,13 @@ namespace SystemShoot
             BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
         }
 
-        public void SetTarget(Enemy enemyTarget)
-        {
-            target = enemyTarget;
-
-            Shoot();
-        }
-
         public void Shoot()
         {
             if (readyToShoot)
             {
-                if (target != null)
+                if (tower.GetTarget != null)
                 {
-                    BoxManager.GetManager<BulletManager>().CreateBullet(bulletData, positionShoot, target);
+                    BoxManager.GetManager<BulletManager>().CreateBullet(bulletData, positionShoot, tower.GetTarget);
 
                     readyToShoot = false;
                     BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
@@ -58,6 +51,8 @@ namespace SystemShoot
                 readyToShoot = true;
                 timeWaitReloading = timeReloading;
                 BoxManager.GetManager<TimeManager>().RemoveWaitingObject(this);
+
+                Shoot();
             }
         }
     }

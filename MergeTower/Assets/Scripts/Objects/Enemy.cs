@@ -1,11 +1,14 @@
 ﻿using SystemMove;
 using Core;
 using SystemTarget;
+using System;
 
 namespace ObjectsOnScene
 {
     public class Enemy : ObjectScene
     {
+        public event Action DeathEnemy;
+
         private MoveObjectSystem moveSystem;
         private TargetEnemySystem targetSystem;
 
@@ -18,6 +21,11 @@ namespace ObjectsOnScene
             moveSystem.SetTransformForChange(targetSystem.GetTarget.transform);
 
             BoxManager.GetManager<UpdateManager>().AddMoveObject(moveSystem);
+        }
+
+        private void Dearh()
+        {
+            DeathEnemy?.Invoke();
         }
     }
 }

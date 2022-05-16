@@ -15,6 +15,10 @@ namespace ObjectsOnScene
         private ShootSystem shootSystem;
         private RotationSystem rotationSystem;
 
+        private Enemy target;
+
+        public Enemy GetTarget { get => target; }
+
         public override void OnInitialize()
         {
             rotationSystem = gameObject.AddComponent<RotationSystem>();
@@ -22,7 +26,7 @@ namespace ObjectsOnScene
 
             // TODO: брать дату пули из какого-то хранилища
             BulletData bulletData = new BulletData(TypeBullet.Simple, 2f);
-            shootSystem = new ShootSystem(positionShoot.transform.position, bulletData, 1f);
+            shootSystem = new ShootSystem(this, positionShoot.transform.position, bulletData, 1f);
 
             BoxManager.GetManager<UpdateManager>().AddMoveObject(rotationSystem);
 
@@ -31,8 +35,15 @@ namespace ObjectsOnScene
 
         private void StartAttack(ObjectScene enemy)
         {
+            target = enemy as Enemy;
+            target.DeathEnemy += ChooseNewTarget;
             rotationSystem.SetTransformForChange(enemy.transform);
-            shootSystem.SetTarget(enemy as Enemy);
+        }
+
+        private void ChooseNewTarget()
+        {
+            target = null;
+            targetSystem.SubscribeOnGetTarget(StartAttack);
         }
     }
 }
