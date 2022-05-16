@@ -1,5 +1,6 @@
 ﻿using SystemMove;
 using Data;
+using Core;
 
 namespace ObjectsOnScene
 {
@@ -18,6 +19,8 @@ namespace ObjectsOnScene
         {
             this.target = target;
             target.DeathObjectEvent += TargetIsDeath;
+
+            BoxManager.GetManager<EffectManager>().StartBulletEffect(transform);
         }
 
         public override void OnInitialize()

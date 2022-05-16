@@ -9,16 +9,16 @@ namespace SystemShoot
     {
         private Tower tower;
         private BulletData bulletData;
-        private Vector3 positionShoot;
+        private Transform transformShoot;
 
         private bool readyToShoot;
         private float timeReloading;
         private float timeWaitReloading;
 
-        public ShootSystem(Tower tower, Vector3 positionShoot, BulletData bulletData, float timeReloading)
+        public ShootSystem(Tower tower, Transform transformShoot, BulletData bulletData, float timeReloading)
         {
             this.tower = tower;
-            this.positionShoot = positionShoot;
+            this.transformShoot = transformShoot;
             this.bulletData = bulletData;
             this.timeReloading = timeReloading;
 
@@ -34,7 +34,7 @@ namespace SystemShoot
             {
                 if (tower.GetTarget != null)
                 {
-                    BoxManager.GetManager<BulletManager>().CreateBullet(bulletData, positionShoot, tower.GetTarget);
+                    BoxManager.GetManager<BulletManager>().CreateBullet(bulletData, transformShoot, tower.GetTarget);
 
                     readyToShoot = false;
                     BoxManager.GetManager<TimeManager>().AddWaitingObject(this);

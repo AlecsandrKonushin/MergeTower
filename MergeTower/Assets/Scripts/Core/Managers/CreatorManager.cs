@@ -1,4 +1,5 @@
 ﻿using ObjectsOnScene;
+using SystemEffect;
 using UnityEngine;
 
 namespace Core
@@ -37,19 +38,25 @@ namespace Core
         {
             GameObject objectSpawn = SceneObjects.Instance.GetSpawnEnemyPosition;
             Enemy enemy = Instantiate(enemyPrefab, objectSpawn.transform.position, objectSpawn.transform.rotation);
-           
+
             enemy.transform.SetParent(enemiesParent.transform);
             enemy.OnInitialize();
 
             return enemy;
         }
 
-        public Bullet CreateBullet(Bullet bulletPrefab, Vector3 positionForSpawn)
+        public Bullet CreateBullet(Bullet bulletPrefab, Transform transformSpawn)
         {
-            Bullet bullet = Instantiate(bulletPrefab, positionForSpawn, Quaternion.identity);
+            Bullet bullet = Instantiate(bulletPrefab, transformSpawn.position, transformSpawn.rotation);
             bullet.transform.SetParent(bulletsParent.transform);
-            
+
             return bullet;
+        }
+
+        public EffectBase CreateEffect(EffectBase effect, Transform transformSpawn)
+        {
+            EffectBase newEffect = Instantiate(effect, transformSpawn.position, transformSpawn.rotation);
+            return newEffect;
         }
     }
 }
