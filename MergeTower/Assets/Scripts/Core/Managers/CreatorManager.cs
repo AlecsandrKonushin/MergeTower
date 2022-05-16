@@ -48,8 +48,7 @@ namespace Core
         {
             Bullet bullet = Instantiate(bulletPrefab, positionForSpawn, Quaternion.identity);
             bullet.transform.SetParent(bulletsParent.transform);
-            bullet.OnInitialize();
-
+            
             return bullet;
         }
     }

@@ -28,15 +28,13 @@ namespace ObjectsOnScene
             BulletData bulletData = new BulletData(TypeBullet.Simple, 2f);
             shootSystem = new ShootSystem(this, positionShoot.transform.position, bulletData, 1f);
 
-            BoxManager.GetManager<UpdateManager>().AddMoveObject(rotationSystem);
-
             targetSystem.SubscribeOnGetTarget(StartAttack);
         }
 
         private void StartAttack(ObjectScene enemy)
         {
             target = enemy as Enemy;
-            target.DeathEnemy += ChooseNewTarget;
+            target.DeathObjectEvent += ChooseNewTarget;
             rotationSystem.SetTransformForChange(enemy.transform);
         }
 

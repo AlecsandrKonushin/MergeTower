@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Core;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace SystemMove
@@ -13,6 +14,13 @@ namespace SystemMove
         protected Transform targetTransform;
 
         protected bool canChange;
+
+        public float SetSpeed { set => speedChange = value; }
+
+        private void Awake()
+        {
+            BoxManager.GetManager<UpdateManager>().AddMoveObject(this);
+        }
 
         public void Move()
         {
