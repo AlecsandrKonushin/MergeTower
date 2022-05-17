@@ -44,12 +44,23 @@ namespace SystemMove
             canChange = true;
         }
 
+        public void StopMove()
+        {
+            canChange = false;
+
+            if (ListenerEndChange != null)
+            {
+                ListenerEndChange.RemoveAllListeners();
+            }
+        }
+
         protected virtual void ChangeTransform() { }
         protected virtual void SetData() { }
 
         protected void EndChangeTransform()
         {
             canChange = false;
+
             ListenerEndChange?.Invoke();
         }
     }

@@ -9,7 +9,9 @@ public abstract class ObjectScene : MonoBehaviour, IInitialize
 
     public virtual void OnStart() { }
 
-    public virtual void Death() { }
+    public virtual void Damage(int value) { }
+
+    protected virtual void Death() { }
 
     protected void DeathInvoke()
     {

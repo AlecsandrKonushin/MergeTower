@@ -40,7 +40,6 @@ namespace Core
             Enemy enemy = Instantiate(enemyPrefab, objectSpawn.transform.position, objectSpawn.transform.rotation);
 
             enemy.transform.SetParent(enemiesParent.transform);
-            enemy.OnInitialize();
 
             return enemy;
         }

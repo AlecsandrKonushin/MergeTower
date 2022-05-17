@@ -1,13 +1,14 @@
 ﻿using SystemMove;
 using Data;
 using Core;
+using UnityEngine;
 
 namespace ObjectsOnScene
 {
     public class Bullet : ObjectScene
     {
         private BulletData bulletData;
-        private MoveObjectSystem moveObjectSystem;
+        private MoveObjectSystem moveSystem;
         private ObjectScene target;
 
         public void SetDataBullet(BulletData bulletData)
@@ -25,14 +26,37 @@ namespace ObjectsOnScene
 
         public override void OnInitialize()
         {
-            moveObjectSystem = gameObject.AddComponent<MoveObjectSystem>();
-            moveObjectSystem.SetSpeed = bulletData.GetSpeed;
-            moveObjectSystem.SetTransformForChange(target.transform);
+            moveSystem = gameObject.AddComponent<MoveObjectSystem>();
+            moveSystem.SetSpeed = bulletData.GetSpeed;
+            moveSystem.SetTransformForChange(target.transform);
         }
 
         private void TargetIsDeath()
         {
             target.DeathObjectEvent -= TargetIsDeath;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent<ObjectScene>(out ObjectScene objectScene))
+            {
+                if (objectScene == target)
+                {
+                    objectScene.Damage(bulletData.GetDamange);
+
+                    Death();
+                }
+                else
+                {
+                    Debug.Log("Не моя цель");
+                }
+            }
+        }
+
+        protected override void Death()
+        {
+            moveSystem.StopMove();
+            Destroy(gameObject);
         }
     }
 }

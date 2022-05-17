@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\Core\Main\UpdateGame.cs" />
     <Compile Include="Assets\Scripts\Core\Main\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\TimeManager.cs" />
+    <Compile Include="Assets\Scripts\Core\Data\EnemyData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

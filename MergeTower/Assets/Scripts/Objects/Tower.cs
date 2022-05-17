@@ -25,7 +25,7 @@ namespace ObjectsOnScene
             targetSystem = new TargetTowerSystem();
 
             // TODO: брать дату пули из какого-то хранилища
-            BulletData bulletData = new BulletData(TypeBullet.Simple, 15f);
+            BulletData bulletData = new BulletData(TypeBullet.Simple, 20f, 1);
             shootSystem = new ShootSystem(this, positionShoot.transform, bulletData, 1f);
 
             targetSystem.SubscribeOnGetTarget(StartAttack);

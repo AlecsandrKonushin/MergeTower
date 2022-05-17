@@ -1,4 +1,5 @@
-﻿using ObjectsOnScene;
+﻿using Data;
+using ObjectsOnScene;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,7 @@ namespace Core
         private List<Enemy> enemies = new List<Enemy>();
 
         private bool canSpawn;
-        private float timeSpawn = 2f;
+        private float timeSpawn = 3f;
         private float timeWaitSpawn = 0;
 
         #region INITIALIZE 
@@ -95,8 +96,14 @@ namespace Core
         private void CreateEnemy()
         {
             Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
-            enemies.Add(enemy);
+
+            // TODO: брать из данных Enemy из ScriptableObject
+            EnemyData enemyData = new EnemyData(10, 1.5f);
+            enemy.SetData = enemyData;
+
             enemy.OnInitialize();
+
+            enemies.Add(enemy);
             NewEnemy?.Invoke(enemy);
 
             timeWaitSpawn = timeSpawn;

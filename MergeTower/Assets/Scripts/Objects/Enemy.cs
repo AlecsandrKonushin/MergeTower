@@ -1,5 +1,5 @@
-﻿using SystemMove;
-using Core;
+﻿using Data;
+using SystemMove;
 using SystemTarget;
 
 namespace ObjectsOnScene
@@ -8,6 +8,16 @@ namespace ObjectsOnScene
     {
         private MoveObjectSystem moveSystem;
         private TargetEnemySystem targetSystem;
+        private EnemyData enemyData;
+
+        public EnemyData SetData
+        {
+            set
+            {
+                enemyData = value;
+                enemyData.EndHealth += Death;
+            }
+        }
 
         public override void OnInitialize()
         {
@@ -15,12 +25,22 @@ namespace ObjectsOnScene
             targetSystem.ChooseTarget();
 
             moveSystem = gameObject.AddComponent<MoveObjectSystem>();
+            moveSystem.SetSpeed = enemyData.GetSpeed;
             moveSystem.SetTransformForChange(targetSystem.GetTarget.transform);
         }
 
-        public override void Death()
+        public override void Damage(int value)
         {
+            enemyData.DownHealth(value);
+        }
+
+        protected override void Death()
+        {
+            moveSystem.StopMove();
+
             DeathInvoke();
+
+            gameObject.SetActive(false);
         }
     }
 }

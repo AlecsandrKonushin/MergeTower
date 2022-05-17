@@ -2510,11 +2510,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6673802680727711063, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
+    - target: {fileID: -3797866689915996471, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
+    - target: {fileID: -2473424575180118478, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
+    - target: {fileID: -787141429326784033, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
     - target: {fileID: 919132149155446097, guid: 4907ec84aad704746a359b628b7f6869,
         type: 3}
       propertyPath: m_Name
       value: GoldHeap_Model
       objectReference: {fileID: 0}
+    - target: {fileID: 945454400225530728, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
+    - target: {fileID: 1512191506632812556, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
+    - target: {fileID: 2927593092117553206, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
+    - target: {fileID: 6272350532052637613, guid: 4907ec84aad704746a359b628b7f6869,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e1436d1ad4b7e54186ece0d74039b5d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4907ec84aad704746a359b628b7f6869, type: 3}
 --- !u!4 &1901945157 stripped
