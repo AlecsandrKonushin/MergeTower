@@ -1470,3 +1470,4 @@ Received Import Request.
   path: Assets/Prefabs/Box_Plane_gold/plane_treasure_0.prefab
   artifactKey: Guid(1cf0cdc9400c4994792534bff8e2f42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/Box_Plane_gold/plane_treasure_0.prefab using Guid(1cf0cdc9400c4994792534bff8e2f42a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eddc901338abc4cb33f97ebe28e4e526') in 0.007665 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
