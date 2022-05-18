@@ -98,7 +98,7 @@ namespace Core
             Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
 
             // TODO: брать из данных Enemy из ScriptableObject
-            EnemyData enemyData = new EnemyData(10, 1.5f);
+            EnemyData enemyData = new EnemyData(10, 2f);
             enemy.SetData = enemyData;
 
             enemy.OnInitialize();
