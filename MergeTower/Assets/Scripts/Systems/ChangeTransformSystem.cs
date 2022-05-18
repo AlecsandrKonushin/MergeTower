@@ -1,4 +1,5 @@
 ﻿using Core;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,7 +8,7 @@ namespace SystemMove
     public class ChangeTransformSystem : MonoBehaviour, IMove
     {
         [HideInInspector]
-        public UnityEvent ListenerEndChange;
+        public event Action EndedChangeTransform;
 
         // TODO: устанавливать скорость в конструкторе
         protected float speedChange = 3f;
@@ -48,9 +49,9 @@ namespace SystemMove
         {
             canChange = false;
 
-            if (ListenerEndChange != null)
+            if (EndedChangeTransform != null)
             {
-                ListenerEndChange.RemoveAllListeners();
+                EndedChangeTransform = null;
             }
         }
 
@@ -61,7 +62,7 @@ namespace SystemMove
         {
             canChange = false;
 
-            ListenerEndChange?.Invoke();
+            EndedChangeTransform?.Invoke();
         }
     }
 }

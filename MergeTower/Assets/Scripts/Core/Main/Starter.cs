@@ -13,7 +13,7 @@ namespace Core
         {
             // TODO: сделать OnStart UIManager и SceneObjects
             UIManager.Instance.OnInitialize();
-            SceneObjects.Instance.OnInitialize();
+            AllObjectsInScene.Instance.OnInitialize();
             BoxManager.Init(sceneManagers, isLogging);
         }
     }

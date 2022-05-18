@@ -58,7 +58,7 @@ namespace Core
         {
             if (BoxManager.GetManager<CoinsManager>().CanBuyTower(typeTower))
             {
-                if (SceneObjects.Instance.GetTilesParent.HaveTileForSpawn())
+                if (AllObjectsInScene.Instance.GetTilesParent.HaveTileForSpawn())
                 {
                     BoxManager.GetManager<CoinsManager>().BuyTower(typeTower);
                     BoxManager.GetManager<TowersManager>().BuyTower(typeTower);

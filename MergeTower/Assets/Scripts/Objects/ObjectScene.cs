@@ -1,20 +1,23 @@
 ﻿using System;
 using UnityEngine;
 
-public abstract class ObjectScene : MonoBehaviour, IInitialize
+namespace ObjectsOnScene
 {
-    public event Action DeathObjectEvent;
-
-    public virtual void OnInitialize() { }
-
-    public virtual void OnStart() { }
-
-    public virtual void Damage(int value) { }
-
-    protected virtual void Death() { }
-
-    protected void DeathInvoke()
+    public abstract class ObjectScene : MonoBehaviour, IInitialize
     {
-        DeathObjectEvent?.Invoke();
+        public event Action DeathObjectEvent;
+
+        public virtual void OnInitialize() { }
+
+        public virtual void OnStart() { }
+
+        public virtual void Damage(int value) { }
+
+        protected virtual void Death() { }
+
+        protected void DeathInvoke()
+        {
+            DeathObjectEvent?.Invoke();
+        }
     }
 }

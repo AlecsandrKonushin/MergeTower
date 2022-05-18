@@ -95,8 +95,8 @@
     <Compile Include="Assets\Scripts\Systems\Effects\EffectBase.cs" />
     <Compile Include="Assets\Scripts\Core\Interface\ISettings.cs" />
     <Compile Include="Assets\Scripts\Core\Main\NamesData.cs" />
+    <Compile Include="Assets\Scripts\Core\Data\EnemyData.cs" />
     <Compile Include="Assets\Scripts\UI\Windows\MainUIWindow.cs" />
-    <Compile Include="Assets\Scripts\Objects\SceneObjects.cs" />
     <Compile Include="Assets\Scripts\Core\Main\ClassReferenceAttribute.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\BaseManager.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\EnemiesManager.cs" />
@@ -117,7 +117,8 @@
     <Compile Include="Assets\Scripts\Core\Main\UpdateGame.cs" />
     <Compile Include="Assets\Scripts\Core\Main\Coroutines.cs" />
     <Compile Include="Assets\Scripts\Core\Managers\TimeManager.cs" />
-    <Compile Include="Assets\Scripts\Core\Data\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\Objects\AllObjectsInScene.cs" />
+    <Compile Include="Assets\Scripts\Objects\PositionEnemyMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

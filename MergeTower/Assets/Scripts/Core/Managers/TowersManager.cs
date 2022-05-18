@@ -14,7 +14,7 @@ namespace Core
 
         public void BuyTower(TypeTower typeTower)
         {
-            Tile tile = SceneObjects.Instance.GetTilesParent.GetTileForSpawnTower();
+            Tile tile = AllObjectsInScene.Instance.GetTilesParent.GetTileForSpawnTower();
 
             Tower newTower = BoxManager.GetManager<CreatorManager>().CreateTower(towerPrefabs[0], tile);
 

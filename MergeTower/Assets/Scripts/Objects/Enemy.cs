@@ -1,6 +1,7 @@
 ﻿using Data;
 using SystemMove;
 using SystemTarget;
+using UnityEngine;
 
 namespace ObjectsOnScene
 {
@@ -27,6 +28,7 @@ namespace ObjectsOnScene
             moveSystem = gameObject.AddComponent<MoveObjectSystem>();
             moveSystem.SetSpeed = enemyData.GetSpeed;
             moveSystem.SetTransformForChange(targetSystem.GetTarget.transform);
+            moveSystem.EndedChangeTransform += EndMoveToTarget;
         }
 
         public override void Damage(int value)
@@ -41,6 +43,27 @@ namespace ObjectsOnScene
             DeathInvoke();
 
             gameObject.SetActive(false);
+        }
+
+        private void EndMoveToTarget()
+        {
+            moveSystem.EndedChangeTransform -= EndMoveToTarget;
+            targetSystem.ChooseTarget();
+
+            if (targetSystem.GetFinishPosition)
+            {
+                Attack();
+            }
+            else
+            {
+                moveSystem.SetTransformForChange(targetSystem.GetTarget.transform);
+                moveSystem.EndedChangeTransform += EndMoveToTarget;
+            }
+        }
+
+        private void Attack()
+        {
+            Debug.Log("attack");
         }
     }
 }

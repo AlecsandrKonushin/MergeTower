@@ -44,21 +44,6 @@ namespace Core
             if (enemies.Count > 0)
             {
                 enemy = enemies[0];
-                float zPos = SceneObjects.Instance.GetGoldHeap.transform.position.z;
-                float distance = zPos - enemy.transform.position.z;
-
-                if (enemies.Count > 1)
-                {
-                    for (int i = 1; i < enemies.Count; i++)
-                    {
-                        float newDistance = zPos - enemies[i].transform.position.z;
-
-                        if (newDistance < distance)
-                        {
-                            enemy = enemies[i];
-                        }
-                    }
-                }
             }
 
             return enemy;
@@ -98,7 +83,7 @@ namespace Core
             Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
 
             // TODO: брать из данных Enemy из ScriptableObject
-            EnemyData enemyData = new EnemyData(10, 2f);
+            EnemyData enemyData = new EnemyData(10, 10f);
             enemy.SetData = enemyData;
 
             enemy.OnInitialize();
