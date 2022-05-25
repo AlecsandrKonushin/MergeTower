@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 257089931499209552}
   m_Layer: 0
-  m_Name: pirat_with_gun_0
+  m_Name: Pirat_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
