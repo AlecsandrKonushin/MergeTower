@@ -1232,3 +1232,4 @@ Received Import Request.
   path: Assets/Visual/Materials/VFX_Material
   artifactKey: Guid(b0140383093dc1742befb7a95510cdec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Visual/Materials/VFX_Material using Guid(b0140383093dc1742befb7a95510cdec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0f0503f1b30fb6266bb956fc51ed14c') in 0.007749 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
