@@ -1102,3 +1102,297 @@ Received Import Request.
   path: Assets/Visual/Materials/VFXMaterial/FireMaterial.mat
   artifactKey: Guid(48ba9946eb3f8394ca35e5e3de3d0c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Visual/Materials/VFXMaterial/FireMaterial.mat using Guid(48ba9946eb3f8394ca35e5e3de3d0c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952123c69d45fc1c009920a9e5c664fe') in 0.009867 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 83.154450 seconds.
+  path: Assets/Visual/Models/Enemies/Mermaid/Material
+  artifactKey: Guid(5a38f5403044102418ed7e53b524bc8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Mermaid/Material using Guid(5a38f5403044102418ed7e53b524bc8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87693043cc09d1d1b00f4c174a2ed3a0') in 0.001286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.520528 seconds.
+  path: Assets/Visual/Models/Enemies/Mermaid/MermaidTexture.png
+  artifactKey: Guid(bdf3469a7aa44e04aa2cd9b44403405f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Mermaid/MermaidTexture.png using Guid(bdf3469a7aa44e04aa2cd9b44403405f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939dea7d93d47f0f7474b69d723408d3') in 0.009044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.707682 seconds.
+  path: Assets/Visual/Models/Enemies/Mermaid/MermaidMaterial.mat
+  artifactKey: Guid(01b10eb4f5c55974ea245585be28d19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Mermaid/MermaidMaterial.mat using Guid(01b10eb4f5c55974ea245585be28d19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d4181289298a4e8cc528ad23113091') in 0.013645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.284407 seconds.
+  path: Assets/Visual/Models/Enemies/Mermaid/MermaidModel.fbx
+  artifactKey: Guid(1a753467de6805642a6bbcfef5700bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Mermaid/MermaidModel.fbx using Guid(1a753467de6805642a6bbcfef5700bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e69eef2307b938c621ca04f6c2d885a9') in 0.030489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.442439 seconds.
+  path: Assets/Visual/Models/Enemies/Octopus/Materials
+  artifactKey: Guid(a8fe8e7103255fc498ffb40d9c4ee066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Octopus/Materials using Guid(a8fe8e7103255fc498ffb40d9c4ee066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36bd072e9e9666ea39c8fa9aef7abd74') in 0.001035 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.057381 seconds.
+  path: Assets/Visual/Models/Enemies/Octopus/Materials/Octopus.mat
+  artifactKey: Guid(c1bf066fca89dac43b5d36670adad868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Octopus/Materials/Octopus.mat using Guid(c1bf066fca89dac43b5d36670adad868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54496bae59af96e562d538b1cb748624') in 0.012521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.811149 seconds.
+  path: Assets/Visual/Models/Enemies/Octopus/OctopusModel.fbx
+  artifactKey: Guid(913e8a7e439c75d429bc354a5dacf00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Octopus/OctopusModel.fbx using Guid(913e8a7e439c75d429bc354a5dacf00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbb925d8431a190b26ab7569f807b53f') in 0.047181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.706037 seconds.
+  path: Assets/Visual/Models/Enemies/Octopus/OctopusMaterial.mat
+  artifactKey: Guid(c1bf066fca89dac43b5d36670adad868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Octopus/OctopusMaterial.mat using Guid(c1bf066fca89dac43b5d36670adad868) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c45cbe85379668eb4a53f1cf0d436d71') in 0.012757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.733402 seconds.
+  path: Assets/Visual/Models/Enemies/Octopus/OctopusTexture.png
+  artifactKey: Guid(d92c3fd5c75bcbd4d9828d72c6908bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Octopus/OctopusTexture.png using Guid(d92c3fd5c75bcbd4d9828d72c6908bfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15c28477f256bdcfd85a3ef4551e42ca') in 0.009140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.286204 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/Material
+  artifactKey: Guid(315f4b15e70613141aedcc01064257b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/Material using Guid(315f4b15e70613141aedcc01064257b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5d6e596c3078b5f85c72dcf4a94cbf1') in 0.000979 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.058972 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/Material/Shark.mat
+  artifactKey: Guid(798e68e4c30c2b844a21e90b09a4a53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/Material/Shark.mat using Guid(798e68e4c30c2b844a21e90b09a4a53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91da83e732889bfad1b5b4cd2ef7c771') in 0.010525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.762140 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/Texture/Shark_00.png
+  artifactKey: Guid(8327a028e0f68034c8d5af40b2614d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/Texture/Shark_00.png using Guid(8327a028e0f68034c8d5af40b2614d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c19afe902a4333d3547782dc30a73cc8') in 0.011769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.980266 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/SharkModel.fbx
+  artifactKey: Guid(f6fec91a9b8698347bb00a5e20fb438d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/SharkModel.fbx using Guid(f6fec91a9b8698347bb00a5e20fb438d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e02dda20286a5e912ab18641f01213eb') in 0.019104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.137566 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/SharkTexture.png
+  artifactKey: Guid(8327a028e0f68034c8d5af40b2614d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/SharkTexture.png using Guid(8327a028e0f68034c8d5af40b2614d18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '496cbbc2c5369cbb756de878731f11c8') in 0.007612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.736044 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/SharkAnimation.fbx
+  artifactKey: Guid(b7c8f2c24b728904abfa91c562d98d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/SharkAnimation.fbx using Guid(b7c8f2c24b728904abfa91c562d98d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6222869d5712ca0356d5ebe4cc6a1cb') in 0.051567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.420802 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/shark_00.controller
+  artifactKey: Guid(878c099b9d57742488364252b526a660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/shark_00.controller using Guid(878c099b9d57742488364252b526a660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a778b4e6f5d6ca24c44d8b0d7c0ff964') in 0.052161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.456586 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/SharkMaterial.mat
+  artifactKey: Guid(798e68e4c30c2b844a21e90b09a4a53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/SharkMaterial.mat using Guid(798e68e4c30c2b844a21e90b09a4a53c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac00466dcfd62eb49888633953362c7e') in 0.012717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.170409 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/Animation
+  artifactKey: Guid(b1b35ef444ad346079481b314295f747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/Animation using Guid(b1b35ef444ad346079481b314295f747) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '522e0234b029f238b94e5247a6ca5129') in 0.001861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.357067 seconds.
+  path: Assets/Visual/Models/Enemies/Shark/Shark.controller
+  artifactKey: Guid(aba8e45d44e82c74ab014db55ff7c55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Enemies/Shark/Shark.controller using Guid(aba8e45d44e82c74ab014db55ff7c55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61d630eb36a3729bf6df5f0948fde097') in 0.003935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 71.157385 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_1/PiratModel_1.fbx
+  artifactKey: Guid(ecf64a6947cfba9489d49c3de118b733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_1/PiratModel_1.fbx using Guid(ecf64a6947cfba9489d49c3de118b733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae1b5d2f0349b19b3fa1abd52a3075f6') in 0.022163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.231774 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_1/ParatTexture_1.png
+  artifactKey: Guid(91e6d8cf1a9ecf748b716e17c99a88ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_1/ParatTexture_1.png using Guid(91e6d8cf1a9ecf748b716e17c99a88ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4352186c94cb5d3a74b8f5fea59b1156') in 0.008925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.851617 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_1/Pirat_1Model.fbx
+  artifactKey: Guid(ecf64a6947cfba9489d49c3de118b733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_1/Pirat_1Model.fbx using Guid(ecf64a6947cfba9489d49c3de118b733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d17cc8097b72802acf0b971197545ca') in 0.021170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.703418 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_1/PiratMaterial_1.mat
+  artifactKey: Guid(eb448a29145c1264483ab9da09de8974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_1/PiratMaterial_1.mat using Guid(eb448a29145c1264483ab9da09de8974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4210e226bbc5e679a6dfcefcebf5dd64') in 0.011501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.598189 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_2/PiratModel_2.fbx
+  artifactKey: Guid(58727d8acc01af84eb52cb29494efc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_2/PiratModel_2.fbx using Guid(58727d8acc01af84eb52cb29494efc05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c58ed95b8b8306b6813545d35bb3785') in 0.026959 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.421722 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_2/PiratTexture_2.png
+  artifactKey: Guid(a0da100fd03b6bc498898a0a33f2ca15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_2/PiratTexture_2.png using Guid(a0da100fd03b6bc498898a0a33f2ca15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd73f67ddcfa6c065b1cb93119170baf2') in 0.009831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.301336 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_2/PiratMaterial_2.mat
+  artifactKey: Guid(9c2276ba1d43cac4c819a60fea283ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_2/PiratMaterial_2.mat using Guid(9c2276ba1d43cac4c819a60fea283ca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5378322a2e7abe34cd1d4f0332bdefc1') in 0.011352 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.136834 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_3/PiratModel_3.fbx
+  artifactKey: Guid(31b6dabcfa1894c41ab75529940eb69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_3/PiratModel_3.fbx using Guid(31b6dabcfa1894c41ab75529940eb69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10111d04425312e2cae43cf0d4054146') in 0.063756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.393352 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_3/PiratTexture_3.png
+  artifactKey: Guid(59ed5f0cf917b1e4baf6063618f0cd20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_3/PiratTexture_3.png using Guid(59ed5f0cf917b1e4baf6063618f0cd20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd2efcd2cde697309c0552d4bf591fe4') in 0.008904 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.195359 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_3/PiratMaterial_3.mat
+  artifactKey: Guid(139acee400ac5814db261734b33186fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_3/PiratMaterial_3.mat using Guid(139acee400ac5814db261734b33186fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12790c8c79ef31cfe0e9a445fe100b96') in 0.011978 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.930774 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_3/Pirat.mat
+  artifactKey: Guid(b943d0a302089d94ab5d6b437365c71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_3/Pirat.mat using Guid(b943d0a302089d94ab5d6b437365c71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c4f610f50e9bb873db242227399115f') in 0.015372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 61.945739 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_3/GunP.png
+  artifactKey: Guid(5c248ff53e6bf1d4eb7f665c6d5c3408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_3/GunP.png using Guid(5c248ff53e6bf1d4eb7f665c6d5c3408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '887f60a3dd60114cff123e6705310303') in 0.009801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 168.982317 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_3/PiratTexture_3.1.png
+  artifactKey: Guid(5c248ff53e6bf1d4eb7f665c6d5c3408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_3/PiratTexture_3.1.png using Guid(5c248ff53e6bf1d4eb7f665c6d5c3408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c228c528e43d280f5806e718a0e17946') in 0.010259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.978780 seconds.
+  path: Assets/Visual/Models/Pirats/Pirat_3/PiratTexture_3.2.png
+  artifactKey: Guid(5c248ff53e6bf1d4eb7f665c6d5c3408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Pirats/Pirat_3/PiratTexture_3.2.png using Guid(5c248ff53e6bf1d4eb7f665c6d5c3408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28113e5bba06e1f404ac9cc0ce35d2c9') in 0.008963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.224922 seconds.
+  path: Assets/Visual/Models/Plane_gold/Treasure.fbx
+  artifactKey: Guid(555047ebc1b040b4b817fb7cdc486cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Plane_gold/Treasure.fbx using Guid(555047ebc1b040b4b817fb7cdc486cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b89c1e7aaa43a3d7ab30724294877371') in 0.088974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.035367 seconds.
+  path: Assets/Visual/Models/Plane_gold/TreasureModel.fbx
+  artifactKey: Guid(555047ebc1b040b4b817fb7cdc486cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Plane_gold/TreasureModel.fbx using Guid(555047ebc1b040b4b817fb7cdc486cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd516450c9e85fe67dd8a704b99beea08') in 0.087857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.970629 seconds.
+  path: Assets/Visual/Models/Plane_gold/TreasureTexture.png
+  artifactKey: Guid(b8bde2ad2d36b3c4ea4e0995ddd07384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Plane_gold/TreasureTexture.png using Guid(b8bde2ad2d36b3c4ea4e0995ddd07384) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cac455b5a47e485ed1c3519c221ec5c') in 0.011004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.138850 seconds.
+  path: Assets/Visual/Models/Plane_gold/TreasureMaterial.mat
+  artifactKey: Guid(80c78cb2b555b154e899583b9a7b4eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Plane_gold/TreasureMaterial.mat using Guid(80c78cb2b555b154e899583b9a7b4eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '180c082fbed6fefdd68aa8d3a15be5ae') in 0.012580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.846228 seconds.
+  path: Assets/Visual/Models/GoldHeap
+  artifactKey: Guid(3e949c9e0a196a94fb9050c4456512da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/GoldHeap using Guid(3e949c9e0a196a94fb9050c4456512da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5bc36ba117805c0dca84ffbc5fdc3dd') in 0.001605 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.787825 seconds.
+  path: Assets/Visual/Models/GoldHeap/ChestMaterial.mat
+  artifactKey: Guid(1e1436d1ad4b7e54186ece0d74039b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/GoldHeap/ChestMaterial.mat using Guid(1e1436d1ad4b7e54186ece0d74039b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05d4122b6f121fdd816c5a05bee6440') in 0.014616 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.112687 seconds.
+  path: Assets/Visual/Models/GoldHeap/ChestTexture.png
+  artifactKey: Guid(d1b7d6854361b5b46b828f21b1bca572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/GoldHeap/ChestTexture.png using Guid(d1b7d6854361b5b46b828f21b1bca572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de181f38e0ec8e3d147b87630dffbda7') in 0.009124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.393023 seconds.
+  path: Assets/Visual/Models/GoldHeap/ChestModel.fbx
+  artifactKey: Guid(4907ec84aad704746a359b628b7f6869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/GoldHeap/ChestModel.fbx using Guid(4907ec84aad704746a359b628b7f6869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc016791ba703012025dd069cf2ff33') in 0.014817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.180457 seconds.
+  path: Assets/Visual/Models/GoldHeap/Chest
+  artifactKey: Guid(28f643e41e23743ccaead71ca198b001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/GoldHeap/Chest using Guid(28f643e41e23743ccaead71ca198b001) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd1d3454d5ef3ee69b51531e56fdf933') in 0.001223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.664583 seconds.
+  path: Assets/Visual/Models/Island/Tile
+  artifactKey: Guid(be8cf499509884290bd9a8d0ae859b76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Visual/Models/Island/Tile using Guid(be8cf499509884290bd9a8d0ae859b76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886549d174a63b62391cbff46a7c89fc') in 0.001058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 74.984195 seconds.
+  path: Assets/Prefabs/Enemies/MermaidPrefaf.prefab
+  artifactKey: Guid(9bf4e83841d2c4d4d98c46c92cd3eedf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies/MermaidPrefaf.prefab using Guid(9bf4e83841d2c4d4d98c46c92cd3eedf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65220395fbb21a99fd3ec1a3d6630909') in 0.023185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Prefabs/Enemies/OctopusPrefab.prefab
+  artifactKey: Guid(9ff0f3e9828892748b88132f597a4f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies/OctopusPrefab.prefab using Guid(9ff0f3e9828892748b88132f597a4f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c9801efb278cf4eb685f2d536ef15e9') in 0.013281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Prefabs/Enemies/SharkPrefab.prefab
+  artifactKey: Guid(6ffedb175d011244d94635b2c09efa34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies/SharkPrefab.prefab using Guid(6ffedb175d011244d94635b2c09efa34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3fa22f9d39639961156dcafcce754f0') in 0.011695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.051030 seconds.
+  path: Assets/Prefabs/Towers/Pirat_1.prefab
+  artifactKey: Guid(4c4d07b0fc4cd1b49bc77e14febc4dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Pirat_1.prefab using Guid(4c4d07b0fc4cd1b49bc77e14febc4dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3695f5de05270624a28098650554267') in 0.019221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Prefabs/Towers/Pirat_2.prefab
+  artifactKey: Guid(3fbc704d07f87b943847bc4014817964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Pirat_2.prefab using Guid(3fbc704d07f87b943847bc4014817964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6124fa43313b393e6e112cfe814bac3a') in 0.015042 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 206.069957 seconds.
+  path: Assets/Prefabs/GoldHeap/GoldHeap.prefab
+  artifactKey: Guid(d353546af33e74d15be5570dfcbd0a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GoldHeap/GoldHeap.prefab using Guid(d353546af33e74d15be5570dfcbd0a39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78080e5edcfb8455c5dbb6f32d6168a1') in 0.019009 seconds 
