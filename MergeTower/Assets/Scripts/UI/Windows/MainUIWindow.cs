@@ -9,6 +9,7 @@ namespace UI
         protected override void AfterInitialization()
         {
             buyTowerButton.OnInitialize();
+            buyTowerButton.OnStart();
         }
     }
 }

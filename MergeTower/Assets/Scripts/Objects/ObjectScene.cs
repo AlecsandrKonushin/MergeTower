@@ -5,7 +5,7 @@ namespace ObjectsOnScene
 {
     public abstract class ObjectScene : MonoBehaviour, IInitialize
     {
-        public event Action DeathObjectEvent;
+        public event Action<ObjectScene> DeathObjectEvent;
 
         public virtual void OnInitialize() { }
 
@@ -17,7 +17,7 @@ namespace ObjectsOnScene
 
         protected void DeathInvoke()
         {
-            DeathObjectEvent?.Invoke();
+            DeathObjectEvent?.Invoke(this);
         }
     }
 }

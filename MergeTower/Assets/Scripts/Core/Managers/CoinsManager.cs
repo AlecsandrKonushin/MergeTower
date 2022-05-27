@@ -1,4 +1,4 @@
-using Towers;
+using System;
 using UnityEngine;
 
 namespace Core
@@ -6,11 +6,28 @@ namespace Core
     [CreateAssetMenu(fileName = "CoinsManager", menuName = "Managers/CoinsManager")]
     public class CoinsManager : BaseManager
     {
-        private int countCoins = 100;
+        public event Action<bool> ChangeCanBuyEvent;
 
-        public bool CanBuyTower(TypeTower typeTower)
+        private int countCoins = 30;
+        private bool canBuy;
+
+        public void AddCoins(int value)
         {
-            int price = BoxManager.GetManager<PriceManager>().GetPriceTower(typeTower);
+            countCoins += value;
+
+            ChangeCanBuy();
+        }
+
+        public void SubtractCoins(int value)
+        {
+            countCoins -= value;
+
+            ChangeCanBuy();
+        }
+
+        public bool CanBuyTower()
+        {
+            int price = BoxManager.GetManager<PriceManager>().GetPriceTower();
 
             if (price <= countCoins)
             {
@@ -18,16 +35,25 @@ namespace Core
             }
             else
             {
-                Debug.Log("Монеты кончились!");
+                Debug.Log("End coins!");
                 return false;
             }
         }
 
-        public void BuyTower(TypeTower typeTower)
+        public void BuyTower()
         {
-            int price = BoxManager.GetManager<PriceManager>().GetPriceTower(typeTower);
+            int price = BoxManager.GetManager<PriceManager>().GetPriceTower();
 
-            countCoins -= price;
+            SubtractCoins(price);
+        }
+
+        private void ChangeCanBuy()
+        {
+            int price = BoxManager.GetManager<PriceManager>().GetPriceTower();
+
+            canBuy = countCoins >= price;
+
+            ChangeCanBuyEvent?.Invoke(canBuy);
         }
     }
 }

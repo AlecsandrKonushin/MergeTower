@@ -14,6 +14,7 @@ namespace Core
         [SerializeField] private Enemy[] enemiesPrefab;
 
         private List<Enemy> enemies = new List<Enemy>();
+        private List<Enemy> poolEnemies = new List<Enemy>();
 
         private bool canSpawn;
         private float timeSpawn = 3f;
@@ -83,16 +84,34 @@ namespace Core
             Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
 
             // TODO: брать из данных Enemy из ScriptableObject
-            EnemyData enemyData = new EnemyData(10, 10f);
+            EnemyData enemyData = new EnemyData(15, 5f);
             enemy.SetData = enemyData;
 
             enemy.OnInitialize();
 
             enemies.Add(enemy);
+            enemy.DeathObjectEvent += EnemyDeath;
             NewEnemy?.Invoke(enemy);
 
             timeWaitSpawn = timeSpawn;
             BoxManager.GetManager<TimeManager>().AddWaitingObject(this);
+        }
+
+        private void EnemyDeath(ObjectScene objectScene)
+        {
+            objectScene.DeathObjectEvent -= EnemyDeath;
+
+            if (objectScene is Enemy)
+            {
+                Enemy enemy = objectScene as Enemy;
+                enemies.Remove(enemy);
+                poolEnemies.Add(enemy);
+                enemy.gameObject.SetActive(false);
+            }
+            else
+            {
+                Debug.Log($"<color=red>Объект не Enemy! {objectScene.gameObject.name}</color>");
+            }
         }
     }
 }

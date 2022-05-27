@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Towers;
 using UnityEngine;
@@ -7,29 +8,31 @@ namespace Core
     [CreateAssetMenu(fileName = "PriceManager", menuName = "Managers/PriceManager")]
     public class PriceManager : BaseManager
     {
+        public event Action<int> ChangePriceEvent;
+
         private List<DataPriceTower> dataPriceTowers;
+
+        private int currentPrice = 10;
+        private int stepUpPrice = 2;
 
         public override void OnInitialize()
         {
             dataPriceTowers = new List<DataPriceTower>();
 
-            // TODO: получение даты price towers
+            // TODO: ????????? ???? price towers
             dataPriceTowers.Add(new DataPriceTower(TypeTower.Pirat, 20));
         }
 
-        public int GetPriceTower(TypeTower typeTower)
+        public int GetPriceTower()
         {
-            foreach (var data in dataPriceTowers)
-            {
-                if(data.GetTypeTower == typeTower)
-                {
-                    return data.GetPriceTower;
-                }
-            }
+            return currentPrice;        
+        }
 
-            Debug.Log($"<color=red>Ќе найдена цена дл€ башни типа {typeTower}!</color>");
+        public void UpPriceAfterBuyTower()
+        {
+            currentPrice *= stepUpPrice;
 
-            return 10;        
+            ChangePriceEvent?.Invoke(currentPrice);
         }
     }
 }

@@ -41,8 +41,6 @@ namespace ObjectsOnScene
             moveSystem.StopMove();
 
             DeathInvoke();
-
-            gameObject.SetActive(false);
         }
 
         private void EndMoveToTarget()

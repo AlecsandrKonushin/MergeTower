@@ -56,11 +56,12 @@ namespace Core
 
         public void ClickBuyTowerButton(TypeTower typeTower)
         {
-            if (BoxManager.GetManager<CoinsManager>().CanBuyTower(typeTower))
+            if (BoxManager.GetManager<CoinsManager>().CanBuyTower())
             {
                 if (AllObjectsInScene.Instance.GetTilesParent.HaveTileForSpawn())
                 {
-                    BoxManager.GetManager<CoinsManager>().BuyTower(typeTower);
+                    BoxManager.GetManager<CoinsManager>().BuyTower();
+                    BoxManager.GetManager<PriceManager>().UpPriceAfterBuyTower();
                     BoxManager.GetManager<TowersManager>().BuyTower(typeTower);
                 }
             }

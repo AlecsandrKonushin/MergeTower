@@ -9,12 +9,15 @@ namespace Core
         [SerializeField] private SCRO_SceneManagers sceneManagers;
         [SerializeField] private bool isLogging;
 
+        [SerializeField] private UIManager uiManager; 
+
         private void Start()
         {
-            // TODO: сделать OnStart UIManager и SceneObjects
-            UIManager.Instance.OnInitialize();
             AllObjectsInScene.Instance.OnInitialize();
             BoxManager.Init(sceneManagers, isLogging);
+
+            UIManager.Instance.OnInitialize();
+            UIManager.Instance.OnStart();
         }
     }
 }

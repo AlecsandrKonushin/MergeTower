@@ -31,9 +31,11 @@ namespace ObjectsOnScene
             moveSystem.SetTransformForChange(target.transform);
         }
 
-        private void TargetIsDeath()
+        private void TargetIsDeath(ObjectScene objectScene)
         {
-            target.DeathObjectEvent -= TargetIsDeath;
+            objectScene.DeathObjectEvent -= TargetIsDeath;
+
+            Death();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -56,7 +58,7 @@ namespace ObjectsOnScene
         protected override void Death()
         {
             moveSystem.StopMove();
-            Destroy(gameObject);
+            DeathInvoke();
         }
     }
 }
