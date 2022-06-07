@@ -1,13 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Test", "NaughtyAttributes.Test.csproj", "{EE6DF47A-DD82-7140-C904-F0143DF39AC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Core", "NaughtyAttributes.Core.csproj", "{3E3B7528-C447-B340-3376-BEDA7A61006F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{3CDE0DF9-E2FC-A44B-509B-6D423ABF92F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StylizedWaterForURP", "StylizedWaterForURP.csproj", "{28994C8C-5C79-89F6-F65F-19CCAE8F608D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Editor", "NaughtyAttributes.Editor.csproj", "{3B92CC6E-F239-0FA9-DEB1-41FEA522A970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StylizedWaterForURPEditor", "StylizedWaterForURPEditor.csproj", "{CC26692D-08E3-5115-0785-D999D5B969E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +31,18 @@ Global
 		{3CDE0DF9-E2FC-A44B-509B-6D423ABF92F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CDE0DF9-E2FC-A44B-509B-6D423ABF92F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CDE0DF9-E2FC-A44B-509B-6D423ABF92F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28994C8C-5C79-89F6-F65F-19CCAE8F608D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28994C8C-5C79-89F6-F65F-19CCAE8F608D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28994C8C-5C79-89F6-F65F-19CCAE8F608D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28994C8C-5C79-89F6-F65F-19CCAE8F608D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B92CC6E-F239-0FA9-DEB1-41FEA522A970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B92CC6E-F239-0FA9-DEB1-41FEA522A970}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B92CC6E-F239-0FA9-DEB1-41FEA522A970}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B92CC6E-F239-0FA9-DEB1-41FEA522A970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC26692D-08E3-5115-0785-D999D5B969E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC26692D-08E3-5115-0785-D999D5B969E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC26692D-08E3-5115-0785-D999D5B969E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC26692D-08E3-5115-0785-D999D5B969E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
