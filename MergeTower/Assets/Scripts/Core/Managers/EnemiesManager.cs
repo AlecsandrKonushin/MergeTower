@@ -11,7 +11,7 @@ namespace Core
     {
         public Action<Enemy> NewEnemy;
 
-        [SerializeField] private Enemy[] enemiesPrefab;
+        [SerializeField] private SCRO_Enemy[] enemiesData;
 
         private List<Enemy> enemies = new List<Enemy>();
         private List<Enemy> poolEnemies = new List<Enemy>();
@@ -81,10 +81,10 @@ namespace Core
 
         private void CreateEnemy()
         {
-            Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(enemiesPrefab[0]);
+            SCRO_Enemy scroEnemy = enemiesData[0];
+            Enemy enemy = BoxManager.GetManager<CreatorManager>().CreateEnemy(scroEnemy.Prefab);
 
-            // TODO: брать из данных Enemy из ScriptableObject
-            EnemyData enemyData = new EnemyData(15, 5f);
+            EnemyData enemyData = new EnemyData(scroEnemy.Health, scroEnemy.Speed, scroEnemy.PriceReward);
             enemy.SetData = enemyData;
 
             enemy.OnInitialize();
@@ -107,6 +107,8 @@ namespace Core
                 enemies.Remove(enemy);
                 poolEnemies.Add(enemy);
                 enemy.gameObject.SetActive(false);
+
+                BoxManager.GetManager<CoinsManager>().AddCoins(enemy.GetPriceReward);
             }
             else
             {

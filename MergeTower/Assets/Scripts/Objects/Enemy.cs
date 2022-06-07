@@ -11,6 +11,8 @@ namespace ObjectsOnScene
         private TargetEnemySystem targetSystem;
         private EnemyData enemyData;
 
+        public int GetPriceReward { get => enemyData.GetPriceReward; }
+
         public EnemyData SetData
         {
             set
