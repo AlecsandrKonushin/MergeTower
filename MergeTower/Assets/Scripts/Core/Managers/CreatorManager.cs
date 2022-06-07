@@ -28,6 +28,7 @@ namespace Core
 
             Tower tower = Instantiate(towerPrefab, positionSpawn, rotationSpawn);
 
+            tower.tag = NamesData.TagTower;
             tower.transform.SetParent(towersParent.transform);
             tower.OnInitialize();
 
