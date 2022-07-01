@@ -998,7 +998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneManagers: {fileID: 11400000, guid: 6bdb5a0bdf7795e4c9cf08a2c3cfc9f6, type: 2}
   isLogging: 0
-  uiManager: {fileID: 0}
+  uiManager: {fileID: 1544379108}
 --- !u!1 &939661615
 GameObject:
   m_ObjectHideFlags: 0
