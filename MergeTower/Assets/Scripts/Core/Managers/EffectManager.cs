@@ -7,18 +7,20 @@ namespace Core
     public class EffectManager : BaseManager
     {
         [SerializeField] private EffectBase startBulletEffect;
-        [SerializeField] private EffectBase hitBulletEffect;
+        [SerializeField] private EffectBase hitBulletEffect;        
 
         public void StartBulletEffect(Transform transformSpawn)
         {
             EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(startBulletEffect, transformSpawn);
             effect.AfterShowEffect += EndedEffect;
             effect.ShowEffect();
-        }
+        }        
 
-        public void HitBulletEffect(Vector3 position)
+        public void HitBulletEffect(Transform transformSpawn)
         {
-
+            EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(hitBulletEffect, transformSpawn);
+            effect.AfterShowEffect += EndedEffect;
+            effect.ShowEffect();
         }
 
         private void EndedEffect(EffectBase effect)
