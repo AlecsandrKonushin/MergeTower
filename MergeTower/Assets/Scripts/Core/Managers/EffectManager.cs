@@ -8,7 +8,7 @@ namespace Core
     {
         [SerializeField] private EffectBase startBulletEffect;
         [SerializeField] private EffectBase hitBulletEffect;
-        [SerializeField] private EffectBase spownEffect;
+        [SerializeField] private EffectBase spownEffect; // спаун пишется не так
 
         public void StartBulletEffect(Transform transformSpawn)
         {
