@@ -3,7 +3,7 @@ using Data;
 using Core;
 using UnityEngine;
 
-
+// лишний пробел
 namespace ObjectsOnScene
 {
     public class Bullet : ObjectScene
@@ -11,9 +11,9 @@ namespace ObjectsOnScene
         private BulletData bulletData;
         private MoveObjectSystem moveSystem;
         private ObjectScene target;
+        // лишний пробел
 
-
-        public void SetDataBullet(BulletData bulletData)
+        public void SetDataBullet(BulletData bulletData) // Этот метод сделать свойством set
         {
             this.bulletData = bulletData;
         }
@@ -25,7 +25,7 @@ namespace ObjectsOnScene
             BoxManager.GetManager<EffectManager>().StartBulletEffect(transform);
         }
 
-        public override void OnInitialize()
+        public override void OnInitialize() // Этот метод должен быть в самом верху. Сначала инициализация.
         {
             moveSystem = gameObject.AddComponent<MoveObjectSystem>();
             moveSystem.SetSpeed = bulletData.GetSpeed;

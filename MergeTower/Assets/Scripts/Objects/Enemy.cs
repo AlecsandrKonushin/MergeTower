@@ -3,7 +3,7 @@ using Core;
 using SystemMove;
 using SystemTarget;
 using UnityEngine;
-using System;
+using System; // библеотека не используется - удалить
 
 namespace ObjectsOnScene
 {
@@ -12,7 +12,7 @@ namespace ObjectsOnScene
         private MoveObjectSystem moveSystem;
         private TargetEnemySystem targetSystem;
         private EnemyData enemyData;
-        [SerializeField] public GameObject _hitposition;
+        [SerializeField] public GameObject _hitposition; // Поле должно быть приватным. Без _ . Нейминг camelCase.  Поля разной доступности разделять пробелом. Сначала SerializeField потом private
         public int GetPriceReward { get => enemyData.GetPriceReward; }
 
         public EnemyData SetData
@@ -23,7 +23,7 @@ namespace ObjectsOnScene
                 enemyData.EndHealth += Death;
             }
         }
-        
+        // лишний пробел
 
         public override void OnInitialize()
         {

@@ -29,7 +29,7 @@ namespace ObjectsOnScene
             BulletData bulletData = new BulletData(TypeBullet.Simple, 20f, 1);
             shootSystem = new ShootSystem(this, positionShoot.transform, bulletData, 0.5f);
             targetSystem.SubscribeOnGetTarget(StartAttack);            
-
+            // пробел
         }
 
         private void StartAttack(ObjectScene enemy)
