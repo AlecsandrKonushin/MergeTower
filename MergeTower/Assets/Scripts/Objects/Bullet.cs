@@ -11,8 +11,6 @@ namespace ObjectsOnScene
         private BulletData bulletData;
         private MoveObjectSystem moveSystem;
         private ObjectScene target;
-        private Enemy enemy;
-        //[SerializeField] public GameObject _hitposition;
 
 
         public void SetDataBullet(BulletData bulletData)

@@ -39,7 +39,7 @@ namespace ObjectsOnScene
         public override void Damage(int value)
         {
             enemyData.DownHealth(value);
-            BoxManager.GetManager<EffectManager>().HitBulletEffect(transform); 
+            BoxManager.GetManager<EffectManager>().HitBulletEffect(transform);
         }
 
         protected override void Death()
