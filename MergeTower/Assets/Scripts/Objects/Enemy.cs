@@ -3,6 +3,7 @@ using Core;
 using SystemMove;
 using SystemTarget;
 using UnityEngine;
+using System;
 
 namespace ObjectsOnScene
 {
@@ -11,7 +12,7 @@ namespace ObjectsOnScene
         private MoveObjectSystem moveSystem;
         private TargetEnemySystem targetSystem;
         private EnemyData enemyData;
-
+        [SerializeField] public GameObject _hitposition;
         public int GetPriceReward { get => enemyData.GetPriceReward; }
 
         public EnemyData SetData
@@ -22,6 +23,7 @@ namespace ObjectsOnScene
                 enemyData.EndHealth += Death;
             }
         }
+        
 
         public override void OnInitialize()
         {
@@ -37,7 +39,7 @@ namespace ObjectsOnScene
         public override void Damage(int value)
         {
             enemyData.DownHealth(value);
-            BoxManager.GetManager<EffectManager>().HitBulletEffect(transform);
+            BoxManager.GetManager<EffectManager>().HitBulletEffect(transform); 
         }
 
         protected override void Death()

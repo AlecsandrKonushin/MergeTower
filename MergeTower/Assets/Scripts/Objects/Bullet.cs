@@ -3,6 +3,7 @@ using Data;
 using Core;
 using UnityEngine;
 
+
 namespace ObjectsOnScene
 {
     public class Bullet : ObjectScene
@@ -10,6 +11,9 @@ namespace ObjectsOnScene
         private BulletData bulletData;
         private MoveObjectSystem moveSystem;
         private ObjectScene target;
+        private Enemy enemy;
+        //[SerializeField] public GameObject _hitposition;
+
 
         public void SetDataBullet(BulletData bulletData)
         {
@@ -17,10 +21,9 @@ namespace ObjectsOnScene
         }
 
         public void SetTarget(ObjectScene target)
-        {
-            this.target = target;
-            target.DeathObjectEvent += TargetIsDeath;
-
+        {  
+            this.target = target;            
+            target.DeathObjectEvent += TargetIsDeath;            
             BoxManager.GetManager<EffectManager>().StartBulletEffect(transform);
         }
 
@@ -28,13 +31,13 @@ namespace ObjectsOnScene
         {
             moveSystem = gameObject.AddComponent<MoveObjectSystem>();
             moveSystem.SetSpeed = bulletData.GetSpeed;
-            moveSystem.SetTransformForChange(target.transform);
+            moveSystem.SetTransformForChange(target.transform.GetComponent<Enemy>()._hitposition.transform);            
         }
 
         private void TargetIsDeath(ObjectScene objectScene)
         {
             objectScene.DeathObjectEvent -= TargetIsDeath;
-
+            
             Death();
         }
 

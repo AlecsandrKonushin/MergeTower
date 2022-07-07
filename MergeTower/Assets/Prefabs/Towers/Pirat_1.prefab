@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionShoot: {fileID: 3607382995590776640}
+  positionHit: {fileID: 2318063616287155906, guid: 9ff0f3e9828892748b88132f597a4f25,
+    type: 3}
 --- !u!65 &853325755867680159
 BoxCollider:
   m_ObjectHideFlags: 0
