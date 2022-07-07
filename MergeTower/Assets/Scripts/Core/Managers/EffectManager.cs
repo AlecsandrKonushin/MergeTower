@@ -8,7 +8,7 @@ namespace Core
     {
         [SerializeField] private EffectBase startBulletEffect;
         [SerializeField] private EffectBase hitBulletEffect;
-        [SerializeField] private EffectBase spownEffect; // спаун пишется не так
+        [SerializeField] private EffectBase spawnEffect; // спаун пишется не так
 
         public void StartBulletEffect(Transform transformSpawn)
         {
@@ -25,7 +25,7 @@ namespace Core
         }
         public void SpownEffect(Transform transformSpown)
         {
-            EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(spownEffect, transformSpown);
+            EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(spawnEffect, transformSpown);
             effect.AfterShowEffect += EndedEffect;
             effect.ShowEffect();
         }
