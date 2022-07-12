@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b798819c1c327e342bd22fed12d803af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hitposition: {fileID: 7978297326523555921}
+  hitPosition: {fileID: 7978297326523555921}
 --- !u!1 &7978297326523555921
 GameObject:
   m_ObjectHideFlags: 0

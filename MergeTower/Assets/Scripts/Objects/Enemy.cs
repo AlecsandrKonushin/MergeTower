@@ -3,7 +3,6 @@ using Core;
 using SystemMove;
 using SystemTarget;
 using UnityEngine;
-using System; // библеотека не используется - удалить
 
 namespace ObjectsOnScene
 {
@@ -12,7 +11,8 @@ namespace ObjectsOnScene
         private MoveObjectSystem moveSystem;
         private TargetEnemySystem targetSystem;
         private EnemyData enemyData;
-        [SerializeField] public GameObject _hitposition; // Поле должно быть приватным. Без _ . Нейминг camelCase.  Поля разной доступности разделять пробелом. Сначала SerializeField потом private
+
+        public GameObject hitPosition;
         public int GetPriceReward { get => enemyData.GetPriceReward; }
 
         public EnemyData SetData
@@ -23,7 +23,6 @@ namespace ObjectsOnScene
                 enemyData.EndHealth += Death;
             }
         }
-        // лишний пробел
 
         public override void OnInitialize()
         {
@@ -39,7 +38,9 @@ namespace ObjectsOnScene
         public override void Damage(int value)
         {
             enemyData.DownHealth(value);
-            BoxManager.GetManager<EffectManager>().HitBulletEffect(transform);
+            EffectManager manager = BoxManager.GetManager<EffectManager>();
+            EffectManager.TypeEffect typeEffect = EffectManager.TypeEffect.HitBulletEffect;
+            manager.SetEffect(typeEffect, transform);
         }
 
         protected override void Death()

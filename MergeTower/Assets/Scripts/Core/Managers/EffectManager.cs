@@ -1,31 +1,26 @@
 using SystemEffect;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Core
 {
     [CreateAssetMenu(fileName = "EffectManager", menuName = "Managers/EffectManager")]
-    public class EffectManager : BaseManager
+    public class EffectManager : BaseManager 
     {
-        [SerializeField] private EffectBase startBulletEffect;
-        [SerializeField] private EffectBase hitBulletEffect;
-        [SerializeField] private EffectBase spawnEffect; // спаун пишется не так
+        [SerializeField] private EffectBase[] typeEffects;
 
-        public void StartBulletEffect(Transform transformSpawn) // у трёх методов практически одинаковый код. Вынести в один метод. Создать enum TypeEffect в котором перечислить эффекты и указать в новом методе в качестве параметра TypeEffect
+        public enum TypeEffect 
         {
-            EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(startBulletEffect, transformSpawn);
-            effect.AfterShowEffect += EndedEffect;
-            effect.ShowEffect();            
-        }        
-
-        public void HitBulletEffect(Transform transformSpawn)
+            StartBulletEffect,
+            HitBulletEffect,
+            SpawnEffect,
+        }
+             
+        public void SetEffect(TypeEffect typeEffect, Transform transformSpawn)
         {
-            EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(hitBulletEffect, transformSpawn);
-            effect.AfterShowEffect += EndedEffect;
-            effect.ShowEffect();            
-        } // пробел между методами
-        public void SpownEffect(Transform transformSpown) // нейминг
-        {
-            EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(spawnEffect, transformSpown);
+            CreatorManager creatorManager = BoxManager.GetManager<CreatorManager>();
+            int typeEffectIndex = (int)typeEffect;
+            EffectBase effect = creatorManager.CreateEffect(typeEffects[typeEffectIndex], transformSpawn);
             effect.AfterShowEffect += EndedEffect;
             effect.ShowEffect();
         }

@@ -2,8 +2,8 @@
 using Data;
 using Core;
 using UnityEngine;
+using System;
 
-// лишний пробел
 namespace ObjectsOnScene
 {
     public class Bullet : ObjectScene
@@ -11,25 +11,27 @@ namespace ObjectsOnScene
         private BulletData bulletData;
         private MoveObjectSystem moveSystem;
         private ObjectScene target;
-        // лишний пробел
+        public BulletData DataBullet{ set => bulletData = value; }
+
+        public override void OnInitialize()
+        {
+            moveSystem = gameObject.AddComponent<MoveObjectSystem>();
+            moveSystem.SetSpeed = bulletData.GetSpeed;
+            moveSystem.SetTransformForChange(target.transform.GetComponent<Enemy>().hitPosition.transform);
+        }
 
         public void SetDataBullet(BulletData bulletData) // Этот метод сделать свойством set
         {
-            this.bulletData = bulletData;
-        }
+            this.bulletData = bulletData;  
+        }   
 
         public void SetTarget(ObjectScene target)
         {  
             this.target = target;            
-            target.DeathObjectEvent += TargetIsDeath;            
-            BoxManager.GetManager<EffectManager>().StartBulletEffect(transform);
-        }
-
-        public override void OnInitialize() // Этот метод должен быть в самом верху. Сначала инициализация.
-        {
-            moveSystem = gameObject.AddComponent<MoveObjectSystem>();
-            moveSystem.SetSpeed = bulletData.GetSpeed;
-            moveSystem.SetTransformForChange(target.transform.GetComponent<Enemy>()._hitposition.transform);            
+            target.DeathObjectEvent += TargetIsDeath;
+            EffectManager manager = BoxManager.GetManager<EffectManager>();
+            EffectManager.TypeEffect typeEffect = EffectManager.TypeEffect.StartBulletEffect;
+            manager.SetEffect(typeEffect, transform);
         }
 
         private void TargetIsDeath(ObjectScene objectScene)
@@ -46,7 +48,7 @@ namespace ObjectsOnScene
                 if (objectScene == target)
                 {
                     objectScene.Damage(bulletData.GetDamange);
-
+                    Destroy(gameObject);
                     Death();
                 }
                 else

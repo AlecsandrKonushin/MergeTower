@@ -21,15 +21,16 @@ namespace ObjectsOnScene
         
         public override void OnInitialize()
         {
-            BoxManager.GetManager<EffectManager>().SpownEffect(transform);
+            EffectManager manager = BoxManager.GetManager<EffectManager>();
+            EffectManager.TypeEffect typeEffect = EffectManager.TypeEffect.SpawnEffect;
+            manager.SetEffect(typeEffect, transform);
             rotationSystem = gameObject.AddComponent<RotationSystem>();
             targetSystem = new TargetTowerSystem();
 
             // TODO: брать дату пули из какого-то хранилища
             BulletData bulletData = new BulletData(TypeBullet.Simple, 20f, 1);
             shootSystem = new ShootSystem(this, positionShoot.transform, bulletData, 0.5f);
-            targetSystem.SubscribeOnGetTarget(StartAttack);            
-            // пробел
+            targetSystem.SubscribeOnGetTarget(StartAttack); 
         }
 
         private void StartAttack(ObjectScene enemy)

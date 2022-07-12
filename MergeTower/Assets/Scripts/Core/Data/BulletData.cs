@@ -10,6 +10,7 @@ namespace Data
         public float GetSpeed { get => speed; }
         public int GetDamange { get => damage; }
 
+
         public BulletData(TypeBullet typeBullet, float speed, int damage)
         {
             this.typeBullet = typeBullet;
