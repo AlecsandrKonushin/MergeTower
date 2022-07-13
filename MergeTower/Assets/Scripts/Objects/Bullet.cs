@@ -11,7 +11,7 @@ namespace ObjectsOnScene
         private BulletData bulletData;
         private MoveObjectSystem moveSystem;
         private ObjectScene target;
-        public BulletData DataBullet{ set => bulletData = value; }
+        
 
         public override void OnInitialize()
         {
@@ -20,10 +20,11 @@ namespace ObjectsOnScene
             moveSystem.SetTransformForChange(target.transform.GetComponent<Enemy>().hitPosition.transform);
         }
 
-        public void SetDataBullet(BulletData bulletData) // Этот метод сделать свойством set
+        /*public void SetDataBullet(BulletData bulletData) // Этот метод сделать свойством set
         {
             this.bulletData = bulletData;  
-        }   
+        }*/ 
+        public BulletData SetDataBullet{ set => bulletData = value; }
 
         public void SetTarget(ObjectScene target)
         {  
