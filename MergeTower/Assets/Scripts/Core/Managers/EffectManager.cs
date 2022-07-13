@@ -1,6 +1,6 @@
 using SystemEffect;
 using UnityEngine;
-using System.Collections.Generic;
+using System.Collections.Generic; // Не нужная библиотека
 
 namespace Core
 {
@@ -8,19 +8,13 @@ namespace Core
     public class EffectManager : BaseManager 
     {
         [SerializeField] private EffectBase[] typeEffects;
-
-        public enum TypeEffect 
-        {
-            StartBulletEffect,
-            HitBulletEffect,
-            SpawnEffect,
-        }
              
         public void SetEffect(TypeEffect typeEffect, Transform transformSpawn)
         {
             CreatorManager creatorManager = BoxManager.GetManager<CreatorManager>();
             int typeEffectIndex = (int)typeEffect;
-            EffectBase effect = creatorManager.CreateEffect(typeEffects[typeEffectIndex], transformSpawn);
+            EffectBase effect = creatorManager.CreateEffect(typeEffects[typeEffectIndex], transformSpawn); // Добавить EffectBase поле TypeEffect и искать по этому полю, а не по индексу
+
             effect.AfterShowEffect += EndedEffect;
             effect.ShowEffect();
         }
@@ -29,5 +23,12 @@ namespace Core
         {
             effect.HideEffect();
         }
+    }
+
+    public enum TypeEffect
+    {
+        StartBulletEffect,
+        HitBulletEffect,
+        SpawnEffect,
     }
 }

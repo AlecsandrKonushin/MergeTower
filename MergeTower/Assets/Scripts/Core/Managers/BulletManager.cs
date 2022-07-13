@@ -10,23 +10,17 @@ namespace Core
     {
         [SerializeField] private Bullet bulletPrefab;                
         private List<Bullet> bullets = new List<Bullet>();
-        private List<Bullet> poolBullets = new List<Bullet>();
-
-                
+        private List<Bullet> poolBullets = new List<Bullet>();               
 
         public void CreateBullet(BulletData bulletData, Transform transformSpawn, ObjectScene target)
         {
-            Bullet SetBullet = new Bullet();
-            // TODO: ??????? pool  ? ????????? ? ???, ???????? ?? ????? ????????? ????? ????
+            Bullet SetBullet = new Bullet(); // Это зачем было создано?
             Bullet newBullet = BoxManager.GetManager<CreatorManager>().CreateBullet(bulletPrefab, transformSpawn);
-            SetBullet.SetDataBullet = bulletData;           
-            //newBullet.SetDataBullet(bulletData);
+            newBullet.SetDataBullet = bulletData; // Вот присвоение через свойство
             newBullet.SetTarget(target);
             newBullet.OnInitialize();
             newBullet.DeathObjectEvent += BulletDeath;            
-            bullets.Add(newBullet);
-            
-            
+            bullets.Add(newBullet);           
         }
 
         private void BulletDeath(ObjectScene objectScene)

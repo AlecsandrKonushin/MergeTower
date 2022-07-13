@@ -2,7 +2,7 @@
 using Data;
 using Core;
 using UnityEngine;
-using System;
+using System; // не нужно
 
 namespace ObjectsOnScene
 {
@@ -11,7 +11,8 @@ namespace ObjectsOnScene
         private BulletData bulletData;
         private MoveObjectSystem moveSystem;
         private ObjectScene target;
-        public BulletData DataBullet{ set => bulletData = value; }
+
+        public BulletData SetDataBullet { set => bulletData = value; }
 
         public override void OnInitialize()
         {
@@ -20,24 +21,17 @@ namespace ObjectsOnScene
             moveSystem.SetTransformForChange(target.transform.GetComponent<Enemy>().hitPosition.transform);
         }
 
-        public void SetDataBullet(BulletData bulletData) // Этот метод сделать свойством set
-        {
-            this.bulletData = bulletData;  
-        }   
-
         public void SetTarget(ObjectScene target)
-        {  
-            this.target = target;            
+        {
+            this.target = target;
             target.DeathObjectEvent += TargetIsDeath;
-            EffectManager manager = BoxManager.GetManager<EffectManager>();
-            EffectManager.TypeEffect typeEffect = EffectManager.TypeEffect.StartBulletEffect;
-            manager.SetEffect(typeEffect, transform);
+            BoxManager.GetManager<EffectManager>().SetEffect(TypeEffect.StartBulletEffect, transform);
         }
 
         private void TargetIsDeath(ObjectScene objectScene)
         {
             objectScene.DeathObjectEvent -= TargetIsDeath;
-            
+
             Death();
         }
 
@@ -48,7 +42,7 @@ namespace ObjectsOnScene
                 if (objectScene == target)
                 {
                     objectScene.Damage(bulletData.GetDamange);
-                    Destroy(gameObject);
+                    Destroy(gameObject); // зачем уничтожать объект? Метод Death не вызовется после этого
                     Death();
                 }
                 else

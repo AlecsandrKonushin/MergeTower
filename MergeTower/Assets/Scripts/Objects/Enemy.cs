@@ -12,7 +12,7 @@ namespace ObjectsOnScene
         private TargetEnemySystem targetSystem;
         private EnemyData enemyData;
 
-        public GameObject hitPosition;
+        public GameObject hitPosition; // 1. Никогда не делать public! Только [SerializeField] private 2. Сделать свойство и через него передавать hitPosition
         public int GetPriceReward { get => enemyData.GetPriceReward; }
 
         public EnemyData SetData
@@ -38,9 +38,8 @@ namespace ObjectsOnScene
         public override void Damage(int value)
         {
             enemyData.DownHealth(value);
-            EffectManager manager = BoxManager.GetManager<EffectManager>();
-            EffectManager.TypeEffect typeEffect = EffectManager.TypeEffect.HitBulletEffect;
-            manager.SetEffect(typeEffect, transform);
+
+            BoxManager.GetManager<EffectManager>().SetEffect(TypeEffect.HitBulletEffect, transform);
         }
 
         protected override void Death()
