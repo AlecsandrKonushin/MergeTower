@@ -6,7 +6,9 @@
 [Bb]uild
 [Bb]uilds/
 [Ll]ibrary/
-/[Pp]ackages/
+[Pp]ackages/
+[Ll]ogs/
+[Nn]aughtyAttributes
 /[Pp]rojectSettings/
 
 sysinfo.txt
@@ -64,3 +66,9 @@ MergeTower/Logs/shadercompiler-UnityShaderCompiler0.log
 MergeTower/Logs/shadercompiler-UnityShaderCompiler1.log
 MergeTower/Logs/shadercompiler-UnityShaderCompiler2.log
 MergeTower/Recordings/Merge_Pirat.mp4
+MergeTower/Assembly-CSharp.csproj
+MergeTower/NaughtyAttributes.Core.csproj
+MergeTower/NaughtyAttributes.Editor.csproj
+MergeTower/NaughtyAttributes.Test.csproj
+MergeTower/StylizedWaterForURP.csproj
+MergeTower/StylizedWaterForURPEditor.csproj
