@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d8a193e0f3ccc46964e8bcf7839434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeEffect: 0
   timeEffect: 2
 --- !u!1 &8635903366024953197
 GameObject:

@@ -10,11 +10,14 @@ namespace Core
 
         public void ShowEffect(TypeEffect typeEffect, Transform transformPosition)
         {
-            EffectBase effect = ChooseEffect(typeEffect);
+            EffectBase currentEffect = ChooseEffect(typeEffect);
 
-            if (effect != null)
+            if (currentEffect != null)
             {
-                BoxManager.GetManager<CreatorManager>().CreateEffect(effect, transformPosition);
+                EffectBase effect = BoxManager.GetManager<CreatorManager>().CreateEffect(currentEffect, transformPosition);
+
+                effect.AfterShowEffect += EndedEffect;
+                effect.ShowEffect();
             }
         }
 
@@ -24,24 +27,22 @@ namespace Core
 
             foreach (var effect in effects)
             {
-                if(effect.GetTypeEffect == typeEffect)
+                if (effect.GetTypeEffect == typeEffect)
                 {
                     currentEffect = effect;
-                    currentEffect.AfterShowEffect += EndedEffect;
-                    currentEffect.ShowEffect();
                 }
             }
 
-            if(currentEffect == null)
+            if (currentEffect == null)
             {
                 Debug.Log($"<color=red>Не найден эффект с типом {typeEffect}</color>");
             }
 
             return currentEffect;
         }
-        
+
         private void EndedEffect(EffectBase effect)
-        { 
+        {
             effect.HideEffect();
         }
     }
