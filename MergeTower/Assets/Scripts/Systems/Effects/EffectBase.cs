@@ -14,7 +14,7 @@ namespace SystemEffect
         public void ShowEffect()
         {
             gameObject.SetActive(true);
-
+            
             StartCoroutine(CoShowEffect());
         }
 
@@ -26,7 +26,15 @@ namespace SystemEffect
         private IEnumerator CoShowEffect()
         {
             yield return new WaitForSeconds(timeEffect);
+            if (timeEffect <= 2)
+                Destroy(gameObject);
             AfterShowEffect?.Invoke(this);
         }
+    }
+    public enum TypeEffect
+    {
+        StartBulletEffect,
+        HitBulletEffect,
+        SpawnEffect,
     }
 }

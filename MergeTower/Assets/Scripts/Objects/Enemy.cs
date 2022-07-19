@@ -12,9 +12,9 @@ namespace ObjectsOnScene
         private TargetEnemySystem targetSystem;
         private EnemyData enemyData;
 
-        public GameObject hitPosition;
+        [SerializeField] private GameObject hitPosition;  
         public int GetPriceReward { get => enemyData.GetPriceReward; }
-
+        public GameObject HitPosition { get => hitPosition; }
         public EnemyData SetData
         {
             set
@@ -38,9 +38,8 @@ namespace ObjectsOnScene
         public override void Damage(int value)
         {
             enemyData.DownHealth(value);
-            EffectManager manager = BoxManager.GetManager<EffectManager>();
-            EffectManager.TypeEffect typeEffect = EffectManager.TypeEffect.HitBulletEffect;
-            manager.SetEffect(typeEffect, transform);
+
+            BoxManager.GetManager<EffectManager>().SetEffect(SystemEffect.TypeEffect.HitBulletEffect, transform);
         }
 
         protected override void Death()

@@ -4,6 +4,7 @@ using Core;
 using SystemTarget;
 using Data;
 using UnityEngine;
+using SystemEffect;
 
 namespace ObjectsOnScene
 {
@@ -21,9 +22,7 @@ namespace ObjectsOnScene
         
         public override void OnInitialize()
         {
-            EffectManager manager = BoxManager.GetManager<EffectManager>();
-            EffectManager.TypeEffect typeEffect = EffectManager.TypeEffect.SpawnEffect;
-            manager.SetEffect(typeEffect, transform);
+            BoxManager.GetManager<EffectManager>().SetEffect(TypeEffect.SpawnEffect, transform);
             rotationSystem = gameObject.AddComponent<RotationSystem>();
             targetSystem = new TargetTowerSystem();
 

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3b36c230201524c9464ac565f8f445, type: 3}
   m_Name: EffectManager
   m_EditorClassIdentifier: 
-  typeEffects:
-  - {fileID: 5794409243909879468, guid: f75ab528a5a483e46812fdeabfe505eb, type: 3}
-  - {fileID: -7354099603345411136, guid: bddedf8a014472245b867075f9326117, type: 3}
-  - {fileID: -8109906679808593942, guid: 4f29d859507c28844b1ee922f3826f62, type: 3}
+  startBulletEffect: {fileID: 5794409243909879468, guid: f75ab528a5a483e46812fdeabfe505eb,
+    type: 3}
+  hitBulletEffect: {fileID: -7354099603345411136, guid: bddedf8a014472245b867075f9326117,
+    type: 3}
+  spawnEffect: {fileID: -8109906679808593942, guid: 4f29d859507c28844b1ee922f3826f62,
+    type: 3}

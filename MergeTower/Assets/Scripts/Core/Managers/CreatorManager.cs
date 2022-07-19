@@ -10,14 +10,18 @@ namespace Core
         private GameObject towersParent;
         private GameObject enemiesParent;
         private GameObject bulletsParent;
+        private GameObject effectPerent;
 
         private const float offsetYTower = 1f;
+        private TypeEffect typeEffect;
+        public TypeEffect GetTypeEffect { get => typeEffect; set => typeEffect = value; }
 
         public override void OnInitialize()
         {
             towersParent = new GameObject(NamesData.TowersParentName);
             enemiesParent = new GameObject(NamesData.EnemiesParentName);
             bulletsParent = new GameObject(NamesData.BulletParentName);
+            effectPerent = new GameObject(NamesData.EffectsParentName);
         }
 
         public Tower CreateTower(Tower towerPrefab, Tile tileForSpawn)
@@ -53,9 +57,10 @@ namespace Core
             return bullet;
         }
 
-        public EffectBase CreateEffect(EffectBase effect, Transform transformSpawn)
+        public EffectBase CreateEffect(EffectBase effects, Transform transformSpawn, TypeEffect typeEffect)
         {
-            EffectBase newEffect = Instantiate(effect, transformSpawn.position, transformSpawn.rotation);
+            EffectBase newEffect = Instantiate(effects, transformSpawn.position, transformSpawn.rotation);
+            newEffect.transform.SetParent(effectPerent.transform);
             return newEffect;
         }
     }

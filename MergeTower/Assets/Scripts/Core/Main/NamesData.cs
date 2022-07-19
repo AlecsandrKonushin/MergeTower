@@ -7,7 +7,8 @@ namespace Core
         public static string EnemiesParentName { get => "[ENEMIES]"; }
         public static string BulletParentName { get => "[BULLETS]"; }
         public static string UpdateGameName { get => "[UPDATE_GAME]"; }
-        public static string TouchSystemName { get => "[TOUCH_SYSTEM]"; }
+        public static string TouchSystemName { get => "[TOUCH_SYSTEM]"; }    
+        public static string EffectsParentName { get => "[EFFECTS]"; }
         public static string TagTower{ get => "Tower"; }
     }
 }

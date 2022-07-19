@@ -1,32 +1,40 @@
 using SystemEffect;
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace Core
 {
     [CreateAssetMenu(fileName = "EffectManager", menuName = "Managers/EffectManager")]
-    public class EffectManager : BaseManager 
+    public class EffectManager : BaseManager
     {
-        [SerializeField] private EffectBase[] typeEffects;
+        [SerializeField] private EffectBase startBulletEffect;
+        [SerializeField] private EffectBase hitBulletEffect;
+        [SerializeField] private EffectBase spawnEffect;
 
-        public enum TypeEffect 
-        {
-            StartBulletEffect,
-            HitBulletEffect,
-            SpawnEffect,
-        }
-             
-        public void SetEffect(TypeEffect typeEffect, Transform transformSpawn)
+        private void Effect(EffectBase effects, Transform transformSpawn, TypeEffect typeEffect)
         {
             CreatorManager creatorManager = BoxManager.GetManager<CreatorManager>();
-            int typeEffectIndex = (int)typeEffect;
-            EffectBase effect = creatorManager.CreateEffect(typeEffects[typeEffectIndex], transformSpawn);
+            EffectBase effect = creatorManager.CreateEffect(effects, transformSpawn, typeEffect);
             effect.AfterShowEffect += EndedEffect;
             effect.ShowEffect();
         }
-
-        private void EndedEffect(EffectBase effect)
+        public void SetEffect(TypeEffect typeEffect, Transform transformSpawn)
         {
+            switch (typeEffect)
+            {
+                case TypeEffect.StartBulletEffect:
+                    Effect(startBulletEffect, transformSpawn, typeEffect);
+                    break;
+                case TypeEffect.HitBulletEffect:
+                    Effect(hitBulletEffect, transformSpawn, typeEffect);
+                    break;
+                case TypeEffect.SpawnEffect:
+                    Effect(spawnEffect, transformSpawn, typeEffect);
+                    break;
+            }
+        }
+        
+        private void EndedEffect(EffectBase effect)
+        { 
             effect.HideEffect();
         }
     }
