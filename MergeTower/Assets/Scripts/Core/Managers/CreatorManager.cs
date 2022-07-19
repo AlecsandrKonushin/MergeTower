@@ -13,8 +13,6 @@ namespace Core
         private GameObject effectPerent;
 
         private const float offsetYTower = 1f;
-        private TypeEffect typeEffect;
-        public TypeEffect GetTypeEffect { get => typeEffect; set => typeEffect = value; }
 
         public override void OnInitialize()
         {
@@ -57,10 +55,11 @@ namespace Core
             return bullet;
         }
 
-        public EffectBase CreateEffect(EffectBase effects, Transform transformSpawn, TypeEffect typeEffect)
+        public EffectBase CreateEffect(EffectBase effects, Transform transformSpawn)
         {
             EffectBase newEffect = Instantiate(effects, transformSpawn.position, transformSpawn.rotation);
             newEffect.transform.SetParent(effectPerent.transform);
+
             return newEffect;
         }
     }

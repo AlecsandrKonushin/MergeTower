@@ -26,7 +26,8 @@ namespace ObjectsOnScene
         {
             this.target = target;
             target.DeathObjectEvent += TargetIsDeath;
-            BoxManager.GetManager<EffectManager>().SetEffect(TypeEffect.StartBulletEffect, transform);            
+
+            BoxManager.GetManager<EffectManager>().ShowEffect(TypeEffect.StartBulletEffect, transform);
         }
 
         private void TargetIsDeath(ObjectScene objectScene)

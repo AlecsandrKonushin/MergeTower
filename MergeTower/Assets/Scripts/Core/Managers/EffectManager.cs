@@ -6,31 +6,38 @@ namespace Core
     [CreateAssetMenu(fileName = "EffectManager", menuName = "Managers/EffectManager")]
     public class EffectManager : BaseManager
     {
-        [SerializeField] private EffectBase startBulletEffect;
-        [SerializeField] private EffectBase hitBulletEffect;
-        [SerializeField] private EffectBase spawnEffect;
+        [SerializeField] private EffectBase[] effects;
 
-        private void Effect(EffectBase effects, Transform transformSpawn, TypeEffect typeEffect)
+        public void ShowEffect(TypeEffect typeEffect, Transform transformPosition)
         {
-            CreatorManager creatorManager = BoxManager.GetManager<CreatorManager>();
-            EffectBase effect = creatorManager.CreateEffect(effects, transformSpawn, typeEffect);
-            effect.AfterShowEffect += EndedEffect;
-            effect.ShowEffect();
-        }
-        public void SetEffect(TypeEffect typeEffect, Transform transformSpawn)
-        {
-            switch (typeEffect)
+            EffectBase effect = ChooseEffect(typeEffect);
+
+            if (effect != null)
             {
-                case TypeEffect.StartBulletEffect:
-                    Effect(startBulletEffect, transformSpawn, typeEffect);
-                    break;
-                case TypeEffect.HitBulletEffect:
-                    Effect(hitBulletEffect, transformSpawn, typeEffect);
-                    break;
-                case TypeEffect.SpawnEffect:
-                    Effect(spawnEffect, transformSpawn, typeEffect);
-                    break;
+                BoxManager.GetManager<CreatorManager>().CreateEffect(effect, transformPosition);
             }
+        }
+
+        private EffectBase ChooseEffect(TypeEffect typeEffect)
+        {
+            EffectBase currentEffect = null;
+
+            foreach (var effect in effects)
+            {
+                if(effect.GetTypeEffect == typeEffect)
+                {
+                    currentEffect = effect;
+                    currentEffect.AfterShowEffect += EndedEffect;
+                    currentEffect.ShowEffect();
+                }
+            }
+
+            if(currentEffect == null)
+            {
+                Debug.Log($"<color=red>Не найден эффект с типом {typeEffect}</color>");
+            }
+
+            return currentEffect;
         }
         
         private void EndedEffect(EffectBase effect)

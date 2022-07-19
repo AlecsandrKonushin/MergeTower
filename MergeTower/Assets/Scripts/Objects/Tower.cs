@@ -22,7 +22,7 @@ namespace ObjectsOnScene
         
         public override void OnInitialize()
         {
-            BoxManager.GetManager<EffectManager>().SetEffect(TypeEffect.SpawnEffect, transform);
+            BoxManager.GetManager<EffectManager>().ShowEffect(TypeEffect.SpawnEffect, transform);
             rotationSystem = gameObject.AddComponent<RotationSystem>();
             targetSystem = new TargetTowerSystem();
 

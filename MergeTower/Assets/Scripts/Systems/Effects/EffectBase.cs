@@ -9,7 +9,10 @@ namespace SystemEffect
         [HideInInspector]
         public event Action<EffectBase> AfterShowEffect;
 
+        [SerializeField] private TypeEffect typeEffect;
         [SerializeField] private float timeEffect;
+
+        public TypeEffect GetTypeEffect { get => typeEffect; }
 
         public void ShowEffect()
         {
@@ -26,15 +29,8 @@ namespace SystemEffect
         private IEnumerator CoShowEffect()
         {
             yield return new WaitForSeconds(timeEffect);
-            if (timeEffect <= 2)
-                Destroy(gameObject);
+
             AfterShowEffect?.Invoke(this);
         }
-    }
-    public enum TypeEffect
-    {
-        StartBulletEffect,
-        HitBulletEffect,
-        SpawnEffect,
     }
 }
